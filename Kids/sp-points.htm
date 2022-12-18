@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>本月問答</title>
+    <title>點數紀錄</title>
     <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
             <script src="js/html5shiv.js"></script>
             <script src="js/respond.min.js"></script>
@@ -23,78 +23,6 @@
 </head>
 
 <body>
-    <!--視窗-->
-    <div id="modal1" class="modal">
-        <!--     div內的內容可以自行設定 -->
-        <h2>正確答案 / 答對名單 / 答題明細</h2>
-        <!-- 內容 1:正確答案 -->
-        <div class="content">
-            <div class="text">
-                各位小博士:
-                有聽過"周處除三害"的故事?話說晉朝時，義興有個年輕人叫周處，爹娘早亡，無人管教，仗著一身蠻力在鄉里打架鬧事，村裏人見了他，總是躲得遠遠的。某天，他又如同往常到街上晃盪，不慎撞倒一瞎眼老人，無意間從老人口中得知此地人人口耳相傳的"三害"，各位小讀者，你們知道是哪三害嗎?
-            </div>
-            <ul>
-                <li>答案出處：我家是動物園<a href="#" target="_blank" title="另開視窗，前往書籍名稱『我家是動物園』">前往連結</a>、151頁</li>
-            </ul>
-            <div class="btn_grp">
-                <input name="" type="button" value="關閉" class="btn" />
-            </div>
-        </div>
-        <!-- 內容 2:答對名單 -->
-        <div class="content">
-            <p>共30人回答，9人答對（以下名單依身分證字號 排序）</p>
-            <div class="flex">
-                <div class="col">
-                    <h3 class="title">線上答對名單</h3>
-                    <div class="list">
-                        <ol>
-                            <li>劉OO｜A12345OOOO</li>
-                            <li>劉OO｜A12345OOOO</li>
-                            <li>劉OO｜A12345OOOO</li>
-                            <li>劉OO｜A12345OOOO</li>
-                            <li>劉OO｜A12345OOOO</li>
-                            <li>劉OO｜A12345OOOO</li>
-                            <li>劉OO｜A12345OOOO</li>
-                            <li>劉OO｜A12345OOOO</li>
-                            <li>劉OO｜A12345OOOO</li>
-                            <li>劉OO｜A12345OOOO</li>
-                        </ol>
-                    </div>
-                </div>
-                <div class="col">
-                    <h3 class="title">紙本答對名單</h3>
-                    <div class="list">
-                        <ol>
-                            <li>劉OO｜A12345OOOO</li>
-                            <li>劉OO｜A12345OOOO</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-            <div class="btn_grp">
-                <input name="" type="button" value="關閉" class="btn" />
-            </div>
-        </div>
-        <!-- 內容 3:答對名單 -->
-        <div class="content">
-            <div>
-                <h3 class="title">你的回答</h3>
-                <div class="text">
-                    各位小博士:
-                    有聽過"周處除三害"的故事?話說晉朝時，義興有個年輕人叫周處，爹娘早亡，無人管教，仗著一身蠻力在鄉里打架鬧事，村裏人見了他，總是躲得遠遠的。某天，他又如同往常到街上晃盪，不慎撞倒一瞎眼老人，無意間從老人口中得知此地人人口耳相傳的"三害"，各位小讀者，你們知道是哪三害嗎?
-                </div>
-                <ul>
-                    <li>書名/網頁：小博士故事書<a href="#" target="_blank" title="另開視窗，前往書籍名稱『小博士故事書』">前往連結</a></li>
-                    <li>頁數：281</li>
-                    <li>答題狀態：正確</li>
-                    <li>獲得點數：1點</li>
-                </ul>
-            </div>
-            <div class="btn_grp">
-                <input name="" type="button" value="關閉" class="btn" />
-            </div>
-        </div>
-    </div>
 
     <!-- 直接跳主內容區 -->
     <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
@@ -203,7 +131,7 @@
                         <!-- 答題紀錄查詢 -->
                         <div class="main-box">
                             <h3 class="subTitle">點數紀錄</h3>
-                            <div class="notice"><span>點數紀錄說明文案</span></div>
+                            <div class="notice">總獲取點數：<span>1111</span>點／目前尚有：<span>111</span>點可以使用</div>
                         </div>
                         <!-- 題目 -->
                         <!-- table -->
@@ -221,60 +149,33 @@
                                     <thead>
                                         <tr>
                                             <th>編號</th>
-                                            <th>標題</th>
+                                            <th>類型</th>
+                                            <th>內容</th>
+                                            <th>點數</th>
                                             <th>日期</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td data-title="編號" class="num">01</td>
-                                            <td data-title="標題"><a href="#">通勤搭車看預報 環保集點10倍送</a></td>
-                                            <td data-title="日期" class="date">2018/01/01</td>
+                                            <td data-title="類型">獲取</td>
+                                            <td data-title="標題">小博士問答「各位小博士: 有聽過"周處除三害"的故事(取20字)...」正確解答</td>
+                                            <td data-title="點數">1點</td>
+                                            <td data-title="日期" class="date">2022/10/01</td>
                                         </tr>
                                         <tr>
                                             <td data-title="編號" class="num">02</td>
-                                            <td data-title="標題"><a href="#">春節不無聊上網學習環境教育</a></td>
-                                            <td data-title="日期" class="date">2018/01/01</td>
+                                            <td data-title="類型">使用</td>
+                                            <td data-title="標題">兌換7-11禮券50元</td>
+                                            <td data-title="點數">10點</td>
+                                            <td data-title="日期" class="date">2022/09/20</td>
                                         </tr>
                                         <tr>
                                             <td data-title="編號" class="num">03</td>
-                                            <td data-title="標題"><a href="#">洗錢防制，國家向前</a></td>
-                                            <td data-title="日期" class="date">2018/01/01</td>
-                                        </tr>
-                                        <tr>
-                                            <td data-title="編號" class="num">04</td>
-                                            <td data-title="標題"><a href="#">春節送禮認標章 環保減碳又健康</a></td>
-                                            <td data-title="日期" class="date">2018/01/01</td>
-                                        </tr>
-                                        <tr>
-                                            <td data-title="編號" class="num">05</td>
-                                            <td data-title="標題"><a href="#">環保替代役歲末新春送溫暖</a></td>
-                                            <td data-title="日期" class="date">2018/01/01</td>
-                                        </tr>
-                                        <tr>
-                                            <td data-title="編號" class="num">06</td>
-                                            <td data-title="標題"><a href="#">向非法化學物質說不 安全蛋品 吃得健康</a></td>
-                                            <td data-title="日期" class="date">2018/01/01</td>
-                                        </tr>
-                                        <tr>
-                                            <td data-title="編號" class="num">07</td>
-                                            <td data-title="標題"><a href="#">春節期間廚餘回收真惜福 狗年來富又來福</a></td>
-                                            <td data-title="日期" class="date">2018/01/01</td>
-                                        </tr>
-                                        <tr>
-                                            <td data-title="編號" class="num">08</td>
-                                            <td data-title="標題"><a href="#">春節長假看Chem Life，增長知識又可抽獎</a></td>
-                                            <td data-title="日期" class="date">2018/01/01</td>
-                                        </tr>
-                                        <tr>
-                                            <td data-title="編號" class="num">09</td>
-                                            <td data-title="標題"><a href="#">金狗年春節旅遊好去處，環保署報你知</a></td>
-                                            <td data-title="日期" class="date">2018/01/01</td>
-                                        </tr>
-                                        <tr>
-                                            <td data-title="編號" class="num">10</td>
-                                            <td data-title="標題"><a href="#">清新空氣保健康 神明歡喜過好年</a></td>
-                                            <td data-title="日期" class="date">2018/01/01</td>
+                                            <td data-title="類型">獲取</td>
+                                            <td data-title="標題">小博士問答「各位小博士: 有聽過"周處除三害"的故事(取20字)...」正確解答</td>
+                                            <td data-title="點數">2點</td>
+                                            <td data-title="日期" class="date">2022/09/11</td>
                                         </tr>
                                     </tbody>
                                 </table>
