@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>會員留言版</title>
+    <title>HyUI kit</title>
     <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -17,8 +17,6 @@
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
     <!-- 燈箱facybox -->
     <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css">
-    <!-- carousel -->
-    <link rel="stylesheet" type="text/css" href="vendor/carousel/carousel-prev-next.css">
     <!-- hyUI css -->
     <link rel="stylesheet" href="css/hyui.css">
     <!-- favicon -->
@@ -180,174 +178,189 @@
                     <nav class="breadcrumb" aria-label="Breadcrumb">
                         <ul>
                             <li><a href="#">首頁</a></li>
-                            <li aria-current="page">留言版</li>
+                            <li aria-current="page">訊息公告</li>
                         </ul>
                     </nav>
                     <!-- breadcrumb路徑 end-->
-                    <h2 class="title" id="h2-label">留言版</h2>
-
-                    <!-- function功能區塊 -->
-                    <div class="function_panel">
-                        <div class="function">
-                            <ul>
-                                <li class="print"><a href="#">友善列印</a></li>
-                                <li class="back"><a href="javascript:history.back()">上一頁</a></li>
-                            </ul>
+                    <h2 class="title" id="h2-label">借書留言版</h2>
+                    <!-- pagesearch Start -->
+                    <div class="pagesearch" role="search">
+                        <div class="form_grp">
+                            <label for="mustSameAsId">單元內搜尋</label>
+                            <input name="username" id="mustSameAsId" type="text" title="單元內搜尋" placeholder="單元內搜尋" accesskey="S" aria-label="單元內搜尋">
+                            <input name="" type="submit" value="搜尋" title="搜尋" class="btn btn-search" />
                         </div>
                     </div>
-                    <!-- function功能區塊end -->
-
-                    <!-- CP Start -->
-                    <section class="cp">
-                        <ul class="publish_info">
-                            <li>留言日期: 2022-11-20</li>
-                            <li>回覆日期: 2022-11-20</li>
+                    <!-- pagesearch End -->
+                    <!-- LP Start -->
+                    <section class="lp">
+                        <!-- category -->
+                        <div class="category">
+                            <span class="title" id="category_label">類別篩選：</span>
+                            <ul aria-labelledby="category_label">
+                                <li><a href="#" class="active">借書留言</a></li>
+                                <li><a href="#">其他問題</a></li>
+                            </ul>
+                        </div>
+                        <!-- category end-->
+                        <!-- funbox star -->
+                        <div class="funbox">
+                         <!-- Pagination -->
+                         <div class="pagination">
+                            <form action="" aria-label="pagination">
+                                <div class="form_inline">
+                                    <div class="total">目前顯示第<span>16</span>至第<span>30</span>筆資料，共<span>186</span>筆資料，目前在第 <select name="" id="" aria-label="目前頁面">
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                        <option value="">4</option>
+                                    </select> 頁 <input type="button" value="確定換頁" title="確定換頁" class="btn btn-submit">
+                                    ，
+                                    每頁顯示 <select name="" id="" aria-label="每頁顯示">
+                                        <option value="">15</option>
+                                        <option value="">30</option>
+                                        <option value="">45</option>
+                                        <option value="">60</option>
+                                    </select> 筆， <input type="button" value="條件切換" title="條件切換" class="btn btn-submit">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    <!-- Pagination end-->
+                    <!-- function功能區塊 -->
+                    <div class="function">
+                        <ul>
+                            <li class="back"><a href="javascript:history.back()">上一頁</a></li>
+                            <li class="next"><a href="javascript:;">下一頁</a></li>
                         </ul>
+                    </div>
+                    <!-- function功能區塊end -->
+                </div>
+                <!-- funbox end -->
 
-                            <!-- 留言版 -->
-                            <h3>借書留言版：借書留言</h3>
-                            <table>
-                                <!-- 無障礙表格必須帶有標題 <caption> -->
-                                    <caption>
-                                        留言資訊
-                                        <!-- 若表格內容複雜，可以補充摘要(summary)來加強說明表格內容，但 內容不要與標題重複 -->
-                                        <!--span class="summary">表格摘要</span-->
-                                    </caption>
-                                    <tr>
-                                        <th scope="row" width="15%">留言類別</th>
-                                        <td>借書留言</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row" width="15%">留言者</th>
-                                        <td>楊敦凱</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">留言標題</th>
-                                        <td>我想借書(續借有聲書，家裡尚有九片，謝謝)</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">留言內容</th>
-                                       <td>我想借三本書，預約到南港分館取書<br>
-                                        怕冷的企鵝<br>
-                                        快樂可以是這樣的...<br>
-                                        工地小貓和警衛爸爸</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">留言日期時間</th>
-                                       <td>2022-11-12 12:26:38</td>
-                                    </tr>
-                                </table>
-                                <hr>
-                                <h3>館方回覆</h3>
-                                <table>
-                                    <!-- 無障礙表格必須帶有標題 <caption> -->
-                                        <caption>
-                                            館方回覆資訊
-                                            <!-- 若表格內容複雜，可以補充摘要(summary)來加強說明表格內容，但 內容不要與標題重複 -->
-                                            <!--span class="summary">表格摘要</span-->
-                                        </caption>
-                                        <tr>
-                                            <th scope="row" width="15%">留言者</th>
-                                            <td>啟明分館</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">留言標題</th>
-                                            <td>館方回覆</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">留言內容</th>
-                                            <td>楊先生您好<br>
-                                                3本雙視圖書已預約成功,謝謝<br>
-                                                啟明分館敬復</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">留言日期時間</th>
-                                            <td>2022-11-12 16:09:21</td>
-                                        </tr>
-                                    </table>
 
-                    </section>
-                    <!-- CP End -->
+                <!-- 文字列表 -->
+                <div class="table_list search_list" aria-describedby="h2-label">
+                    <input type="button" value="張貼新留言" title="張貼新留言" class="btn btn-submit">
+                    <table>
+                        <caption>查詢列表</caption>
+                        <thead>
+                            <tr>
+                                <th width="1%">序號</th>
+                                <th width="10%">類別</th>
+                                <th>留言標題</th>
+                                <th width="15%">留言者</th>
+                                <th width="20%">留言時間</th>
+                                <th width="10%">回覆狀態</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-title="序號" class="num">01</td>
+                                <td data-title="類別">借書留言</td>
+                                <td data-title="留言標題"><a href="#">我想借書</a></td>
+                                <td data-title="留言者">楊敦凱</td>
+                                <td data-title="留言時間">2022/11/12</td>
+                                <td data-title="回覆狀態">待回覆</td>
+                            </tr>
+                            <tr>
+                                <td data-title="序號" class="num">02</td>
+                                <td data-title="類別">借書留言</td>
+                                <td data-title="留言標題"><a href="#">我想借書(續借有聲書，家裡尚有九片，謝謝)</a></td>
+                                <td data-title="留言者">楊敦凱</td>
+                                <td data-title="留言時間">2022/11/10</td>
+                                <td data-title="回覆狀態">已回覆</td>
+                            </tr>
+                            <tr>
+                                <td data-title="序號" class="num">02</td>
+                                <td data-title="類別">其他問題</td>
+                                <td data-title="留言標題"><a href="#">忘記密碼需要求救</a></td>
+                                <td data-title="留言者">楊敦凱</td>
+                                <td data-title="留言時間">2022/11/10</td>
+                                <td data-title="回覆狀態">已回覆</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <!-- LP End -->
 
             <!-- function功能區塊 -->
             <div class="function">
                 <ul>
-                    <li class="back"><a href="javascript:history.back()">回上一頁</a></li>
-                    <li class="home"><a href="javascript:;">回首頁</a></li>
+                    <li class="back"><a href="javascript:history.back()">上一頁</a></li>
+                    <li class="next"><a href="javascript:;">下一頁</a></li>
                 </ul>
             </div>
+        </div>
+    </div>
+</main>
+<!-- footer Start-->
+<footer>
+    <div class="container">
+        <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+        <div class="footer_logo">
+            <img src="images/f_logo.svg" alt="臺北市立圖書館logo" class="img-responsive flogo">
+        </div>
+        <div class="footer_info">
+            <ul class="footer_link">
+                <li><a href="javascript:;">隱私權及資訊安全政策</a></li>
+                <li><a href="javascript:;">政府網站資料開放宣告</a></li>
+                <li><a href="javascript:;">意見信箱</a></li>
+                <li><a href="javascript:;">滿意度調查</a></li>
+            </ul>
+            <p>本網站為建立專屬視障者使用之網站，提供線上有聲書、點字書等資源，供視障者使用</p>
+            <p>啟明分館地址：臺北市松山區敦化北路155巷76號<br>
+                電話：(02)2514-8443（詳細業務聯繫電話）｜傳真：(02)2514-8428<br>
+                電子郵件：<a href="mailto:a15@email.tpml.edu.tw">a15@email.tpml.edu.tw</a><br>
+                開放時間：週一至週日09:00-17:00｜休館日：每月第一個星期四及國定假日
+            </p>
+        </div>
+        <div class="footer_icon">
+            <ul>
+                <li>
+                    <a target="_blank" href="javascript:;">
+                        <img src="images/taipeilogo.png" alt="臺北市政府,另開新視窗">
+                    </a> 
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">
+                        <img src="images/accessibility_aaa.jpg" alt="通過AAA優先等級無障礙網頁檢測,另開新視窗">
+                    </a>                        
+                </li>
+            </ul>
+        </div>
+        <div class="Copyright">台北市立圖書館版權所有 © 2022 All Rights Reserved.</div>
+        <div class="update">網站最後更新日期：<em>111年09月08日</em></div>
+    </div>
+</footer>
+<!-- footer End -->
+</div>
+<a href="javascript:;" class="scrollToTop">回頁首</a>
+<!-- JQ -->
+<script src="js/jquery-3.6.0.min.js"></script>
+<!-- 外掛 plugin js -->
+<script src="vendor/jquery.easing.min.js"></script>
+<!-- ease -->
+<script src="vendor/slick/slick.min.js "></script>
+<!-- slick -->
+<script src="vendor/slick/slick-lightbox.js "></script>
+<!-- slick lightbox -->
+<script src="vendor/lazyload/lazyload.js"></script>
+<!-- lazyload -->
+<script src="vendor/picturefill/picturefill.min.js" async></script>
+<!-- picturefill -->
+<script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
+<!-- scrolltable -->
+<!-- sticky-sidebar -->
+<script src='vendor/sticky-sidebar/sticky-sidebar.js'></script>
+<script src='vendor/sticky-sidebar/ResizeSensor.js'></script>
+<!-- fancy -->
+<script src='vendor/fancybox/jquery.fancybox.min.js'></script>
+<!-- hyUI -->
+<script src="js/hyui.js"></script>
+<!-- 客製js -->
+<script src="js/customize.js"></script>
+</body>
 
-                        </div>
-                    </div>
-                </main>
-                <!-- footer Start-->
-                <footer>
-                    <div class="container">
-                        <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
-                        <div class="footer_logo">
-                            <img src="images/f_logo.svg" alt="臺北市立圖書館logo" class="img-responsive flogo">
-                        </div>
-                        <div class="footer_info">
-                            <ul class="footer_link">
-                                <li><a href="javascript:;">隱私權及資訊安全政策</a></li>
-                                <li><a href="javascript:;">政府網站資料開放宣告</a></li>
-                                <li><a href="javascript:;">意見信箱</a></li>
-                                <li><a href="javascript:;">滿意度調查</a></li>
-                            </ul>
-                            <p>本網站為建立專屬視障者使用之網站，提供線上有聲書、點字書等資源，供視障者使用</p>
-                            <p>啟明分館地址：臺北市松山區敦化北路155巷76號<br>
-                                電話：(02)2514-8443（詳細業務聯繫電話）｜傳真：(02)2514-8428<br>
-                                電子郵件：<a href="mailto:a15@email.tpml.edu.tw">a15@email.tpml.edu.tw</a><br>
-                                開放時間：週一至週日09:00-17:00｜休館日：每月第一個星期四及國定假日
-                            </p>
-                        </div>
-                        <div class="footer_icon">
-                            <ul>
-                                <li>
-                                    <a target="_blank" href="javascript:;">
-                                        <img src="images/taipeilogo.png" alt="臺北市政府,另開新視窗">
-                                    </a> 
-                                </li>
-                                <li>
-                                    <a target="_blank" href="javascript:;">
-                                        <img src="images/accessibility_aaa.jpg" alt="通過AAA優先等級無障礙網頁檢測,另開新視窗">
-                                    </a>                        
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="Copyright">台北市立圖書館版權所有 © 2022 All Rights Reserved.</div>
-                        <div class="update">網站最後更新日期：<em>111年09月08日</em></div>
-                    </div>
-                </footer>
-                <!-- footer End -->
-            </div>
-            <a href="javascript:;" class="scrollToTop">回頁首</a>
-            <!-- JQ -->
-            <script src="js/jquery-3.6.0.min.js"></script>
-            <!-- 外掛 plugin js -->
-            <script src="vendor/jquery.easing.min.js"></script>
-            <!-- ease -->
-            <script src="vendor/slick/slick.min.js "></script>
-            <!-- slick -->
-            <script src="vendor/slick/slick-lightbox.js "></script>
-            <!-- slick lightbox -->
-            <script src="vendor/lazyload/lazyload.js"></script>
-            <!-- lazyload -->
-            <script src="vendor/picturefill/picturefill.min.js" async></script>
-            <!-- picturefill -->
-            <script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
-            <!-- scrolltable -->
-            <!-- sticky-sidebar -->
-            <script src='vendor/sticky-sidebar/sticky-sidebar.js'></script>
-            <script src='vendor/sticky-sidebar/ResizeSensor.js'></script>
-            <!-- fancy -->
-            <script src='vendor/fancybox/jquery.fancybox.min.js'></script>
-            <!-- carousel -->
-            <script src="vendor/carousel/carousel-prev-next.js"></script>
-            <!-- hyUI -->
-            <script src="js/hyui.js"></script>
-            <!-- 客製js -->
-            <script src="js/customize.js"></script>
-        </body>
-
-        </html>
+</html>

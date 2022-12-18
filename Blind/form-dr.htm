@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>會員留言版</title>
+    <title>本月問答</title>
     <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -180,17 +180,16 @@
                     <nav class="breadcrumb" aria-label="Breadcrumb">
                         <ul>
                             <li><a href="#">首頁</a></li>
-                            <li aria-current="page">留言版</li>
+                            <li aria-current="page">本月問答</li>
                         </ul>
                     </nav>
                     <!-- breadcrumb路徑 end-->
-                    <h2 class="title" id="h2-label">留言版</h2>
+                    <h2 class="title" id="h2-label">本月問答</h2>
 
                     <!-- function功能區塊 -->
                     <div class="function_panel">
                         <div class="function">
                             <ul>
-                                <li class="print"><a href="#">友善列印</a></li>
                                 <li class="back"><a href="javascript:history.back()">上一頁</a></li>
                             </ul>
                         </div>
@@ -199,72 +198,90 @@
 
                     <!-- CP Start -->
                     <section class="cp">
-                        <ul class="publish_info">
-                            <li>留言日期: 2022-11-20</li>
-                            <li>回覆日期: 2022-11-20</li>
-                        </ul>
+                        <div class="flex-form">
+                            <div class="notice_info">活動日期:<time>2022年12月1日~2022年12月20日</time> (本活動限視障朋友填答！ 每月兩題，兩題皆答或擇一填答均可。)</div>
+                            <div class="form_grp">
+                                <label for="title" class="form_title">題目一</label>
+                                <div class="form_content title">
+                                    請問再保險與原保險的保險標的性質有何不同？
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="content" class="form_content">答案一</label>
+                                <div class="form_content">
+                                    <textarea placeholder="請輸入答案內容" title="請輸入答案內容" id="form_content"></textarea>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="source" class="form_content">請問你從那本書或網站查到這項答案</label>
+                                <div class="form_content">
+                                    <input type="text" id="source" placeholder="請輸入書名或網站" value="" title="請輸入書名或網站" class="user_typing">
+                                </div>
+                            </div>
+                            <hr/>
+                            <div class="form_grp">
+                                <label for="title" class="form_title">題目二</label>
+                                <div class="form_content title">
+                                    為什麼蓮花可以「出淤泥而不染」？
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="content" class="form_content">答案二</label>
+                                <div class="form_content">
+                                    <textarea placeholder="請輸入答案內容" title="請輸入答案內容" id="content"></textarea>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="source" class="form_content">請問你從那本書或網站查到這項答案</label>
+                                <div class="form_content">
+                                    <input type="text" id="source" placeholder="請輸入書名或網站" value="" title="請輸入書名或網站" class="user_typing">
+                                </div>
+                            </div>
+                            <hr/>
+                            <div class="notice_info">填答者資料(*為必填)</div>
+                            <div class="form_grp">
+                                <label for="username" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。" aria-label="必填">*</abbr>姓名</label>
+                                <div class="form_content username">
+                                    <input type="text" id="username" placeholder="請輸入姓名" value="劉佳淇" title="請輸入姓名" class="user_typing">
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="idnumber" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。" aria-label="必填">*</abbr>身分證字號</label>
+                                <div class="form_content title">
+                                    <input type="text" id="idnumber" placeholder="請輸入身分證字號" value="" title="請輸入身分證字號" class="user_typing">
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="telno" class="form_title">聯絡電話</label>
+                                <div class="form_content username">
+                                    <input type="text" id="telno" placeholder="請輸入聯絡電話" value="" title="請輸入聯絡電話" class="user_typing">
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="email" class="form_title">電子郵件</label>
+                                <div class="form_content title">
+                                    <input type="text" id="email" placeholder="請輸入電子郵件" value="" title="請輸入電子郵件" class="user_typing">
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="type" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。" aria-label="必填">*</abbr>視力狀況</label>
+                                <div class="form_content username">
+                                    <select name="" id="type">
+                                        <option value="" disabled="disabled">請選擇視力狀況</option>
+                                        <option value="借書留言" selected="">重度視障</option>
+                                        <option value="其他問題">中度視障</option>
+                                        <option value="其他問題">輕度視障</option>
+                                    </select>
+                                </div>
+                            </div>
 
-                            <!-- 留言版 -->
-                            <h3>借書留言版：借書留言</h3>
-                            <table>
-                                <!-- 無障礙表格必須帶有標題 <caption> -->
-                                    <caption>
-                                        留言資訊
-                                        <!-- 若表格內容複雜，可以補充摘要(summary)來加強說明表格內容，但 內容不要與標題重複 -->
-                                        <!--span class="summary">表格摘要</span-->
-                                    </caption>
-                                    <tr>
-                                        <th scope="row" width="15%">留言類別</th>
-                                        <td>借書留言</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row" width="15%">留言者</th>
-                                        <td>楊敦凱</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">留言標題</th>
-                                        <td>我想借書(續借有聲書，家裡尚有九片，謝謝)</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">留言內容</th>
-                                       <td>我想借三本書，預約到南港分館取書<br>
-                                        怕冷的企鵝<br>
-                                        快樂可以是這樣的...<br>
-                                        工地小貓和警衛爸爸</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">留言日期時間</th>
-                                       <td>2022-11-12 12:26:38</td>
-                                    </tr>
-                                </table>
-                                <hr>
-                                <h3>館方回覆</h3>
-                                <table>
-                                    <!-- 無障礙表格必須帶有標題 <caption> -->
-                                        <caption>
-                                            館方回覆資訊
-                                            <!-- 若表格內容複雜，可以補充摘要(summary)來加強說明表格內容，但 內容不要與標題重複 -->
-                                            <!--span class="summary">表格摘要</span-->
-                                        </caption>
-                                        <tr>
-                                            <th scope="row" width="15%">留言者</th>
-                                            <td>啟明分館</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">留言標題</th>
-                                            <td>館方回覆</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">留言內容</th>
-                                            <td>楊先生您好<br>
-                                                3本雙視圖書已預約成功,謝謝<br>
-                                                啟明分館敬復</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">留言日期時間</th>
-                                            <td>2022-11-12 16:09:21</td>
-                                        </tr>
-                                    </table>
+
+                            <!-- 按鈕 -->
+                            <div class="btn_grp form_inline">
+                                <button class="btn btn-submit">送出</button>
+                                <button class="btn btn-reset">重設</button>
+                            </div>
+                        </div>
 
                     </section>
                     <!-- CP End -->

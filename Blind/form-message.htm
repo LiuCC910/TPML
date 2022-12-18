@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HyUI kit</title>
+    <title>會員留言版</title>
     <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -180,11 +180,11 @@
                     <nav class="breadcrumb" aria-label="Breadcrumb">
                         <ul>
                             <li><a href="#">首頁</a></li>
-                            <li aria-current="page">訊息公告</li>
+                            <li aria-current="page">留言版</li>
                         </ul>
                     </nav>
                     <!-- breadcrumb路徑 end-->
-                    <h2 class="title" id="h2-label">借書留言版</h2>
+                    <h2 class="title" id="h2-label">留言版</h2>
 
                     <!-- function功能區塊 -->
                     <div class="function_panel">
@@ -202,7 +202,7 @@
                             <div class="form_grp">
                                 <label for="type" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。" aria-label="必填">*</abbr>留言類別</label>
                                 <div class="form_content username">
-                                    <select name="">
+                                    <select name="" id="type">
                                         <option value="" disabled="disabled">請選擇</option>
                                         <option value="借書留言" selected="">借書留言</option>
                                         <option value="其他問題">其他問題</option>
@@ -225,8 +225,8 @@
                             <div class="form_grp">
                                 <label for="content" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>留言內容</label>
                                 <div class="form_content">
-                                    <textarea placeholder="請輸入留言內容" title="請輸入留言內容"></textarea>
-                                <div class="notice_info">內容(輸入書名，已知資料類型，請一併輸入)</div>
+                                    <textarea placeholder="請輸入留言內容" title="請輸入留言內容" id="content"></textarea>
+                                    <div class="notice_info">內容(輸入書名，已知資料類型，請一併輸入)</div>
                                 </div>
                             </div>
 
