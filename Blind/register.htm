@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta name="robots" content="noindex">
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HyUI kit</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+<![endif]-->
+    <!-- slick css-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- 燈箱facybox -->
+    <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css">
+    <!-- carousel -->
+    <link rel="stylesheet" type="text/css" href="vendor/carousel/carousel-prev-next.css">
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/hyui.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+</head>
+
+<body>
+    <!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
+    <!-- wrapper Start -->
+    <div class="wrapper">
+        <!-- header Start -->
+        <header class="header">
+            <div class="container">
+                <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+                <h1>
+                    <a href="index.htm"><img src="images/logo.svg" alt="臺北市立圖書館 視障電子圖書館"></a>
+                </h1>
+                <!-- navigation Start -->
+                <nav class="navigation" role="navigation" aria-label="Site">
+                    <!-- 新增div navlist -->
+                    <div class="navlist">
+                        <ul aria-label="navlist">
+                            <li><a href="#">回首頁</a></li>
+                            <li><a href="#">北市圖首頁</a></li>
+                            <li><a href="#">網站導覽</a></li>
+                            <li><a href="#">使用說明與常見問題</a></li>
+                        </ul>
+                    </div>
+                    <!-- mpfun -->
+                    <div class="mpfun">
+                        <ul aria-label="login">
+                            <li class="myname">歡迎，劉佳淇</li>
+                            <li><a href="#">進入個人書房</a></li>
+                            <li class="logout_btn"><a href="#">登出</a></li>
+                            <li><a href="#">自訂顏色</a>
+                                <!-- readset star -->
+                                <div class="readset">
+                                    <button type="button" class="btn close_btn" aria-label="Close" onclick="">關閉</button>
+                                    <div class="flex-form">
+                                        <!-- changeTextColor -->
+                                        <div class="form_grp form_inline" aria-label="changeTextColor">
+                                            <label for="changeTextColor">文字顏色</label>
+                                            <select id="changeTextColor">
+                                                <option data-val="tC_default" selected="selected">預設文字顏色</option>
+                                                <option data-val="tC_white">白色(White)</option>
+                                                <option data-val="tC_black">黑色(Black)</option>
+                                                <option data-val="tC_yellow">黃色(Yellow)</option>
+                                                <option data-val="tC_lime">綠色(Lime)</option>
+                                            </select>
+                                        </div>
+                                        <!-- changeBackgroundColor -->
+                                        <div class="form_grp form_inline" aria-label="changeBackgroundColor">
+                                            <label for="changeBackgroundColor">背景顏色</label>
+                                            <select id="changeBackgroundColor">
+                                                <option data-val="bC_default" selected="selected">預設背景顏色</option>
+                                                <option data-val="bC_white">白色(White)</option>
+                                                <option data-val="bC_black">黑色(Black)</option>
+                                            </select>
+                                        </div>
+                                        <hr>   
+                                        <div class="btn_grp form_inline">
+                                            <button class="btn btn-submit">套用設定</button>
+                                            <button class="btn btn-reset">預設樣式</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- readset end -->
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- font_size -->
+                    <div class="font_size">
+                        <!-- 英文用<span>font-size：</span> -->
+                        <ul aria-label="font size">
+                            <li><a href="#" class="small">A-</a></li>
+                            <li><a href="#" class="medium active">A</a></li>
+                            <li><a href="#" class="large">A+</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- navigation End -->
+
+                <!-- Search Start -->
+                <div class="search" role="search">
+                    <button type="button" class="btn sclose_btn" aria-label="Close" onclick="">關閉</button>
+                    <div class="form_grp">
+                        <label for="mustSameAsId">站內全文檢索</label>
+                        <input name="username" id="mustSameAsId" type="text" title="請輸入查詢關鍵字" placeholder="請輸入查詢關鍵字" accesskey="S" aria-label="搜尋網站內容">
+                        <input name="" type="submit" value="搜尋" title="搜尋" class="btn btn-search" />
+                    </div>
+                </div>
+                <!-- Search End -->
+                <!-- noscript -->
+                <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="#">網站導覽</a>
+                </noscript>
+                <!-- menu Start -->
+                <nav class="menu" role="navigation" aria-label="Header的導航列">
+                    <ul>
+                        <li><a href="#">訊息公告</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">關於啟明</a></li>
+                        <li><a href="#">博士通信箱</a></li>
+                        <li><a href="#">讀者服務</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="http://www.google.com">第二層有連結</a>
+                                    <ul>
+                                        <li><a href="http://www.google.com">第三層選單有下層</a>
+                                            <ul>
+                                                <li><a href="#">第四層選單</a></li>
+                                                <li><a href="#">第四層選單</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="http://www.google.com">第三層選單有連結</a></li>
+                                        <li><a href="#">第三層選單</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">網站連結</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">線上閱讀下載</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">圖書查詢瀏覽</a></li>
+                    </ul>
+                </nav>
+                <!-- menu End -->
+            </div>
+        </header>
+        <!-- header End -->
+        <!-- main Start -->
+        <main id="center" class="main innerpage">
+            <div class="container">
+                <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+                <!-- 主要內容區 -->
+                <div class="center_block">
+                    <!-- breadcrumb路徑 -->
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <ul>
+                            <li><a href="#">首頁</a></li>
+                            <li aria-current="page">視障讀者註冊</li>
+                        </ul>
+                    </nav>
+                    <!-- breadcrumb路徑 end-->
+                    <h2 class="title" id="h2-label">視障讀者註冊</h2>
+                    <!-- function功能區塊 -->
+                    <div class="function_panel">
+                        <div class="function">
+                            <ul>
+                                <li class="back"><a href="javascript:history.back()">上一頁</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- function功能區塊end -->
+
+                    <!-- register Start -->
+                    <section class="register" aria-describedby="h2-label">
+                        <div class="flex-form">
+                            <div class="form_grp">
+                                <label for="username" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。" aria-label="必填">*</abbr>姓名</label>
+                                <div class="form_content username">
+                                    <input type="text" id="username" placeholder="劉佳淇" value="" title="請輸入姓名" class="user_typing">
+                                    <div class="radio_grp form_inline">
+                                        <input type="radio" id="contactChoice1" name="contact" title="男士" value="man" />
+                                        <label for="contactChoice1">男士</label>
+                                        <input type="radio" id="contactChoice2" name="contact" title="女士" value="miss" />
+                                        <label for="contactChoice2">女士</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="username" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。" aria-label="必填">*</abbr>身份證字號</label>
+                                <div class="form_content idnumber">
+                                    <input type="text" id="username" placeholder="請輸入身分證字號" value="" title="請輸入身分證字號" class="user_typing">
+                                    <div class="acheck">帳號可用</div>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="password" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。" aria-label="必填">*</abbr>帳號密碼</label>
+                                <div class="form_content userpwd">
+                                    <div class="labelEffect password_toggle">
+                                        <input name="password" id="password" type="password" placeholder="請輸入登入要使用的密碼" value="1234" title="請輸入登入要使用的密碼" class="user_typing">
+                                        <button type="button" class="btn btn-icon" aria-label="觀看密碼"><i class="i_hide" aria-hidden="true"></i></button>
+                                    </div>
+                                    <div class="acheck">
+                                        <ul>
+                                            <li class="check">包含英文字母大小寫</li>
+                                            <li>至少包含 1 個數字</li>
+                                            <li>至少包含 1 個符號</li>
+                                            <li>長度大於 5 個字元 </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="password" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。" aria-label="必填">*</abbr>確認密碼</label>
+                                <div class="form_content">
+                                    <div class="labelEffect password_toggle">
+                                        <input name="password" id="password" type="password" placeholder="請再次輸入密碼" value="1234" title="請再次輸入密碼">
+                                    </div>
+                                    <div class="notice_error">密碼輸入不一致，請重新輸入</div>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="fake-legend" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。" aria-label="必填">*</abbr>通訊地址</label>
+                                <div class="form_content form_inline address">
+                                    <select name="" id="fake-legend">
+                                        <option value="">請選擇</option>
+                                        <option value="">台北市</option>
+                                        <option value="">新北市</option>
+                                        <option value="">桃園市</option>
+                                        <option value="">新竹市</option>
+                                        <option value="">...</option>
+                                    </select>
+                                    <select name="" id="fake-legend">
+                                        <option value="">請先選擇縣市</option>
+                                        <option value="">中正區</option>
+                                        <option value="">大安區</option>
+                                        <option value="">信義區</option>
+                                        <option value="">北投區</option>
+                                        <option value="">...</option>
+                                    </select>
+                                    <input name="username" type="text" id="fake-legend" class="user_typing" placeholder="請輸入通訊地址" title="請輸入通訊地址" aria-label="通訊地址">
+                                    <!-- <label for="Postalcode">郵遞區號</label>
+                                    <input name="username" type="text" id="Postalcode" value="" placeholder="系統判斷帶入" title="請輸入郵遞區號" aria-label="系統判斷帶入">
+                                    <input name="username" type="text" value="" placeholder="請輸入郵遞區號後2碼"  title="請輸入郵遞區號後2碼" aria-label="請輸入郵遞區號後2碼"> -->
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="fake-legend" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。" aria-label="必填">*</abbr>戶籍地址</label>
+                                <div class="form_content form_inline address">
+                                    <select name="" id="fake-legend">
+                                        <option value="">請選擇</option>
+                                        <option value="">台北市</option>
+                                        <option value="">新北市</option>
+                                        <option value="">桃園市</option>
+                                        <option value="">新竹市</option>
+                                        <option value="">...</option>
+                                    </select>
+                                    <select name="" id="fake-legend">
+                                        <option value="">請先選擇縣市</option>
+                                        <option value="">中正區</option>
+                                        <option value="">大安區</option>
+                                        <option value="">信義區</option>
+                                        <option value="">北投區</option>
+                                        <option value="">...</option>
+                                    </select>
+                                    <input name="username" type="text" id="fake-legend" class="user_typing" placeholder="請輸入戶籍地址" title="請輸入戶籍地址" aria-label="戶籍地址">
+<!--                                     <label for="Postalcode">郵遞區號</label>
+                                    <input name="username" type="text" id="Postalcode" value="" placeholder="系統判斷帶入" title="請輸入郵遞區號" aria-label="系統判斷帶入">
+                                    <input name="username" type="text" value="" placeholder="請輸入郵遞區號後2碼"  title="請輸入郵遞區號後2碼" aria-label="請輸入郵遞區號後2碼">
+                                    <div class="checkbox">
+                                        <label><input type="checkbox"><span>同上通訊地址</span></label>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="tel" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。" aria-label="必填">*</abbr>連絡電話</label>
+                                <div class="form_content form_inline tel">
+                                    <div class="notice_info">電話(辦公室)、電話(住家)、行動電話，這三個欄位擇一必填</div>
+                                    <input name="" type="tel" id="tel" class="area" value="" placeholder="區碼" title="區碼">
+                                    <input name="" type="tel" id="tel" class="officetel" value="" placeholder="請輸入您的辦公室電話" title="請輸入您的辦公室電話">
+                                    # <input name="" type="tel" id="tel" class="extension" value="" placeholder="分機" title="分機">
+                                    <br>
+                                    <input name="" type="tel" id="tel" value="" class="area" placeholder="區碼" title="區碼">
+                                    <input name="" type="tel" id="tel" class="hometel" value="" placeholder="請輸入您的住家電話" title="請輸入您的住家電話">
+                                    <br>
+                                    <input name="" type="tel" id="tel" class="phonetel" value="" placeholder="請輸入您的行動電話" title="請輸入您的行動電話">
+                                </div>
+                            </div>
+
+
+                            <div class="form_grp">
+                                <label for="email" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>電子信箱</label>
+                                <div class="form_content">
+                                    <input name="email" type="email" id="email" placeholder="請輸入e-mail" title="請輸入e-mail">
+                                    <div class="notice_error">email格式不正確，請再次檢查</div>
+                                </div>
+                            </div>
+
+                            <div class="form_grp">
+                                <label for="fake-legend" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>身心障礙手冊上傳</label>
+                                <div class="form_content userupload">
+                                    <div class="upload_grp">
+                                        <label for="manual_label" class="labelhidden">上傳身心障礙手冊正面檔案</label>
+                                        <input class="upload_file" type="text" id="manual_label" placeholder="請上傳身心障礙手冊正面檔案" title="請上傳身心障礙手冊正面檔案" readonly>
+                                        <div class="upload_btn">
+                                            <label for="upload_label">上傳檔案</label>
+                                            <input type="file" title="請選取您的檔案" class="check_file" id="upload_label" accept="image/png, image/jpeg" />
+                                        </div>
+                                        <div class="pic"><img src="images/pic01.jpg" alt="身心障礙手冊正面"></div>
+                                        <div class="txtint">請上傳身心障礙手冊正面<br>
+                                        接受圖檔格式，包括 .jpg, .jpeg, .png等</div>
+                                    </div>
+                                    <div class="upload_grp">
+                                        <label for="manual_label2" class="labelhidden">上傳身心障礙手冊反面檔案</label>
+                                        <input class="upload_file" type="text" id="manual_label2" placeholder="請上傳身心障礙手冊反面檔案" title="請上傳身心障礙手冊反面檔案" readonly>
+                                        <div class="upload_btn">
+                                            <label for="upload_label2">上傳檔案</label>
+                                            <input type="file" title="請選取您的檔案" class="check_file" id="upload_label" accept="image/png, image/jpeg"/>
+                                        </div>
+
+                                        <div class="pic"></div>
+                                        <div class="txtint">請上傳身心障礙手冊反面<br>
+                                        接受圖檔格式，包括 .jpg, .jpeg, .png等</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 按鈕 -->
+                            <div class="btn_grp form_inline">
+                                <button class="btn btn-submit">送出註冊</button>
+                                <button class="btn btn-reset">重設</button>
+                            </div>
+                        </div>
+
+                    </section>
+                    <!-- register End -->
+
+                </div>
+            </div>
+        </main>
+        <!-- footer Start-->
+        <footer>
+            <div class="container">
+                <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+                <div class="footer_logo">
+                    <img src="images/f_logo.svg" alt="臺北市立圖書館logo" class="img-responsive flogo">
+                </div>
+                <div class="footer_info">
+                    <ul class="footer_link">
+                        <li><a href="javascript:;">隱私權及資訊安全政策</a></li>
+                        <li><a href="javascript:;">政府網站資料開放宣告</a></li>
+                        <li><a href="javascript:;">意見信箱</a></li>
+                        <li><a href="javascript:;">滿意度調查</a></li>
+                    </ul>
+                    <p>本網站為建立專屬視障者使用之網站，提供線上有聲書、點字書等資源，供視障者使用</p>
+                    <p>啟明分館地址：臺北市松山區敦化北路155巷76號<br>
+                        電話：(02)2514-8443（詳細業務聯繫電話）｜傳真：(02)2514-8428<br>
+                        電子郵件：<a href="mailto:a15@email.tpml.edu.tw">a15@email.tpml.edu.tw</a><br>
+                        開放時間：週一至週日09:00-17:00｜休館日：每月第一個星期四及國定假日
+                    </p>
+                </div>
+                <div class="footer_icon">
+                    <ul>
+                        <li>
+                            <a target="_blank" href="javascript:;">
+                                <img src="images/taipeilogo.png" alt="臺北市政府,另開新視窗">
+                            </a> 
+                        </li>
+                        <li>
+                            <a target="_blank" href="javascript:;">
+                                <img src="images/accessibility_aaa.jpg" alt="通過AAA優先等級無障礙網頁檢測,另開新視窗">
+                            </a>                        
+                        </li>
+                    </ul>
+                </div>
+                <div class="Copyright">台北市立圖書館版權所有 © 2022 All Rights Reserved.</div>
+                <div class="update">網站最後更新日期：<em>111年09月08日</em></div>
+            </div>
+        </footer>
+        <!-- footer End -->
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- JQ -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- 外掛 plugin js -->
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- ease -->
+    <script src="vendor/slick/slick.min.js "></script>
+    <!-- slick -->
+    <script src="vendor/slick/slick-lightbox.js "></script>
+    <!-- slick lightbox -->
+    <script src="vendor/lazyload/lazyload.js"></script>
+    <!-- lazyload -->
+    <script src="vendor/picturefill/picturefill.min.js" async></script>
+    <!-- picturefill -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
+    <!-- scrolltable -->
+    <!-- sticky-sidebar -->
+    <script src='vendor/sticky-sidebar/sticky-sidebar.js'></script>
+    <script src='vendor/sticky-sidebar/ResizeSensor.js'></script>
+    <!-- fancy -->
+    <script src='vendor/fancybox/jquery.fancybox.min.js'></script>
+    <!-- carousel -->
+    <script src="vendor/carousel/carousel-prev-next.js"></script>
+    <!-- hyUI -->
+    <script src="js/hyui.js"></script>
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta name="robots" content="noindex">
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HyUI kit</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+<![endif]-->
+    <!-- slick css-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- 燈箱facybox -->
+    <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css">
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/hyui.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+</head>
+
+<body>
+    <!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
+    <!-- wrapper Start -->
+    <div class="wrapper">
+        <!-- header Start -->
+        <header class="header">
+            <div class="container">
+                <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+                <h1>
+                    <a href="index.htm"><img src="images/logo.svg" alt="臺北市立圖書館 視障電子圖書館"></a>
+                </h1>
+                <!-- navigation Start -->
+                <nav class="navigation" role="navigation" aria-label="Site">
+                    <!-- 新增div navlist -->
+                    <div class="navlist">
+                        <ul aria-label="navlist">
+                            <li><a href="#">回首頁</a></li>
+                            <li><a href="#">北市圖首頁</a></li>
+                            <li><a href="#">網站導覽</a></li>
+                            <li><a href="#">使用說明與常見問題</a></li>
+                        </ul>
+                    </div>
+                    <!-- mpfun -->
+                    <div class="mpfun">
+                        <ul aria-label="login">
+                            <li class="myname">歡迎，劉佳淇</li>
+                            <li><a href="#">進入個人書房</a></li>
+                            <li class="logout_btn"><a href="#">登出</a></li>
+                            <li><a href="#">自訂顏色</a>
+                                <!-- readset star -->
+                                <div class="readset">
+                                    <button type="button" class="btn close_btn" aria-label="Close" onclick="">關閉</button>
+                                    <div class="flex-form">
+                                        <!-- changeTextColor -->
+                                        <div class="form_grp form_inline" aria-label="changeTextColor">
+                                            <label for="changeTextColor">文字顏色</label>
+                                            <select id="changeTextColor">
+                                                <option data-val="tC_default" selected="selected">預設文字顏色</option>
+                                                <option data-val="tC_white">白色(White)</option>
+                                                <option data-val="tC_black">黑色(Black)</option>
+                                                <option data-val="tC_yellow">黃色(Yellow)</option>
+                                                <option data-val="tC_lime">綠色(Lime)</option>
+                                            </select>
+                                        </div>
+                                        <!-- changeBackgroundColor -->
+                                        <div class="form_grp form_inline" aria-label="changeBackgroundColor">
+                                            <label for="changeBackgroundColor">背景顏色</label>
+                                            <select id="changeBackgroundColor">
+                                                <option data-val="bC_default" selected="selected">預設背景顏色</option>
+                                                <option data-val="bC_white">白色(White)</option>
+                                                <option data-val="bC_black">黑色(Black)</option>
+                                            </select>
+                                        </div>
+                                        <hr>   
+                                        <div class="btn_grp form_inline">
+                                            <button class="btn btn-submit">套用設定</button>
+                                            <button class="btn btn-reset">預設樣式</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- readset end -->
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- font_size -->
+                    <div class="font_size">
+                        <!-- 英文用<span>font-size：</span> -->
+                        <ul aria-label="font size">
+                            <li><a href="#" class="small">A-</a></li>
+                            <li><a href="#" class="medium active">A</a></li>
+                            <li><a href="#" class="large">A+</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- navigation End -->
+
+                <!-- Search Start -->
+                <div class="search" role="search">
+                    <button type="button" class="btn sclose_btn" aria-label="Close" onclick="">關閉</button>
+                    <div class="form_grp">
+                        <label for="mustSameAsId">站內全文檢索</label>
+                        <input name="username" id="mustSameAsId" type="text" title="請輸入查詢關鍵字" placeholder="請輸入查詢關鍵字" accesskey="S" aria-label="搜尋網站內容">
+                        <input name="" type="submit" value="搜尋" title="搜尋" class="btn btn-search" />
+                    </div>
+                </div>
+                <!-- Search End -->
+                <!-- noscript -->
+                <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="#">網站導覽</a>
+                </noscript>
+                <!-- menu Start -->
+                <nav class="menu" role="navigation" aria-label="Header的導航列">
+                    <ul>
+                        <li><a href="#">訊息公告</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">關於啟明</a></li>
+                        <li><a href="#">博士通信箱</a></li>
+                        <li><a href="#">讀者服務</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="http://www.google.com">第二層有連結</a>
+                                    <ul>
+                                        <li><a href="http://www.google.com">第三層選單有下層</a>
+                                            <ul>
+                                                <li><a href="#">第四層選單</a></li>
+                                                <li><a href="#">第四層選單</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="http://www.google.com">第三層選單有連結</a></li>
+                                        <li><a href="#">第三層選單</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">網站連結</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">線上閱讀下載</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">圖書查詢瀏覽</a></li>
+                    </ul>
+                </nav>
+                <!-- menu End -->
+            </div>
+        </header>
+        <!-- header End -->
+        <!-- main Start -->
+        <main id="center" class="main innerpage">
+            <div class="container">
+                <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+                <!-- 主要內容區 -->
+                <div class="center_block">
+                    <!-- breadcrumb路徑 -->
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <ul>
+                            <li><a href="#">首頁</a></li>
+                            <li aria-current="page">訊息公告</li>
+                        </ul>
+                    </nav>
+                    <!-- breadcrumb路徑 end-->
+                    <h2 class="title" id="h2-label">QA條列頁</h2>
+                    <!-- pagesearch Start -->
+                    <div class="pagesearch" role="search">
+                        <div class="form_grp">
+                            <label for="mustSameAsId">單元內搜尋</label>
+                            <input name="username" id="mustSameAsId" type="text" title="單元內搜尋" placeholder="單元內搜尋" accesskey="S" aria-label="單元內搜尋">
+                            <input name="" type="submit" value="搜尋" title="搜尋" class="btn btn-search" />
+                        </div>
+                    </div>
+                    <!-- pagesearch End -->
+                    <!-- LP Start -->
+                    <section class="lp">
+                        <!-- category -->
+                        <div class="category">
+                            <span class="title" id="category_label">類別篩選：</span>
+                            <ul aria-labelledby="category_label">
+                                <li><a href="#" class="active">系統操作</a></li>
+                                <li><a href="#">問答類別</a></li>
+                            </ul>
+                        </div>
+                        <!-- category end-->
+                        <!-- funbox star -->
+                        <div class="funbox">
+                         <!-- Pagination -->
+                         <div class="pagination">
+                            <form action="" aria-label="pagination">
+                                <div class="form_inline">
+                                    <div class="total">目前顯示第<span>16</span>至第<span>30</span>筆資料，共<span>186</span>筆資料，目前在第 <select name="" id="" aria-label="目前頁面">
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                        <option value="">4</option>
+                                    </select> 頁 <input type="button" value="確定換頁" title="確定換頁" class="btn btn-submit">
+                                    <br>
+                                    每頁顯示 <select name="" id="" aria-label="每頁顯示">
+                                        <option value="">15</option>
+                                        <option value="">30</option>
+                                        <option value="">45</option>
+                                        <option value="">60</option>
+                                    </select> 筆， <input type="button" value="條件切換" title="條件切換" class="btn btn-submit">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Pagination end-->
+                    <!-- function功能區塊 -->
+                    <div class="function">
+                        <ul>
+                            <li class="back"><a href="javascript:history.back()">上一頁</a></li>
+                            <li class="next"><a href="javascript:;">下一頁</a></li>
+                        </ul>
+                    </div>
+                    <!-- function功能區塊end -->
+                </div>
+                <!-- funbox end -->
+
+                <!--Accordionqa  start-->
+                <div class="accordionqa" aria-describedby="h2-label">
+                  <!-- accordionblock  start-->
+                  <div class="accordionblock">
+                    <button type="button" class="question" aria-expanded="false" aria-controls="faq1_desc"><span class="Q_word">Q：</span><span class="sort">系統操作</span>我沒有借閱證號碼與密碼，請問該如何申請？
+                      <span class="openclose_btn">展開</span></button>
+                      <div class="answer" id="faq1_desc">
+                          <div class="A_word">A：</div>
+                          <div class="Ablock">
+                            <p>請申請臺北市立圖書館借閱證以取得借閱證號，密碼預設值為您「出生日期」的「月日」(如：3月15日生，密碼為0315)。</p>
+                            <p>您可於本網站中讀者服務-->借閱證申請項目內填寫基本資料並傳真或郵寄身分類別為視障之身心障礙證明(或手冊)影本或學習障礙鑑定證明書影本(障礙類型為閱讀或語言障礙)至啟明分館申請視障或學習障礙借閱證。</p>
+                            <p>如有任何問題請來電洽詢，電話(02)2514-8443。</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- accordionblock  end-->
+                <!-- accordionblock  start-->
+                <div class="accordionblock">
+                    <button type="button" class="question" aria-expanded="false" aria-controls="faq2_desc"><span class="Q_word">Q：</span><span class="sort">系統操作</span>使用說明：線上閱讀下載<span class="openclose_btn">展開</span></button>
+                    <div class="answer" id="faq2_desc">
+                      <div class="A_word">A：</div>
+                      <div class="Ablock">
+                        <p>線上閱讀及下載，包括：線上有聲書、線上點字書、有聲國語日報、線上臺北畫刊、啟明之音、林老師說故事、用心看電影、線上點字樂譜。</p>
+                        <ol>
+                            <li>
+                                <h3>線上有聲書</h3>
+                                <p>點入即顯示書名條列，可選擇每頁顯示筆數，條列最上方為最新上稿資料，點選書名即進入該書詳細資料頁面，可下載音檔閱聽。如需查詢特定書籍，點選「條件查詢瀏覽」，查詢時可選擇國字輸入或點字輸入；有五個查詢框，包括書名、作者、主題、出版社及所有欄位，另可用下拉式選單選擇資料類別，包含總類、哲學類、宗教類、科學類、應用科學類、社會科學類、史地：中國、史地：世界、語言文學類及藝術類，預設為所有類別，按「確定」送出查詢條件，顯示結果列表供選擇閱聽。</p>
+                            </li>
+                            <li>
+                                <h3>線上點字書</h3>
+                                <p>點入即顯示書名條列，可選擇每頁顯示筆數，條列最上方為最新上稿資料，點選書名即進入該書詳細資料頁面，可下載點字檔案閱讀。如需查詢特定書籍，點選「條件查詢瀏覽」，查詢時可選擇國字輸入或點字輸入；有五個查詢框，包括書名、作者、主題、出版社及所有欄位，並可用下拉式選單選擇資料類別，包含總類、哲學類、宗教類、科學類、應用科學類、社會科學類、史地：中國、史地：世界、語言文學類及藝術類，預設為所有類別，另可在選擇對象的下拉選單中選擇成人或兒童，預設為所有對象，按「確定」送出查詢條件，顯示結果列表供選擇閱讀。</p>
+                            </li>
+                            <li>
+                                <h3>有聲國語日報</h3>
+                                <p>點入即顯示標題條列，可選擇每頁顯示筆數，條列最上方為最新上稿資料，點選標題可下載音檔，如需查詢特定資料，點選「條件查詢瀏覽」，輸入標題關鍵字查詢，或以下拉式選單選擇類別，分為四類，包括：文學天地、法律知識、科學教室及生活園地，按「確定」送出查詢條件，顯示結果列表供選擇閱聽。</p>
+                            </li>
+                            <li>
+                                <h3>線上臺北畫刊</h3>
+                                <p>點入即顯示標題條列，可選擇每頁顯示筆數，條列最上方為最新上稿資料，點選標題進入內容頁，可直接閱讀內容文字或選擇「檔案下載」儲存文字內容，亦可點選「播放語音」聽讀內容文字。如需查詢特定資料，點選「條件查詢瀏覽」，輸入標題關鍵字查詢，或以下拉式選單選擇特定年份或特定月份，按「確定」送出查詢條件，顯示結果列表供選擇閱讀。</p>
+                            </li>
+                            <li>
+                                <h3>啟明之音</h3>
+                                <p>點入即顯示標題條列，可選擇每頁顯示筆數，條列最上方為最新上稿資料，點選標題可下載音檔閱聽。如需查詢特定資料，可點選「條件查詢瀏覽」，輸入標題關鍵字查詢，例如「美食小廚房」，或以下拉式選單選擇特定年份或特定月份，按「確定」送出查詢條件，顯示結果列表供選擇閱聽。</p>
+                            </li>
+                            <li>
+                                <h3>林老師說故事</h3>
+                                <p>點入即顯示標題條列，可選擇每頁顯示筆數，條列最上方為最新上稿資料，點選標題可下載音檔閱聽。如需查詢特定資料，可點選「條件查詢瀏覽」，輸入標題關鍵字查詢，例如「恐龍」，或以下拉式選單選擇資料類別，包含總類、哲學類、宗教類、科學類、應用科學類、社會科學類、史地：中國、史地：世界、語言文學類及藝術類，預設為所有類別，按「確定」送出查詢條件，顯示結果列表供選擇閱聽。</p>
+                            </li>
+                            <li>
+                                <h3>用心看電影</h3>
+                                <p>點入即顯示標題條列，可選擇每頁顯示筆數，條列最上方為最新上稿資料，點選標題進入內容頁，可直接閱讀劇情簡介及賞析文字內容，或點選「播放語音」聽讀劇情簡介及賞析內容，點選導讀音檔檔案可開啟或下載老師口述導讀電影音檔。如需查詢特定資料，可點選「條件查詢瀏覽」，輸入標題關鍵字查詢，或以下拉式選單選擇特定年份或特定月份，按「確定」送出查詢條件，顯示結果列表供選擇閱聽。</p>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <!-- accordionblock  end-->
+            <!-- accordionblock  start-->
+            <div class="accordionblock">
+                <button type="button" class="question" aria-expanded="false" aria-controls="faq3_desc"><span class="Q_word">Q：</span><span class="sort">系統操作</span>使用說明：博士通信箱<span class="openclose_btn">展開</span></button>
+                <div class="answer" id="faq3_desc">
+                  <div class="A_word">A：</div>
+                  <div class="Ablock">
+                    <ol>
+                        <li>
+                            <h3>參加對象：</h3>
+                            <p>領有身心障礙手冊之視覺障礙讀者。</p>
+                        </li>
+                        <li>
+                            <h3>活動方式：</h3>
+                            <ol>
+                                <li>每月1日由啟明分館公布2個題目於服務櫃台、啟明之音、視障電子圖書館網站之【博士通信箱】；參加者可從館方出版之點字書、有聲書、雙視圖書或電腦網路資源中查尋答案。</li>
+                                <li>參加者需於當月20日前，以親自到館、郵寄信件、撥打電話、傳送e-mail等方式，將答案、資料來源及頁數或網址告知本館，由館員協助或親自填妥於「博士通信箱答案卷」，或者在啟明分館視障電子圖書館網站【博士通信箱】中以線上作答方式答題。</li>
+                                <li>啟明分館每月1日於服務櫃台、啟明之音或網站上公布正確答案及答對名單。</li>
+                            </ol>
+                        </li>
+                        <li>
+                            <h3>獎勵辦法：</h3>
+                            <ol>
+                                <li>參加者每答對1題，發給貼紙1張，由館方將貼紙貼於紀錄卡上，累計張數。</li>
+                                <li>紀錄卡由參加者自行保管或委由館方代為保管。</li>
+                                <li>集滿6張貼紙可兌換圖書禮券100元。</li>
+                                <li>圖書禮券由館方郵寄給獲獎者或參加者憑紀錄卡到啟明分館兌換。</li>
+                            </ol>
+                        </li>
+                        <li>
+                            <h3>注意事項：</h3>
+                            <ol>
+                                <li>參加者應親自查找資料，題目限擇一種（書面或線上）方式作答，且不得互相抄襲。</li>
+                                <li>換取圖書禮券時，不可數位參加者合起來兌領。兌換後，由館員蓋「兌訖」章註銷。</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- accordionblock  end-->
+        <!-- accordionblock  start-->
+        <div class="accordionblock">
+            <button type="button" class="question" aria-expanded="false" aria-controls="faq4_desc"><span class="Q_word">Q：</span><span class="sort">系統操作</span>使用說明：圖書查詢<span class="openclose_btn">展開</span></button>
+            <div class="answer" id="faq4_desc">
+              <div class="A_word">A：</div>
+              <div class="Ablock">
+                <ol>
+                  <li>圖書查詢標的為臺北市立圖書館館藏目錄，不包含期刊，分為簡易查詢及進階查詢。首頁的圖書查詢即為簡易查詢，內層(非首頁)左方導覽區塊第三個選項點入即為圖書進階查詢。</li>
+                  <li>
+                    簡易查詢
+                    <p>有一個查詢框，輸入關鍵字跨欄位查詢，查詢框上方可選擇國字輸入或點字輸入，預設為國字輸入。有三個查詢限制條件：置於查詢框之下，以下拉式選單呈現，限制條件包括：(1)選擇資料類型，選項包含所有類型、有聲書、點字書、兒童點字書、雙視圖書、一般書、兒童書、視聽資料，預設為有聲書。(2)選擇類別，包含所有類別、總類、哲學類、宗教類、科學類、應用科學類、社會科學類、史地：中國、史地：世界、語言文學類及藝術類，預設為所有類型。(3)選擇館藏地，預設為啟明分館，按下「查詢」即可進行查詢。
+                    </p>
+                </li>
+                <li>
+                    進階查詢
+                    <p>有六個查詢框。查詢欄位包括：書名、作者、主題、叢書名、ISBN及所有欄位，可同時輸入多個查詢條件，會找出同時符合輸入條件的書籍。查詢框上方可選擇國字輸入或點字輸入，預設為國字輸入。查詢框之下有三個查詢限制條件：選擇資料類型、選擇類別、選擇館藏地，以下拉式選單呈現，與簡易查詢相同，按下「查詢」即可進行查詢。
+                    </p>
+                </li>
+                <li>
+                  查詢結果條列
+                  <p>每頁顯示10筆，點選語音播放會唸出10筆書名及其資料類型，讀者可依條列序號按鍵盤數字鍵，以查看館藏資訊及書籍詳細資訊，第10筆請按0。查詢結果條列預設排序為「題名筆畫由少至多」，另可選擇「題名筆畫由多至少」、「出版年份由新至舊」、「出版年份由舊至新」、「作者筆畫由少至多」、「作者筆畫由多至少」，無論何種排序方式，有聲書及點字書都會排在最前面。
+                  </p>
+              </li>
+              <li>
+                  館藏資訊
+                  <p>點選查詢結果條列的書名或序號數字鍵可進入館藏資訊頁面，除了基本書籍資料外，可以獲得該書籍的借出或在館內的狀態。
+                  </p>
+              </li>
+              <li>
+                  圖書詳細資訊
+                  <p>在館藏資訊頁面點選「圖書詳細資訊」按鈕，可進入圖書詳細資訊頁面，提供更多的圖書資料。</p>
+              </li>
+          </ol>
+      </div>
+  </div>
+</div>
+<!-- accordionblock  end-->
+
+</div>
+<!--Accordionqa  end-->
+
+</section>
+<!-- LP End -->
+
+<!-- function功能區塊 -->
+<div class="function">
+    <ul>
+        <li class="back"><a href="javascript:history.back()">上一頁</a></li>
+        <li class="next"><a href="javascript:;">下一頁</a></li>
+    </ul>
+</div>
+</div>
+</div>
+</main>
+<!-- footer Start-->
+<footer>
+    <div class="container">
+        <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+        <div class="footer_logo">
+            <img src="images/f_logo.svg" alt="臺北市立圖書館logo" class="img-responsive flogo">
+        </div>
+        <div class="footer_info">
+            <ul class="footer_link">
+                <li><a href="javascript:;">隱私權及資訊安全政策</a></li>
+                <li><a href="javascript:;">政府網站資料開放宣告</a></li>
+                <li><a href="javascript:;">意見信箱</a></li>
+                <li><a href="javascript:;">滿意度調查</a></li>
+            </ul>
+            <p>本網站為建立專屬視障者使用之網站，提供線上有聲書、點字書等資源，供視障者使用</p>
+            <p>啟明分館地址：臺北市松山區敦化北路155巷76號<br>
+                電話：(02)2514-8443（詳細業務聯繫電話）｜傳真：(02)2514-8428<br>
+                電子郵件：<a href="mailto:a15@email.tpml.edu.tw">a15@email.tpml.edu.tw</a><br>
+                開放時間：週一至週日09:00-17:00｜休館日：每月第一個星期四及國定假日
+            </p>
+        </div>
+        <div class="footer_icon">
+            <ul>
+                <li>
+                    <a target="_blank" href="javascript:;">
+                        <img src="images/taipeilogo.png" alt="臺北市政府,另開新視窗">
+                    </a> 
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">
+                        <img src="images/accessibility_aaa.jpg" alt="通過AAA優先等級無障礙網頁檢測,另開新視窗">
+                    </a>                        
+                </li>
+            </ul>
+        </div>
+        <div class="Copyright">台北市立圖書館版權所有 © 2022 All Rights Reserved.</div>
+        <div class="update">網站最後更新日期：<em>111年09月08日</em></div>
+    </div>
+</footer>
+<!-- footer End -->
+</div>
+<a href="javascript:;" class="scrollToTop">回頁首</a>
+<!-- JQ -->
+<script src="js/jquery-3.6.0.min.js"></script>
+<!-- 外掛 plugin js -->
+<script src="vendor/jquery.easing.min.js"></script>
+<!-- ease -->
+<script src="vendor/slick/slick.min.js "></script>
+<!-- slick -->
+<script src="vendor/slick/slick-lightbox.js "></script>
+<!-- slick lightbox -->
+<script src="vendor/lazyload/lazyload.js"></script>
+<!-- lazyload -->
+<script src="vendor/picturefill/picturefill.min.js" async></script>
+<!-- picturefill -->
+<script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
+<!-- scrolltable -->
+<!-- sticky-sidebar -->
+<script src='vendor/sticky-sidebar/sticky-sidebar.js'></script>
+<script src='vendor/sticky-sidebar/ResizeSensor.js'></script>
+<!-- fancy -->
+<script src='vendor/fancybox/jquery.fancybox.min.js'></script>
+<!-- hyUI -->
+<script src="js/hyui.js"></script>
+<!-- 客製js -->
+<script src="js/customize.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta name="robots" content="noindex"><!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>單位名稱切版檔案</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+<![endif]-->
+    <!-- hyUI -->
+    <link rel="stylesheet" href="css/hyui.css">
+    <style>
+        .demo_wrap {
+            max-width: 1000px;
+            margin: 0em auto 1em;
+            padding: 15px 15px 3em;
+            clear: both;
+            background: #FFF
+        }
+        .demo_wrap h1 {
+            display: block;
+            margin: 0px auto;
+            max-width: 300px;
+            float: left;
+            margin-right: 1em
+        }
+        @media screen and (max-width:545px) {
+            .demo_wrap h1 {
+                max-width: 100%;
+                float: none;
+                text-align: center
+            }
+        }
+        .demo_wrap h1 img {
+            width: 300px
+        }
+        .num {
+            width: 12%
+        }
+        body {
+            counter-reset: num
+        }
+        table {
+            margin-bottom: 1em
+        }
+        table caption {
+            text-align: left;
+            font-weight: bold;
+            font-size: 1.25em;
+            padding: .5em 0;
+            color: #ff5050
+        }
+        tbody tr td:first-child:before {
+            counter-increment: num;
+            display: block;
+            text-align: center;
+            content: counters(num, ".") " "
+            }
+            tbody tr td:nth-child(2) {
+                width: 35%
+            }
+            .btn_grp{
+                text-align: right;
+            }
+            @media screen and (max-width:545px) {
+               .btn_grp{
+                text-align: center;
+            } 
+        }
+    </style>
+</head>
+<body>
+    <div class="demo_wrap">
+        <h1><img src="images/logo.png" alt=""></h1>
+        <div class="btn_grp">
+            <a href="https://github.com/HywebU00/2022_tpml_blind.git" class="btn">切版檔案請按此下載</a>
+        </div>
+        <hr>
+        <div class="table_wrapper">
+            <!-- hyUI 標準頁面 -->
+            <table>
+                <thead>
+                    <tr>
+                        <th class="num">編號</th>
+                        <th>頁面名稱</th>
+                        <th>檔案名稱</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>首頁</td>
+                        <!-- 連結放到a裡面就好 -->
+                        <td><a href="mp.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>標準(標題)條列頁</td>
+                        <!-- 連結放到a裡面就好 -->
+                        <td><a href="lp.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>標準內容頁</td>
+                        <!-- 連結放到a裡面就好 -->
+                        <td><a href="cp.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>書目：條件查詢+Table欄位條列頁</td>
+                        <!-- 連結放到a裡面就好 -->
+                        <td><a href="sp_search.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>書目：Table欄位內容頁</td>
+                        <!-- 連結放到a裡面就好 -->
+                        <td><a href="sp_table.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>常見問答(QA)條列頁</td>
+                        <!-- 連結放到a裡面就好 -->
+                        <td><a href="qa.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>會員登入</td>
+                        <!-- 連結放到a裡面就好 -->
+                        <td><a href="login.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>NP(下層選單)頁</td>
+                        <!-- 連結放到a裡面就好 -->
+                        <td><a href="np.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Sitemap頁</td>
+                        <!-- 連結放到a裡面就好 -->
+                        <td><a href="sitemap.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>404頁</td>
+                        <!-- 連結放到a裡面就好 -->
+                        <td><a href="404.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>視障讀者註冊</td>
+                        <!-- 連結放到a裡面就好 -->
+                        <td><a href="register.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>博士通信箱－本月問答</td>
+                        <!-- 連結放到a裡面就好 -->
+                        <td><a href="#"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>博士通信箱－答對名單</td>
+                        <!-- 連結放到a裡面就好 -->
+                        <td><a href="#"></a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <hr>
+        <div class="table_wrapper">
+            <!-- 客製化頁面 -->
+            <table>
+                <thead>
+                    <tr>
+                        <th class="num">編號</th>
+                        <th>頁面名稱</th>
+                        <th>檔案名稱</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>客製化條列：借書留言版</td>
+                        <!-- 連結放到a裡面就好 -->
+                        <td><a href="lp-message.htm"></a>｜<a href="cp-message.htm"></a>｜<a href="form-message.htm"></a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    <a href="javascript:;" class="scrollToTop" >回頁首</a>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <script src="js/hyui.js"></script>
+    <script src="js/customize.js"></script>
+    <script>
+        $(function() {
+            $('tbody').find('a').each(function(index, el) {
+                var Link = $(this).attr('href');
+                $(this).text(Link);
+            });
+        })
+    </script>
+</body>
+
+</html>
