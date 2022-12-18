@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta name="robots" content="noindex"><!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>首頁</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- slick css-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- 燈箱facybox -->
+    <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css">
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/hyui.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+</head>
+
+<body>
+    <!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
+    <!-- wrapper Start -->
+    <div class="wrapper">
+        <!-- header Start -->
+        <header class="header">
+            <div class="container">
+                <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+                <!-- navigation Start -->
+                <nav class="navigation" role="navigation" aria-label="Site">
+                    <!-- 新增div navlist -->
+                    <div class="navlist">
+                        <ul>
+                            <li><a href="#">回首頁</a></li>
+                            <li><a href="#">北市圖首頁</a></li>
+                            <li><a href="#">網站導覽</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- navigation End -->
+                <h1>
+                    <a href="info.htm"><img src="images/logo.png" alt="網站標題" /></a>
+                </h1>
+                <!-- 使用者登入登出 -->
+                <div class="user">
+                    <!-- <p>歡迎<b>劉ＯＯ</b>，<a href="#">進入個人書房</a></p> -->
+                    <button class="btn btn-login">會員登入</button>
+                    <!-- <button class="btn btn-logout">登出</button> -->
+                </div>
+                <button class="btn btn-open">選單</button>
+                <!-- menu Start -->
+                <nav class="megamenu" role="navigation" aria-label="About page">
+                    <ul>
+                        <li><a href="#">我要找書</a>
+                            <ul>
+                                <li><a href="#">關鍵字搜尋</a></li>
+                                <li><a href="#">分類搜尋</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">好書推薦</a>
+                            <ul>
+                                <li><a href="#">每月好書</a></li>
+                                <li><a href="#">得獎書</a></li>
+                                <li><a href="#">好書大家讀</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">電子圖畫書</a></li>
+                        <li><a href="#">活動資源</a></li>
+                        <li><a href="#">酷網站推薦</a></li>
+                        <li><a href="#">認識圖書館</a></li>
+                        <li><a href="#">小博士信箱</a></li>
+                        <li><a href="#">我要問問題</a></li>
+                    </ul>
+                    <div class="btn_grp">
+                        <button class="btn btn-close">關閉選單</button>
+                    </div>
+                </nav>
+                <!-- menu End -->
+                <!-- noscript -->
+                <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+
+                    (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←)
+                    快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="#">網站導覽</a>
+                </noscript>
+            </div>
+        </header>
+        <!-- header End -->
+        <!-- main Start -->
+        <div id="center" class="main mp">
+            <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+            <!-- 任何一個section下一層都要包下一層都要包div container作對齊 -->
+            <!-- 2欄 -->
+            <section class="flex-6-6">
+                <div class="container">
+                    <div class="Flex-set">
+                        <div class="col">
+                            <div>
+                                <a href="#">
+                                    <h2>我要<br>找書</h2>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#">
+                                    <h2>電子<br>圖畫書</h2>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#">
+                                    <h2>小博士<br>信箱</h2>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h2 class="title">活動報導</h2>
+                            <div class="mpSlider">
+                                <div class="img-container">
+                                    <a href="#" title="">
+                                        <img data-lazy="images/demo/01.jpg" class="cover" alt="圖說1">
+                                    </a>
+                                </div>
+                                <div class="img-container">
+                                    <a href="#" title="">
+                                        <img data-lazy="images/demo/02.jpg" class="cover" alt="圖說2">
+                                    </a>
+                                </div>
+                                <div class="img-container">
+                                    <a href="#" title="">
+                                        <img data-lazy="images/demo/03.jpg" class="cover" alt="圖說3">
+                                    </a>
+                                </div>
+                            </div>
+                            <ol>
+                                <li>
+                                    <a href="#">
+                                        <time>2022-09-23</time>南港分館「十月萬聖節」兒童主題書展
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <time>2022-09-23</time>親子美育數位圖書館—10/30(日)「萬聖節英語手作派對」活動
+                                    </a>
+                                </li>
+                            </ol>
+                            <div class="btn_grp">
+                                <button class="btn btn-more">看更多活動報導</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 好書推薦 -->
+            <section class="recommend">
+                <div class="container">
+                    <h2 class="title">好書推薦</h2>
+                    <!-- 3欄 -->
+                    <div class="Flex-set">
+                        <a href="#">
+                            <h3 class="subtitle">主題好書</h3>
+                            <div class="book">
+                                <h4><span>Kindness matters</span></h4>
+                                <div class="img-container"><img src="images/book1.png" alt="" class="contain"></div>
+                                <p>The jelly donut difference : sharing kindness with the world</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <h3 class="subtitle">得獎書</h3>
+                            <div class="book">
+                                <h4><span>國際安徒生文學大獎</span></h4>
+                                <div class="img-container"><img src="images/book2.png" alt="" class="contain"></div>
+                                <p>闇の守り人</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <h3 class="subtitle">好書大家讀</h3>
+                            <div class="book">
+                                <h4><span>文學讀物 A 組</span></h4>
+                                <div class="img-container"><img src="images/book3.png" alt="" class="contain"></div>
+                                <p>無事的守護神= Patron saints of nothing</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="flex-6-3-3">
+                <div class="container">
+                    <!-- 6-3-3 -->
+                    <div class="Flex-set">
+                        <div class="col">
+                            <a href="#">
+                                <h2>活動資源</h2>
+                            </a>
+                            <a href="#">
+                                <h2>酷網站推薦</h2>
+                            </a>
+                            <a href="#">
+                                <h2>給爸媽 / 親子專區</h2>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="#">
+                                <h2>認識圖書館</h2>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="#">
+                                <h2>我要問問題</h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- footer Start-->
+        <footer>
+            <div class="container">
+                <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+                <!-- 1 -->
+                <section>
+                    <div class="flex">
+                        <img src="images/logo-footer.png" alt="" class="img-responsive footer_logo">
+                        <p>本網站為提供小朋友使用之網站，蒐集兒童圖書、電子書等資源，並提供線上作答等活動</p>
+                    </div>
+                    <ul class="footer_link">
+                        <li><a href="javascript:;">隱私權及資訊安全政策</a></li>
+                        <li><a href="javascript:;">政府網站資料開放宣告</a></li>
+                        <li><a href="javascript:;">本站使用正字體</a></li>
+                    </ul>
+                    <p>總館館址：10659 臺北市建國南路二段125號<br>
+                        電話：2755-2823 （詳細業務聯繫電話）<br>
+                        本館網址：<a href="#">https://tpml.gov.taipei/</a>
+                    </p>
+                </section>
+                <!-- 2 -->
+                <section class="flex">
+                    <div class="footer_others">
+                        <p class="Copyright">台北市立圖書館版權所有 © 2022 All Rights Reserved.</p>
+                        <span class="update">網站最後更新日期：<em>111年09月08日</em></span>
+                    </div>
+                    <div class="footer_icon">
+                        <a target="_blank" href="javascript:;">
+                            <img src="images/kidelab/TCG.png" alt="台北市政府,另開新視窗">
+                        </a>
+                        <a target="_blank" href="javascript:;">
+                            <img src="images/basic/accessibility_aa.jpg" alt="通過AA優先等級無障礙網頁檢測,另開新視窗">
+                        </a>
+                    </div>
+                </section>
+                <!-- 圖 -->
+                <div class="deco-car">
+                    <img src="images/kidelab/img-animal-footer.svg" alt="">
+                </div>
+            </div>
+        </footer>
+        <!-- footer End -->
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- JQ -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- 外掛 plugin js -->
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- ease -->
+    <script src="vendor/slick/slick.min.js "></script>
+    <!-- slick -->
+    <script src="vendor/slick/slick-lightbox.js "></script>
+    <!-- slick lightbox -->
+    <script src="vendor/lazyload/lazyload.js"></script>
+    <!-- lazyload -->
+    <script src="vendor/picturefill/picturefill.min.js" async></script>
+    <!-- picturefill -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
+    <!-- scrolltable -->
+    <!-- sticky-sidebar -->
+    <script src='vendor/sticky-sidebar/sticky-sidebar.js'></script>
+    <script src='vendor/sticky-sidebar/ResizeSensor.js'></script>
+    <!-- fancy -->
+    <script src='vendor/fancybox/jquery.fancybox.min.js'></script>
+    <!-- hyUI -->
+    <script src="js/hyui.js"></script>
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+</body>
+
+</html>
