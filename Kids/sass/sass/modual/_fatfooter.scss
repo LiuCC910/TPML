@@ -1,0 +1,118 @@
+.fatfooter {
+    @extend %clearfix;
+    overflow: hidden;
+    padding-bottom: 1em;
+    margin: 0 auto;
+    background: $fatfooterBgColor;
+    @include screen('mobile') {
+        display: none;
+    }
+    .container {
+        overflow: hidden;
+        box-sizing: border-box;
+        @include gutter;
+    }
+    // 按鈕
+    .btn-fatfooter {
+        font-size: .813em;
+        display: block;
+        min-width: 6em;
+        color: #FFF;
+        border: none;
+        background: $aHover;
+        position: absolute;
+        right: 1%;
+        z-index: 90;
+        text-indent: -9999px;
+        border-radius: 4px;
+        &:before {
+            content: "";
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border: 2px solid #FFF;
+            border-left: none;
+            border-bottom: none;
+            transform: rotate(-45deg);
+            left: 50%;
+            top: 12px;
+            margin-left: -6px;
+            transition: .3s ease-out;
+        }
+        &:hover,
+        &:focus {
+            background: darken($aHover, 10);
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            box-shadow: none;
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+        &.close {
+            &:before {
+                transform: rotate(135deg) !important;
+                top: 5px;
+            }
+        }
+    }
+    nav {
+        overflow: hidden;
+        display: block;
+        position: relative;
+        padding: 3em 0 0 2em;
+        box-sizing: border-box;
+
+        ul {
+            display: flex;
+            @include li-reset;
+
+            li {
+                flex:1 1 16%;
+                box-sizing: border-box;
+
+                a {
+                    line-height: 1.5;
+                    display: block;
+                    font-weight: bold;
+                    padding: .5em 0px;
+                    box-sizing: border-box;
+                    &:hover{
+                        box-shadow: none;
+                    }
+                }
+                ul {
+                    // display: flex;
+                    // flex-direction:column;
+                    // flex-wrap:wrap;
+                    display: block;
+                    margin: 0;
+                    padding:0 1em 0 0;                  
+                    @include screen('mobile') {
+                        width: auto;
+                    }
+                    li {
+                        // flex: 0 0 100%;
+
+                        a {
+                            display: block;
+                            @include aSetting_nocolor;
+                            font-weight: normal;
+                            text-align: left;
+                            font-size: .938em;
+                            line-height: 1.5em;
+                            padding: .5em 0;
+                            background: none;
+                        }
+                    }
+                    //第三層關閉
+                    ul {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

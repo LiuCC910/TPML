@@ -1,0 +1,904 @@
+/////////////////////////////////////////////////////////以下為demo範例///
+// 首頁區塊設定
+// more按鈕
+a.more {
+    display: block;
+    width: 10em;
+    text-align: center;
+    height: 2.5em;
+    margin: .5em auto .5em;
+    line-height: 2.5;
+    color: $primaryColor;
+    border: 1px solid $primaryColor;
+    text-align: center;
+    overflow: hidden;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+
+    &:after {
+        content: "";
+        width: 12px;
+        height: 12px;
+        border: 2px solid #FFF;
+        transform: rotate(45deg);
+        position: absolute;
+        right: -10px;
+        top: 14px;
+        border-left: none;
+        border-bottom: none;
+        transition: .3s ease-out;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $primaryColor;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transition-duration: 0.2s;
+        transition-duration: 0.2s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+
+    &:hover,
+    &:focus,
+    &.active {
+        color: white;
+
+        &:before {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+
+        &:after {
+            right: 15px;
+        }
+    }
+}
+
+// 範例：
+// .demosection {
+//     [class^="col"] {
+//         border: 2px solid #FFF;
+//         background: #DEDEDE;
+//     }
+// }
+
+// 好書推薦
+.recommend {
+    .container {
+        text-align: center;
+    }
+}
+
+.mp {
+
+    a {
+        transition: .3s;
+
+        &:hover,
+        &:focus {
+            background: $aFocus !important;
+            color: #fff !important;
+        }
+    }
+
+    .title {
+        font-size: 220%;
+        padding: 1em 0;
+        text-align: center;
+    }
+
+    .subtitle {
+        font-size: 1.6em;
+        ;
+    }
+
+    .flex-6-6,
+    .recommend,
+    .flex-6-3-3 {
+        .container {
+            margin: 2em auto;
+
+            a {
+                color: #222;
+            }
+
+            @include screen('tablet') {
+                @include gutter(60px);
+            }
+        }
+    }
+
+    .flex-6-6 {
+        >.container {
+
+            .Flex-set {
+                align-items: stretch;
+            }
+
+        }
+
+        .col {
+            border-radius: 20px;
+
+            // 我要找書、電子圖畫書、小博士信箱
+            &:first-child {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                >div {
+                    border-radius: 20px;
+                    overflow: hidden;
+
+                    a {
+                        border-radius: 20px;
+                        position: relative;
+                        padding: 4em 2.5em 0;
+                        min-height: 220px;
+
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            right: 0;
+                            bottom: 0;
+                            transform: scale(1);
+                            transition: .3s;
+                        }
+
+                        &:hover,
+                        &:focus {
+                            &:after {
+                                transform: scale(1.2);
+                            }
+                        }
+                    }
+
+                    h2 {
+                        margin: 0;
+                        text-align: center;
+                        font-size: 180%;
+                        position: relative;
+                        z-index: 1;
+                    }
+
+                    &:nth-child(1) {
+                        background: #ECF3F9;
+                        flex: 1 1 100%;
+                        margin-bottom: 1em;
+
+                        a {
+                            h2 {
+                                // padding-right: 50%;
+                                position: absolute;
+                                z-index: 1;
+                                top: 50%;
+                                left: 2.8em;
+                                margin-top: -44px;
+                            }
+
+                            &:after {
+                                width: 350px;
+                                height: 270px;
+                                background: url(../images/kidelab/Graphic-6.svg) right bottom no-repeat;
+                            }
+                        }
+                    }
+
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                        flex: 1 1 auto;
+                        flex-basis: calc(50% - .5em);
+                        max-width: calc(50% - .5em);
+                    }
+
+                    &:nth-child(2) {
+                        background: #F8EAE2;
+
+                        a {
+                            &:after {
+                                width: 280px;
+                                height: 190px;
+                                background: url(../images/kidelab/Graphic-7.svg) right bottom no-repeat;
+                                right: 50%;
+                                margin-right: -140px;
+                            }
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        background: #EDE8F2;
+
+                        a {
+                            &:after {
+                                width: 290px;
+                                height: 200px;
+                                background: url(../images/kidelab/Graphic-8.svg) right bottom no-repeat;
+                            }
+                        }
+                    }
+                }
+
+                a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            // 活動報導
+            &:last-child {
+                background: #FAF3DA;
+                padding: 0 2em 1em;
+
+                ol {
+                    @include li-reset;
+
+                    li {
+                        margin: 10px 0;
+
+                        a {
+                            display: block;
+                            padding: 1em 2em;
+                            background: #F5E9B8;
+                            border-radius: 10px;
+
+                            time {
+                                display: block;
+                                font-size: 85%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @include screen('tablet') {
+            .col {
+
+                // 我要找書、電子圖畫書、小博士信箱
+                &:first-child {
+                    >div {
+
+                        &:nth-child(1),
+                        &:nth-child(2),
+                        &:nth-child(3) {
+                            margin-bottom: 0;
+                            flex-basis: calc(100% / 3 - 20px);
+                        }
+
+                        &:nth-child(1) {
+                            a {
+                                h2 {
+                                    position: relative;
+                                    margin-top: 0;
+                                    left: auto;
+                                    top: auto;
+                                }
+
+                                &:after {
+                                    width: 250px;
+                                    height: 200px;
+                                    bottom: -20px;
+                                }
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            margin: 0 10px;
+                        }
+
+                        &:nth-child(3) {}
+
+                        a {
+                            padding: 2.2em 1.5em 0;
+                            min-height: 320px;
+                        }
+                    }
+                }
+
+                // 活動報導
+                &:last-child {
+                    margin-top: 1em;
+                }
+            }
+        }
+
+        @include screen('mobile') {
+            .col {
+
+                // 我要找書、電子圖畫書、小博士信箱
+                &:first-child {
+                    >div {
+
+                        &:nth-child(2),
+                        &:nth-child(3) {
+                            flex-basis: 100%;
+                            max-width: 100%;
+                        }
+
+                        &:nth-child(1) {
+                            margin-bottom: 0;
+                        }
+
+                        &:nth-child(2) {
+                            margin: 1em 0;
+                        }
+                    }
+                }
+
+                &:last-child {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+    .recommend {
+        background: url(../images/kidelab/bg-books.png) 50% 50% no-repeat;
+        background-size: cover;
+        overflow: hidden;
+
+        position: relative;
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            width: 480px;
+            bottom: 0;
+        }
+
+        // 左：牛
+        &:before {
+            height: 320px;
+            left: 0;
+            background: url(../images/kidelab/img-command-left.svg) 50% 50% no-repeat;
+        }
+
+        // 右：兔
+        &:after {
+            height: 360px;
+            right: 0;
+            background: url(../images/kidelab/img-command-right.svg) 50% 50% no-repeat;
+        }
+
+        .container {
+            // background: url(../images/kidelab/bg-books.png) 50% 50% no-repeat;
+            // background-size: cover;
+            // border-radius: 20px;
+            padding: 1em 6em 10em;
+
+            .Flex-set {
+                position: relative;
+                z-index: 1;
+
+                a {
+                    display: block;
+                    border-radius: 10px;
+                    transform: scale(1);
+                    transition: .3s;
+                    border-radius: 10px;
+                    background: #fff;
+                    overflow: hidden;
+
+                    &:hover,
+                    &:focus {
+                        box-shadow: none;
+                        transform: scale(1.1);
+                        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+                        position: relative;
+                        z-index: 1;
+
+                        .book {
+                            span {
+                                background: $aFocus;
+                            }
+                        }
+
+                        &:nth-child(1),
+                        &:nth-child(2),
+                        &:nth-child(3) {
+                            color: #222 !important;
+                        }
+
+                        &:nth-child(1) {
+                            background: #DFEBEC !important;
+                        }
+
+                        &:nth-child(2) {
+                            background: #F3F4DE !important;
+                        }
+
+                        &:nth-child(3) {
+                            background: #FFEFE7 !important;
+                        }
+                    }
+
+                    .img-container {
+                        background: transparent;
+                        height: 220px;
+                    }
+
+                    .subtitle {
+                        margin: 0;
+                        padding: 1.5em 0 1em;
+                        font-size: 130%;
+                    }
+
+                    .book {
+                        padding-bottom: 2em;
+                        background: #fff;
+                        position: relative;
+                        z-index: 1;
+
+                        h4 {
+                            position: relative;
+                            margin: 0 0 1em;
+
+                            &:after {
+                                content: '';
+                                position: absolute;
+                                width: 100%;
+                                height: 25px;
+                                top: 0;
+                                left: 0;
+                            }
+
+                            span {
+                                position: relative;
+                                z-index: 1;
+                                line-height: 1.4;
+                            }
+                        }
+
+                        span {
+                            display: inline-block;
+                            background: $primaryColor;
+                            color: #FFF;
+                            border-radius: 40px;
+                            padding: .65em 2em;
+                            margin: 0 30px;
+                        }
+
+                        p {
+                            font-size: 110%;
+                            margin: 0 30px;
+                            padding: 12px 0;
+                        }
+                    }
+
+                    &:nth-child(1),
+                    &:nth-child(1) .book h4::after {
+                        background: #DFEBEC;
+                    }
+
+                    &:nth-child(2),
+                    &:nth-child(2) .book h4::after {
+                        background: #F3F4DE;
+                    }
+
+                    &:nth-child(3),
+                    &:nth-child(3) .book h4::after {
+                        background: #FFEFE7;
+                    }
+                }
+            }
+        }
+
+        // @media screen and (max-width: 1180px) {
+        @include screen('tablet') {
+
+            &:before,
+            &:after {
+                transform: scale(.85);
+                bottom: -1.5%;
+            }
+
+            &:before {
+                left: -6%;
+            }
+
+            &:after {
+                right: -6%;
+            }
+
+            .container {
+                padding: 1em 4em 10em;
+                border-radius: 0;
+
+                .Flex-set {
+                    a {
+                        &:nth-child(2) {
+                            margin: 1em 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include screen('mobile') {
+
+            &:before,
+            &:after {
+                transform: scale(.75);
+                bottom: -3%;
+            }
+
+            &:before {
+                left: -20%;
+            }
+
+            &:after {
+                right: -20%;
+            }
+
+            .container {
+                padding: 1em 2em 8em;
+            }
+        }
+    }
+
+    .flex-6-3-3 {
+        .container {
+
+            .Flex-set {
+                align-items: stretch;
+            }
+
+            .col {
+                a {
+                    display: block;
+                    text-align: center;
+                    padding: 3.6em 2em 0;
+                    border-radius: 20px;
+                    transition: .3s;
+                    position: relative;
+
+                    &:before,
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        transform: scale(1);
+                        transition: .3s;
+                    }
+
+                    &:hover,
+                    &:focus {
+                        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
+                        &:before,
+                        &:after {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+
+                h2 {
+                    margin: 0;
+                    position: relative;
+                    z-index: 1;
+                }
+
+                // 活動資源、酷網站推薦、親子專區
+                &:nth-child(1) {
+
+                    a {
+                        border-radius: 20px 20px 0 0;
+                        padding: 2em 2em 6em;
+                        margin-bottom: -4em;
+
+                        &:nth-child(1) {
+                            background: #D7DBE0;
+
+                            &:before {
+                                width: 180px;
+                                height: 150px;
+                                background: url(../images/kidelab/Graphic-1.svg) left bottom no-repeat;
+                                background-size: contain;
+                                transform-origin: left bottom;
+                                left: 60px;
+                                top: -12px;
+                            }
+
+                        }
+
+                        &:nth-child(2) {
+                            background: #FFEFE7;
+
+                            &:before {
+                                width: 130px;
+                                height: 150px;
+                                background: url(../images/kidelab/Graphic-2.svg) left bottom no-repeat;
+                                background-size: contain;
+                                transform-origin: right bottom;
+                                right: 60px;
+                                top: -12px;
+                            }
+                        }
+
+                        &:nth-child(3) {
+                            background: #FDFFF3;
+                            padding: 2em 2em 2em;
+                            margin-bottom: 0;
+
+                            &:before {
+                                width: 162px;
+                                height: 115px;
+                                background: url(../images/kidelab/Graphic-3-1.svg) left bottom no-repeat;
+                                background-size: contain;
+                                transform-origin: left bottom;
+                                left: 15px;
+                                bottom: 0;
+                            }
+
+                            &:after {
+                                width: 150px;
+                                height: 160px;
+                                background: url(../images/kidelab/Graphic-3-2.svg) left bottom no-repeat;
+                                background-size: contain;
+                                transform-origin: right bottom;
+                                right: 15px;
+                                bottom: 0;
+                            }
+                        }
+                    }
+                }
+
+                // 認識圖書館
+                &:nth-child(2) {
+                    a {
+                        height: 100%;
+                        background: #DFEBEC;
+                        overflow: hidden;
+
+                        &:before {
+                            width: 300px;
+                            height: 170px;
+                            background: url(../images/kidelab/Graphic-4.svg) left bottom no-repeat;
+                            background-size: contain;
+                            left: 50%;
+                            margin-left: -150px;
+                            bottom: 0;
+                        }
+                    }
+                }
+
+                // 我要問問題
+                &:nth-child(3) {
+                    a {
+                        height: 100%;
+                        background: #FAF3DA;
+                        overflow: hidden;
+
+                        &:before {
+                            width: 300px;
+                            height: 200px;
+                            background: url(../images/kidelab/Graphic-5.svg) left bottom no-repeat;
+                            background-size: contain;
+                            left: 50%;
+                            margin-left: -150px;
+                            bottom: -12px;
+                        }
+                    }
+                }
+            }
+
+            @media screen and (max-width: 1440px) {
+                .col {
+
+                    a {
+
+                        &:before,
+                        &:after {
+                            transform: scale(.8);
+                        }
+
+                        &:hover,
+                        &:focus {
+
+                            &:before,
+                            &:after {
+                                transform: scale(.92);
+                            }
+                        }
+                    }
+
+                    // 活動資源、酷網站推薦、親子專區
+                    &:nth-child(1) {
+                        a {
+
+                            &:nth-child(1) {
+                                &:before {
+                                    left: 15px;
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                &:before {
+                                    right: 15px;
+                                }
+                            }
+
+                            &:nth-child(3) {
+                                &:before {
+                                    left: 15px;
+                                }
+
+                                &:after {
+                                    right: 15px;
+                                }
+                            }
+                        }
+                    }
+
+                    // 認識圖書館
+                    &:nth-child(2) {
+                        a {
+                            &:before {}
+                        }
+                    }
+
+                    // 我要問問題
+                    &:nth-child(3) {
+                        a {
+                            &:before {}
+                        }
+                    }
+
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                        a {
+                            padding: 4em 2em;
+
+                            &:before {
+                                bottom: -16px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            @include screen('tablet') {
+                .col {
+
+                    // 活動資源、酷網站推薦、親子專區
+                    &:nth-child(1) {
+                        a {
+                            margin-bottom: 1em;
+                            border-radius: 20px;
+                            padding: 2em 2em;
+                            overflow: hidden;
+
+                            &:nth-child(1) {}
+
+                            &:nth-child(2) {}
+
+                            &:nth-child(3) {
+                                &:after {
+                                    right: auto;
+                                    left: 60px;
+                                }
+                            }
+                        }
+                    }
+
+                    // 認識圖書館
+                    &:nth-child(2) {
+                        margin: 1em 0;
+
+                        a {
+                            &:before {
+                                transform: scale(.8) scaleX(-1);
+                                right: 0;
+                                left: auto;
+                            }
+                        }
+
+                    }
+
+                    // 我要問問題
+                    &:nth-child(3) {
+                        a {
+                            &:before {
+                                transform: scale(.8) scaleX(-1);
+                                left: 0;
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            @include screen('mobile') {
+                .col {
+
+                    // 活動資源、酷網站推薦、親子專區
+                    &:nth-child(1) {
+                        a {
+                            padding: 2em 2em 2em 5.5em;
+                            text-align: right;
+
+                            &:before,
+                            &:after {
+                                transform: scale(.6);
+                            }
+
+                            &:nth-child(1) {
+                                &:before {
+                                    top: -24%;
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                text-align: left;
+                                padding: 2em 5.5em 2em 2em;
+
+                                &:before {
+                                    right: 0;
+                                }
+                            }
+
+                            &:nth-child(3) {
+                                padding: 2em 2em 2em 4em;
+
+                                &:before {
+                                    right: 0;
+                                }
+
+                                &:after {
+                                    right: auto;
+                                    left: 0px;
+                                    transform: scale(.5);
+                                }
+                            }
+                        }
+                    }
+
+                    // 認識圖書館
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                        a {
+                            padding: 2em 1em 6em;
+
+                            &:before {
+                                transform: scale(.65);
+                                bottom: -50px;
+                            }
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        a {
+                            &:before {}
+                        }
+
+                    }
+
+                    // 我要問問題
+                    &:nth-child(3) {
+                        a {
+                            &:before {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,355 @@
+/////////////////////////////////////////////////////////以下為demo範例///
+
+// flex 欄位均分
+// 父層啟動 flex : @extend %flex_set;
+// 子層欄寬（均分）: @include flex-瀏覽器寬度-equal(欄數, margin );
+// 子層欄寬（自由）: @include flex-瀏覽器寬度(欄數, margin);
+
+// step 0、設定 flex 的 margin gutter
+$m-gutter: 20px;
+
+////////////////////////////////////////////////////
+////////////////// 均分 equal ///////////////////////
+////////////////////////////////////////////////////
+
+/////////////////////// step 1、父層啟動 flex
+.Flex-set {
+    // 啟動flex
+    // 位置：sass/sass/common/_extend.scss
+    @extend %flex_set;
+
+    // sampl樣式設定
+    // .col {
+    //     background: #485b8a;
+    //     color: #fff;
+    //     margin: 4px 0;
+
+    //     p {
+    //         color: rgba(255, 255, 255, .5);
+    //     }
+    // }
+}
+
+/////////////////////// step 2、子層設定欄寬
+// .flex-equal-2, .flex-equal-3, .flex-equal-4, .flex-equal-5{
+//     .Flex-set{
+//         .col{ background: #00b0c6; }
+//     }
+// }
+
+// .flex-equal-2{
+//     .Flex-set{
+//         .col{
+//             @include flex-xs-equal(1, 0px);
+//             @include flex-sm-equal(2, $m-gutter);
+//             @include flex-md-equal(2, $m-gutter);
+//             @include flex-lg-equal(2, $m-gutter);
+//             @include gutter();
+//         }
+//     }
+// }
+.flex-equal-3 {
+    .Flex-set {
+        .col {
+            @include flex-xs-equal(1, 0px);
+            @include flex-sm-equal(2, $m-gutter);
+            @include flex-md-equal(3, $m-gutter);
+            @include flex-lg-equal(3, $m-gutter);
+            @include gutter();
+        }
+    }
+
+    // 近期活動
+    &.recent-act {
+        .Flex-set {
+            margin-top: 2em;
+
+            .col {
+                text-align: center;
+                background: #ddd;
+                padding: 2em;
+                border-radius: 6px;
+
+                @include flex-xs-equal(1, 0px);
+                @include flex-sm-equal(1, 0px);
+                @include flex-md-equal(3, $m-gutter);
+                @include flex-lg-equal(3, $m-gutter);
+
+                span {
+                    font-size: 130%;
+                    display: block;
+                    margin-bottom: 1em;
+                }
+
+                b {
+                    display: inline-block;
+                    background: #fff;
+                    border-radius: 50%;
+                    padding: 1em;
+                    font-size: 160%;
+                }
+
+                &:nth-child(1) {
+                    // background: #ECF3F9;
+                    background: url(../images/kidelab/Graphic-1.svg) left 10% bottom -20px no-repeat #ECF3F9;
+                }
+
+                &:nth-child(2) {
+                    // background: #F8EAE2;
+                    background: url(../images/kidelab/Graphic-2.svg) right 10% bottom -20px no-repeat #F8EAE2;
+                    transform: scaleX(-1);
+
+                    span,
+                    b {
+                        transform: scaleX(-1);
+                    }
+                }
+
+                &:nth-child(3) {
+                    // background: #EDE8F2;
+                    background: url(../images/kidelab/Graphic-3-1.svg) left 10% bottom 0 no-repeat #EDE8F2;
+                }
+            }
+        }
+
+        @include screen('tablet') {
+            .col {
+                &:nth-child(2) {
+                    margin: 1em 0;
+                }
+            }
+        }
+    }
+}
+
+.flex-equal-4 {
+    .Flex-set {
+        align-items: stretch;
+
+        .thumbnail {
+            margin-bottom: 30px;
+            @include flex-xs-equal(1, 0px);
+            @include flex-sm-equal(2, $m-gutter);
+            @include flex-md-equal(4, $m-gutter);
+            @include flex-lg-equal(4, $m-gutter);
+
+            @include screen('mobile') {
+                justify-content: center;
+            }
+        }
+    }
+
+    &.list {
+        .Flex-set {
+            .thumbnail {
+                @include flex-xs-equal(1, 0px);
+                @include flex-sm-equal(1, 0px);
+                @include flex-md-equal(1, 0px);
+                @include flex-lg-equal(1, 0px);
+
+                a {
+                    display: flex;
+                    flex-wrap: nowrap;
+
+                    .img-container {
+                        flex: 0 0 320px;
+                        margin-bottom: 0;
+                    }
+
+                    .caption {
+                        flex: 1 1 auto;
+
+                        .info {
+
+                            b {
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.recommend {
+    .Flex-set {
+        // align-items: stretch;
+
+        a {
+            @include flex-xs-equal(1, 0px);
+            @include flex-sm-equal(1, 0px);
+            @include flex-md-equal(3, 20px);
+            @include flex-lg-equal(3, 20px);
+        }
+    }
+}
+
+// .flex-equal-4{
+//     .Flex-set{
+//         .col{
+//             @include flex-xs-equal(1, 0px);
+//             @include flex-sm-equal(2, $m-gutter);
+//             @include flex-md-equal(4, $m-gutter);
+//             @include flex-lg-equal(4, $m-gutter);
+//             @include gutter();
+//         }
+//     }
+// }
+
+
+//////////////////////////////////////////////////
+////////////////// 自訂欄寬         ///////////////
+////////////////// 處理不均分的欄位  ///////////////
+//////////////////////////////////////////////////
+
+
+// 多欄 = 12
+.flex-6-3-3 {
+    .col {
+        @include flex-xs(12, 0px);
+        @include flex-sm(12, 0px);
+        @include flex-md(3, $m-gutter);
+        @include flex-lg(3, $m-gutter);
+
+        &:nth-child(1) {
+            @include flex-xs(12, 0px);
+            @include flex-sm(12, 0px);
+            @include flex-md(6, $m-gutter);
+            @include flex-lg(6, $m-gutter);
+        }
+    }
+}
+
+.flex-6-6 {
+    .col {
+        @include flex-xs(12, 0px);
+        @include flex-sm(12, 0px);
+        @include flex-md(6, 12px);
+        @include flex-lg(6, 12px);
+    }
+}
+
+// .flex-4-4-4{
+//     .col{
+//         @include flex-xs(12, 0px);
+//         @include flex-sm(12, $m-gutter);
+//         @include flex-md(4, $m-gutter);
+//         @include flex-lg(4, $m-gutter);
+//         @include gutter();
+//     }
+//     .thumbnail{
+//         margin-bottom: 30px;
+//         @include flex-xs(12, 0px);
+//         @include flex-sm(12, 10px);
+//         @include flex-md(4, 10px);
+//         @include flex-lg(4, 10px);
+
+//         @include screen('mobile') {
+//             justify-content: center;
+//         }
+//     }
+// }
+
+// .flex-3-3-3-3{
+//     .col{
+//         @include flex-xs(12, 0px);
+//         @include flex-sm(6, $m-gutter);
+//         @include flex-md(3, $m-gutter);
+//         @include flex-lg(3, $m-gutter);
+//         @include gutter();
+//     }
+// }
+
+// .flex-3-6-3{
+//     .col{
+//         @include flex-xs(12, 0px);
+//         @include flex-sm(12, $m-gutter);
+//         @include flex-md(3, $m-gutter);
+//         @include flex-lg(3, $m-gutter);
+//         @include gutter();
+
+//         &:nth-child(2){
+//             @include flex-xs(12, 0px);
+//             @include flex-sm(12, $m-gutter);
+//             @include flex-md(6, $m-gutter);
+//             @include flex-lg(6, $m-gutter);
+//         }
+//     }
+// }
+
+// .flex-8-4{
+//     .col{
+//         @include flex-xs(12, 0px);
+//         @include flex-sm(6, $m-gutter);
+//         @include flex-md(8, $m-gutter);
+//         @include flex-lg(8, $m-gutter);
+//         @include gutter();
+
+//         &:nth-child(2){
+//             @include flex-xs(12, 0px);
+//             @include flex-sm(6, $m-gutter);
+//             @include flex-md(4, $m-gutter);
+//             @include flex-lg(4, $m-gutter);
+//         }
+//     }
+// }
+// .flex-4-8{
+//     .col{
+//         @include flex-xs(12, 0px);
+//         @include flex-sm(6, $m-gutter);
+//         @include flex-md(4, $m-gutter);
+//         @include flex-lg(4, $m-gutter);
+//         @include gutter();
+
+//         &:nth-child(2){
+//             @include flex-xs(12, 0px);
+//             @include flex-sm(6, $m-gutter);
+//             @include flex-md(8, $m-gutter);
+//             @include flex-lg(8, $m-gutter);
+//         }
+//     }
+// }
+
+
+// 綜合
+// .mix-equal-2{
+//     .Flex-set{
+//         @extend %flex_set;
+//         .col{
+//             // @include flex-xs-equal(1, 0px);
+//             // @include flex-sm-equal(2, $m-gutter);
+//             // @include flex-md-equal(2, $m-gutter);
+//             // @include flex-lg-equal(2, $m-gutter);
+
+//             @include flex-xs(12, 0px);
+//             @include flex-sm(12, $m-gutter);
+//             @include flex-md(6, $m-gutter);
+//             @include flex-lg(6, $m-gutter);
+//             // @include gutter();
+//             padding: 1em;
+
+//             h3{ margin: 10px 0;}
+//         }
+//     }
+
+//     .inner-4-8{
+//         @extend %flex_set;
+//         div{
+//             @include flex-xs(12, 0px);
+//             @include flex-sm(4, $m-gutter);
+//             @include flex-md(4, $m-gutter);
+//             @include flex-lg(4, $m-gutter);
+
+//             &:last-child{
+//                 @include flex-xs(12, 0px);
+//                 @include flex-sm(8, $m-gutter);
+//                 @include flex-md(8, $m-gutter);
+//                 @include flex-lg(8, $m-gutter);
+//             }
+
+//             &.img{}
+//             &.text{}
+//         }
+//     }
+// }

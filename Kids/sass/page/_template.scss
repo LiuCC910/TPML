@@ -1,0 +1,707 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #FAF9EF;
+
+    &.noscroll {
+        position: static !important;
+        width: 100%;
+        height: 100%;
+        overflow: hidden !important;
+        overflow-y: hidden !important;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+// 最外圍預設為100%
+.wrapper {
+    width: 100%;
+    margin: 0px auto;
+
+    // 桌機版使用者登入
+    .user {
+        position: absolute;
+        right: 6em;
+        bottom: 1em;
+        display: flex;
+        flex-flow: row nowrap;
+
+        p {
+            margin: 0 .5em 0 0;
+            line-height: 47px;
+            display: inline-block;
+
+            // 個人書房
+            a {
+                background: url(../images/kidelab/icon_book.svg) 12px 50% no-repeat $primaryColor;
+                background-size: 30px 30px;
+                color: #fff;
+                display: inline-block;
+                padding: 0 1em 0 3em;
+                border-radius: 4px;
+
+                &:hover,
+                &:focus {
+                    background: url(../images/kidelab/icon_book.svg) 12px 50% no-repeat darken($lightColor, 12);
+                    background-size: 30px 30px;
+                    // border: 1px solid darken($lightColor, 20);
+                }
+            }
+        }
+
+        button {
+            margin: 0;
+        }
+    }
+
+    @include screen('tablet') {
+        .user {
+            display: none;
+        }
+    }
+
+    @include screen('mobile') {
+        overflow: hidden;
+        overflow-y: auto;
+    }
+}
+
+// 整體共用container樣式，請注意首頁切版頁面的整齊
+.container {
+    padding: 0;
+    margin: 0 auto;
+    max-width: $container-max; //請看_variable.scss
+    @include gutter(2em);
+}
+
+.main {
+    position: relative;
+    margin: 130px auto 0;
+
+    // 可先設定一個中央區塊最大寬，限制accesskey對齊
+    h2 {
+        line-height: 1.25em;
+    }
+
+    // 手機版使用者登入
+    .user {
+        position: initial;
+        padding: 1em 2em;
+        background: #e5e5e5;
+        display: none;
+    }
+
+    // 搜尋
+    .search {
+        .form_grp {
+            display: flex;
+            flex-flow: row nowrap;
+
+            label {
+                font-size: 0;
+            }
+        }
+    }
+
+    .search,
+    .multi-search {
+        #mustSameAsId {
+            padding-left: 3em;
+            background: url(../images/kidelab/icon_search.svg) 16px 50% no-repeat #fff;
+            background-size: 20px 20px;
+        }
+    }
+
+    // 
+    .multi-search {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+
+        .form_grp,
+        .btn-search {
+            flex: 1 1 auto;
+        }
+
+        .btn_grp {
+            padding: 0;
+        }
+
+        @include screen('mobile') {
+            flex-wrap: wrap;
+
+            .form_grp {
+                flex: 1 1 100%;
+            }
+        }
+    }
+
+    // .flex-form {
+    //     .form_grp {
+    //         border-bottom: none;
+    //     }
+    // }
+
+    @include screen('tablet') {
+        margin-top: 90px;
+    }
+}
+
+////////////////////////////////////////////////////////////
+// 為了與首頁區隔，請在內頁加上innerpage ClassName
+.innerpage {
+    >.container {
+        @include gutter(); //gutter 代表左右要留白
+        display: flex;
+        // backdrop-filter: blur(10px);
+        // -webkit-backdrop-filter: blur(10px);
+    }
+
+    position: relative;
+
+    &:before,
+    &:after {
+        content: '';
+        position: fixed;
+        width: 750px;
+        height: 525px;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    &:before {
+        left: 0;
+        background: url(../images/kidelab/bg-page-left.svg) 50% 50% no-repeat;
+        background-size: contain;
+    }
+
+    &:after {
+        right: 0;
+        background: url(../images/kidelab/bg-page-right.svg) right bottom no-repeat;
+        background-size: contain;
+    }
+
+    section.content {
+        >section {
+            // margin-bottom: 2em;
+            margin: 2em 0;
+            padding: 0 4em
+        }
+
+        @include screen('tablet') {
+            >section {
+                padding: 0;
+            }
+        }
+    }
+
+    .login {
+        .notice {
+            color: #ad0000;
+
+            a {
+                padding: .25em .5em;
+                text-decoration: underline;
+                transition: .3s;
+
+                &:hover,
+                &:focus {
+                    background: $aHover;
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .robert {
+        text-align: center;
+        width: 100%;
+
+        img {
+            max-width: 400px;
+        }
+    }
+
+    .statistics {
+        padding: 2.5em 3em;
+        background: rgba(255, 255, 255, 1);
+        border-radius: 10px;
+    }
+
+    .subTitle {
+        text-align: center;
+        font-size: 160%;
+        color: #222;
+        // color: $primaryColor;
+        // margin: 3em 0 1.25em;
+    }
+
+    .main-box {
+        .subTitle {
+            // margin-top: 1em;
+            margin: 1em 0 .5em;
+        }
+    }
+
+    .innerTitle {
+        font-size: 120%;
+        display: inline-block;
+        // color: $primaryColor;
+        color: #222;
+        // margin: 3em 0 0;
+        padding: 1.75em 0 1.75em 5em;
+        // background: url(../images/kidelab/icon_tree.svg) left 50% no-repeat;
+        background: url(../images/kidelab/icon_milu.svg) left 50% no-repeat;
+        background-size: 80px 80px;
+
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+
+        span {
+            display: block;
+            margin-top: 6px;
+            color: #fff;
+            background: #72aa00;
+            padding: 0.45em 2.5em;
+            border-radius: 60px;
+        }
+    }
+
+    // 裝飾用框
+    .deco-wrap {
+        background: rgba(255, 255, 255, .75);
+        padding: 3em 2em;
+        border-radius: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    .notice {
+        // background: #ca0000;
+        // color: #ca0000;
+        font-size: 110%;
+        margin: 1em 0;
+        padding: 0.25em 0;
+        text-align: center;
+        display: inline-block;
+
+        span {
+            // border: 1px solid #bc3000;
+            // background: #86b0f3;
+            color: #fff;
+            background: #72aa00;
+            padding: .45em 2.5em;
+            border-radius: 60px;
+            display: inline-block;
+        }
+    }
+
+    // 進行中
+    .going {
+        color: #fff;
+        background: $primaryColor;
+    }
+
+    // 已結束
+    .stop {
+        background: #ddd;
+        color: #222;
+    }
+
+    .center_block {
+        flex: none;
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    // 內頁標題＋function
+    .pageHead {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: .65em 0;
+
+        h2.title {}
+
+        .function {}
+    }
+
+    // 單元，設定在 _category
+    .units {}
+
+    // 年級分類
+    .main-box {
+        // background: #D9E0B5;
+        // background: #f7efc5;
+        background: rgba(247, 239, 197, .75);
+        padding: 2em 4em;
+        border-radius: 20px;
+        margin: 2em 0 4em;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+
+        time {
+
+            span {
+                display: inline-block;
+                border-left: 1px solid #222;
+                padding: 0 1em;
+                margin-left: 1em;
+            }
+        }
+
+        .innerTitle {
+            backdrop-filter: blur(0px);
+            -webkit-backdrop-filter: blur(0px);
+            margin-bottom: 0;
+        }
+
+        .grade {
+            @extend %flex_set;
+            margin: 20px 0;
+
+            a {
+                @include flex-xs-equal(1, 0px);
+                @include flex-sm-equal(3, 10px);
+                @include flex-md-equal(3, 20px);
+                @include flex-lg-equal(3, 20px);
+                display: block;
+                color: #222;
+                background: #fff;
+                text-align: center;
+                padding: 2em 0 9em;
+                border-radius: 10px;
+                font-size: 130%;
+                font-weight: bold;
+                transition: .3s;
+
+                position: relative;
+                overflow: hidden;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 60%;
+                    height: 180px;
+                    // background: #666;
+                    top: 90px;
+                    left: 50%;
+                    margin-left: -30%;
+                }
+
+                &:nth-child(1) {
+                    background: #ECF3F9;
+
+                    &:before {
+                        background: url(../images/kidelab/Graphic-6.svg) right bottom no-repeat;
+                    }
+                }
+
+                &:nth-child(2) {
+                    background: #F8EAE2;
+
+                    &:before {
+                        background: url(../images/kidelab/Graphic-7.svg) right bottom no-repeat;
+                    }
+                }
+
+                &:nth-child(3) {
+                    background: #EDE8F2;
+
+                    &:before {
+                        background: url(../images/kidelab/Graphic-8.svg) right bottom no-repeat;
+                    }
+                }
+
+                &:hover,
+                &:focus {
+                    background: $aHover;
+                    color: #fff;
+                }
+            }
+
+            @include screen('mobile') {
+                a {
+                    &:nth-child(2) {
+                        margin: .65em 0;
+                    }
+                }
+            }
+        }
+
+        .btn_grp {}
+
+        .flex-form {
+            .form_grp {
+                border-bottom: none;
+            }
+        }
+
+        // 答題狀態
+        .ans-status {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            margin-top: 1.25em;
+
+            .col {
+                &:first-child {
+                    flex: 1 1 auto;
+
+                    p {
+                        margin: .5em 0;
+                        font-size: 110%;
+                    }
+                }
+
+                &:last-child {
+                    flex: 0 1 240px;
+                    background: #fff;
+                    color: #222;
+                    text-align: center;
+                    padding: 4em 1.25em 1em;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+                    position: relative;
+
+                    .status {
+                        position: absolute;
+                        width: 100%;
+                        top: 0;
+                        left: 0;
+                        padding: 0.5em 0;
+
+                        // // 進行中
+                        // &.going {
+                        //     background: $primaryColor;
+                        // }
+
+                        // // 已結束
+                        // &.stop {
+                        //     background: #ddd;
+                        //     color: #222;
+                        // }
+                    }
+
+                    .point {
+                        font-size: 150%;
+                        margin: .5em 0;
+                    }
+                }
+            }
+
+            @include screen('mobile') {
+                flex-wrap: wrap;
+
+                .col {
+
+                    &:first-child,
+                    &:last-child {
+                        flex: 1 1 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    // 問答查詢
+    .QA_topic {
+        ul {
+            @include li-reset;
+            @extend %flex_set;
+
+            li {
+                @include flex-xs-equal(2, 10px);
+                @include flex-sm-equal(3, 6px);
+                @include flex-md-equal(6, 10px);
+                @include flex-lg-equal(6, 10px);
+
+                a {
+                    display: block;
+                    text-align: center;
+                    font-size: 120%;
+                    padding: 1.25em 1em;
+                    margin: .45em 0;
+                    // background: #f7efc5;
+                    background: #f8f8f8;
+                    color: #222;
+                    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+                    border-radius: 10px;
+                    transition: .3s;
+
+                    &:hover,
+                    &:focus {
+                        background: $aHover;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    .QA-box,
+    .QA_topic {
+        margin: 20px 0;
+    }
+
+    // 本月問答
+    .question {
+        padding: 1em 0;
+
+        .tag {
+            margin-bottom: -20px;
+            margin-left: 2em;
+            padding: .5em 0 0;
+
+            &:before {
+                display: none;
+            }
+
+            span {
+                display: inline-block;
+                padding: .25em 1.75em;
+                margin: 0 .25em 6px;
+                border: solid 1px #ccc;
+                background: #e5e5e5;
+                color: #222;
+                border-radius: 40px;
+            }
+        }
+
+        .content {
+            background: #fff;
+            border: solid 1px #ccc;
+            border-radius: 20px;
+            padding: 3em 1em 2em;
+
+            // @extend %flex_set;
+            // align-items: stretch;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+
+            .Q {
+                flex: 1 1 auto;
+                @include gutter();
+
+            }
+
+            .A {
+                flex: 0 0 360px;
+                @include gutter();
+                border-left: 1px dotted #000;
+                text-align: center;
+
+                .point {
+                    font-size: 150%;
+                }
+
+                .btn_grp {}
+            }
+
+        }
+    }
+
+    // 你的回答
+    .user-answer {
+        textarea {
+            padding: 1em 2em;
+            border-radius: 20px;
+        }
+    }
+
+    // 答題狀態
+    // .ans-status {
+    //     background: #f7efc5;
+    //     padding: 2em;
+    //     border-radius: 20px;
+
+    //     .flex-set{
+    //         display: flex;
+    //         flex-wrap: nowrap;
+
+    //         .col {
+    //             flex: 1 1 50%;
+    //         }
+    //     }
+    // }
+
+    @include screen('tablet') {
+
+        // 本月問答
+        .question {
+            .content {
+                flex-wrap: wrap;
+
+                .Q,
+                .A {
+                    flex: 1 1 100%;
+                }
+
+                .A {
+                    border-left: none;
+                    border-top: 1px dotted #000;
+                    margin-top: 2em;
+                    padding-top: 2em;
+                }
+            }
+        }
+    }
+
+
+
+
+    // .left_block {
+    //     flex: none;
+    //     flex-basis: 260px;
+    //     max-width: 260px;
+    //     margin-right: 40px;
+
+    //     &.hidden {
+    //         +.center_block {
+    //             flex: none;
+    //             flex-basis: 100%;
+    //             max-width: 100%;
+    //         }
+    //     }
+
+    //     +.center_block {
+    //         flex: auto;
+    //         flex-basis: calc(100% - 300px);
+    //         max-width: calc(100% - 300px);
+    //     }
+
+    //     @include screen('tablet') {
+    //         display: none;
+
+    //         +.center_block {
+    //             flex: none;
+    //             flex-basis: 100%;
+    //             max-width: 100%;
+    //         }
+    //     }
+    // }
+
+    // &.small_size {
+    //     font-size: .938em;
+    // }
+
+    // &.large_size {
+    //     font-size: 1.125em;
+    // }
+}
+
+.hidden {
+    display: none;
+}

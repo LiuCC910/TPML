@@ -1,0 +1,68 @@
+// 此變數為框架之整體變數，控制整體網站之設定，包含 顏色、文字、格線系統
+// 於mixins 資料夾內，各個模組也有其個別使用的變數，請至個別檔案設定，個別使用變數不含在此設定
+//---------------------------------------------------顏色---------//
+// 定義顏色 此顏色可自由變換
+$primaryColor: #0e917c; //主色
+$secondaryColor: #D9E0B5; //輔色
+$darkColor: #24466C; //重色
+$lightColor: #EA9B3D; //點綴
+$linkColor: #0066cc; //連結
+$importantColor: #eb0202; //重要
+// 但注意真實顏色與語意的關聯必須易於辨識
+$color-blue: #0066cc;
+$color-green: #298729;
+$color-orange: #d04500;
+$color-red: #d30000;
+$color-yellow: #fec003;
+$color-purple: #781f79;
+$color-gray: #ccc;
+$color-dark: #333333;
+$color-hr: #666; //hr顏色
+$color-word: #222; //一般字的顏色
+$btn-word: #222; //按鈕字的顏色
+// 連結顏色
+$aColor: #0066cc;
+// $aHover: darken($aColor, 10);
+// $aFocus: #ff3e4d;
+$aHover: darken($lightColor, 12);
+$aFocus: darken($lightColor, 12);
+// 表單focus顏色
+$form-focus: #0066cc; //表單
+$form-btn: #0066cc; //表單
+//------------------------------------------------------字型--------//
+// 字型設定
+@import url('../font/BpmfGenSenRounded-R.ttf');
+
+@font-face {
+    font-family: '源泉注音圓體';
+    src: url('../font/BpmfGenSenRounded-R.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$font-family: '源泉注音圓體',
+    Lato,
+    'PingFang TC',
+    'Helvetica Neue',
+    Helvetica,
+    微軟正黑體,
+    Arial,
+    sans-serif;
+$font-size: 1em;
+//------------------------------------------------------格線系統-----//
+// 格線系統
+$grid-columns: 12 !default; //格線欄位數
+$grid-gutter-width: 30px !default; //左右padding
+$container-max: 1600px !default; //container最大寬
+//mediaquery
+$screen-lg: 1920px !default; //電腦
+$screen-md: 1180px !default; //平板
+$screen-sm: 820px !default; //手機
+// $screen-xs: 576px !default; //極小尺寸 - hyui
+$screen-xs: 768px !default; //極小尺寸 - hyui
+$screen-xs-flex: 320px !default; //極小尺寸 - flex
+//-------------------------------------------------------客製化------//
+$fatfooterBgColor: #f1f1f1; //fatFooter 底色
+//--------------------------------------------------------客製化------//
+$rounded-angle: 10px; //整站導角
+$cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99); //動態預設

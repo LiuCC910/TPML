@@ -1,0 +1,103 @@
+// hyui flex 預設 demo
+.modal {
+    position: fixed;
+    display: none;
+    width: 60%;
+    // height: 300px;
+    max-height: 80%;
+    overflow-y: scroll;
+    background: #FFF;
+    z-index: 99999999;
+    top: 10%;
+    left: 50%;
+    margin-left: -30%;
+    padding: 2em 3em;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 1px 1px 15px RGBA(0, 0, 0, .5);
+    animation: scaleUp .5s ease-out;
+
+    h2 {
+        border-bottom: 3px solid $primaryColor;
+        padding-bottom: .5em;
+    }
+
+    .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60px !important;
+        min-width: auto;
+        height: 60px;
+        font-size: 0em;
+        border: none;
+        display: block;
+        padding: 0;
+        background: url(../images/basic/icon_close.svg) no-repeat center center #ddd;
+        background-size: 20px 20px;
+
+        &:hover,
+        &:focus {
+            cursor: pointer;
+        }
+    }
+
+    .content {
+        // background: #eee;
+        // max-height: 300px;
+        max-height: 80%;
+        overflow-y: scroll;
+
+        .title {
+            color: $primaryColor;
+            padding: 1.75em 0 1.75em 5em;
+            background: url(../images/kidelab/icon_milu.svg) left 50% no-repeat;
+        }
+
+        .text {
+            border: 1px solid #ccc;
+            padding: 1em 2em;
+            border-radius: 20px;
+        }
+
+        .flex {
+            @extend %flex_set;
+
+            .col {
+                @include flex-xs-equal(1, 0px);
+                @include flex-sm-equal(2, 10px);
+                @include flex-md-equal(2, 20px);
+                @include flex-lg-equal(2, 20px);
+
+                .list {
+                    background: #f6f6f6;
+                    height: 200px;
+                    overflow-y: scroll;
+                }
+            }
+        }
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1) translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1) translateY(0px);
+        opacity: 1;
+    }
+}
+
+.modal_overlay {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: RGBA(0, 0, 0, .5);
+    z-index: 99999998;
+}

@@ -1,0 +1,82 @@
+//https://isabelcastillo.com/error-info-messages-css
+*[class^="notice"] {
+    padding: .25em 1.5em;
+    margin: 0 .3em;
+    display: block;
+    width: 100%;
+    font-size: .938em;
+    color: #666;
+    // background-color: #f2f2f2;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: none;
+    text-align: left;
+    &:before {
+        position: absolute;
+        top: 7px;
+        left: .25em;
+        display: block;
+        vertical-align: middle;
+        width: 15px;
+        height: 15px;
+        content: "";
+        img {
+            width: 100%;
+        }
+    }
+    a.close {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        top: .8em;
+        right: 1em;
+        display: block;
+        opacity: .5;
+        &:hover, &:focus {
+            opacity: 1;
+        }
+        img {
+            display: block;
+            width: 12px;
+            height: 12px;
+            margin: 0;
+        }
+    }
+}
+*[class*="notice_info"] {
+    color: #00529B;
+    // background-color: #ceecfa;
+    &:before {
+        background: url(../images/basic/icon_info.svg) no-repeat center center;
+        background-size: 15px;
+    }
+}
+*[class*="notice_success"] {
+    color: #3B7600;
+    // background-color: #DFF2BF;
+    &:before {
+        background: url(../images/basic/icon_success.svg) no-repeat center center;
+        background-size: 15px;
+    }
+}
+*[class*="notice_warning"] {
+    color: #C23E00;
+    // background-color: #FEEFB3;
+    &:before {
+        background: url(../images/basic/icon_warning.svg) no-repeat center center;
+        background-size: 15px;
+    }
+}
+*[class*="notice_error"] {
+    color: #C40000;
+    // background-color: #FFD2D2;
+    &:before {
+        background: url(../images/basic/icon_error.svg) no-repeat center center;
+        background-size: 15px;
+    }
+}
+
+.notice{
+    padding-left: 0;
+}
