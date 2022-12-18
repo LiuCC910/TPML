@@ -1,0 +1,76 @@
+// 斜線
+%slash {
+    content: " / ";
+    display: inline-block;
+    padding: 0px 4px;
+    margin: 0px 5px 0px 5px;
+    color: #CCC;
+}
+
+// 箭頭
+%arrow_setting {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .5em;
+    content: " ";
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+%arrow_down {
+    @extend %arrow_setting;
+    border-width: 6px 3px 0 3px;
+    border-color: #555 transparent transparent transparent;
+}
+%arrow_right {
+    @extend %arrow_setting;
+    border-width: 3px 0 3px 6px;
+    border-color: transparent transparent transparent #555;
+}
+%arrow_up {
+    @extend %arrow_setting;
+    border-width: 0 3px 6px 3px;
+    border-color: transparent transparent #555 transparent;
+}
+%arrow_left {
+    @extend %arrow_setting;
+    border-width: 3px 6px 3px 0;
+    border-color: transparent #555 transparent transparent;
+}
+
+// 清除浮動
+%clearfix {
+    clear: both;
+    zoom: 1;
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+// 啟動display:flex
+%flex_set{
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row wrap;  
+    // 預設均分
+    justify-content: space-between;
+    align-items: flex-start;  // 表單靠上
+}
+
+
+// 繼承
+// @extend %slash;              // 斜線
+// @extend %arrow_setting;      // 箭頭
+// @extend %arrow_down;         // 箭頭：下
+// @extend %arrow_right;        // 箭頭：右
+// @extend %arrow_up;           // 箭頭：上
+// @extend %arrow_left;         // 箭頭：左
+// @extend %clearfix;           // 清除浮動
+// @extend %flex_set;           // 啟動 display:flex
+
+

@@ -1,0 +1,41 @@
+.breadcrumb {
+    // border-bottom: 1px solid #EEE;
+    padding: .1em 0em .1em 1.5em;
+    font-size: .938em;
+    margin: 0px auto 5px;
+    @include screen('mobile') {
+       padding: .1em 0em;   
+   }
+   ul {
+    @include li-reset;
+    li {
+        display: inline-block;
+        margin: 0px .1em .1em 0px;
+        &:before {
+            @extend %slash;
+        }
+        &:first-child:before {
+            content: "";
+            display: inline-block;
+            color: #666;
+            margin-left: 0;
+            padding: 0;
+        }
+    }
+    &:before{
+        content:'現在位置：';
+    }
+}
+a {
+    @include aSetting_nocolor;
+}
+[aria-current="page"] {
+    font-weight: bold;
+}
+}
+
+.center_block{
+    .breadcrumb {
+        padding: .1em 0;
+    }
+}

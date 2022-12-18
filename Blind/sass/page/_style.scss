@@ -1,0 +1,808 @@
+//fontcolor
+body{
+    &.tC_white * {
+        color: $color-white !important;
+    }
+    &.tC_black * {
+        color: $color-black !important;
+    }
+    &.tC_yellow * {
+        color: $color-yellow !important;
+    }
+    &.tC_lime * {
+        color: $color-lime !important;
+    }
+    //白字
+    &.tC_white * {
+        input, input[type="text"], button, input[type="submit"], input[type="reset"], input[type="button"], input[type="search"]{
+            color: $color-white!important;
+            border: solid 1px $color-white!important;
+        }
+        #manual_label, #manual_label2, .breadcrumb ul li:before{
+            color: $color-white!important;
+        }
+        input::placeholder, .labelEffect.password_toggle input[type="text"], .labelEffect.password_toggle input[type="password"], .labelEffect.hasBtn input[type="text"], .labelEffect.hasBtn input[type="password"], input[type="text"]{color: $color-white!important;}
+        .btn{
+            color: $color-white!important;
+            border: solid 1px $color-white!important;
+        }
+        select{
+            color: $color-white!important;
+            border: solid 1px $color-white!important;
+            background: url('../images/icon/icon_select_arrow_w.svg') no-repeat right 5px center!important;
+            background-size: 10px auto!important;
+        }
+        .i_show:before {
+            background: url(../images/icon/icon_show_w.svg) center center no-repeat;
+            background-size: contain;
+        }
+        .i_hide:before {
+            background: url(../images/icon/icon_hide_w.svg) center center no-repeat;
+            background-size: contain;
+        }
+        input[type="password"]{
+            color: $color-white!important;
+        }
+        .btn-search, .btn-submit, .btn-reset, h2#booksearch-label, .browselink li a:hover, .newbook a, .newsbox, .more a, .cp .pic, .accordionqa .accordionblock button.question, .accordionqa .accordionblock button.question .sort, .accordionqa .accordionblock button.question .openclose_btn, .sitemap .accesskeyDefine, kbd, .sub_menu li a, .labelEffect.password_toggle input[type="text"], .labelEffect.password_toggle input[type="password"], .labelEffect.hasBtn input[type="text"], .labelEffect.hasBtn input[type="password"]{
+            border: solid 1px $color-white!important;
+        }
+        .cp blockquote, .tooltip span, table, table th, table td, .img_list>ul>li, .img_list2>ul>li, .content-area, .bookbrowsing ul li a, .upload_grp .pic, div.function ul li button, div.function ul li a, .category a, .category a:hover, .category a:focus, .file_download li span.file_doc a, .file_download li span.file_docx a, .file_download li span.file_odt a, .file_download li span.file_xls a, .file_download li span.file_xlsx a, .file_download li span.file_csv a, .file_download li span.file_ods a, .file_download li span.file_ppt a, .file_download li span.file_pptx a, .file_download li span.file_odp a, .file_download li span.file_pdf a, .file_download li span.file_zip a, .file_download li span.file_txt a, .file_download li span.file_other a, .file_download li span.file_mov a, .file_download li span.file_mp3 a, .file_download li span.file_mp4 a, .file_download li span.file_jpg a, .file_download li span.file_wmv a, .audio_list table caption .int em{
+            border: solid 1px $color-white!important;
+        }
+        .lp .list>ul, .lp .list ol, .cascading{
+            border-top: 1px solid $color-white;
+        }
+        .mpfun>ul>li>a{
+            border: solid 1px $color-white;
+        }
+        .cascading li a, .file_download h3, .file_download li {
+            border-bottom: solid 1px $color-white;
+            &:hover{
+                color: $color-white!important;
+            }     
+        }
+        .font_size ul li a{
+            border: solid 1px $color-white;
+        }
+        .accordionqa .accordionblock button.question .openclose_btn:after {
+           border: solid 2px $color-white;
+           border-top: none;
+           border-left: none; 
+       }
+       a{
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;  
+      }
+  }
+  .menu>ul>li{
+    &.hasChild{
+        >a{
+            &:after {
+                border: 2px solid $color-white;
+                transform: rotate(135deg);
+                border-bottom: none;
+                border-left: none;
+            }
+        }
+    }
+}
+.menu ul li ul{
+    border: solid 1px $color-white;
+    li{
+        border-bottom: solid 1px $color-white;
+        &.hasChild {
+            >a{
+                &:after {
+                    top: 1.2em;
+                    border: 2px solid $color-white;
+                    transform: rotate(45deg);
+                    border-bottom: none;
+                    border-left: none;
+                }
+            }
+        }
+    }
+}
+.i_man:before {
+    background: url(../images/icon/icon_man_w.svg) center center no-repeat;
+    background-size: contain;
+}
+.i_lock:before {
+    background: url(../images/icon/icon_lock_w.svg) center center no-repeat;
+    background-size: contain;
+}
+.input-i i{
+    border-right: solid 1px $color-white;
+}
+.booksearch .flex-4-8 .col:nth-child(2){
+    border-left: solid 1px $color-white;
+}
+.onlinedownload ul li{
+    &.icon_online01 a:before {
+        background: url(../images/icon_online01_w.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online02 a:before {
+        background: url(../images/icon_online02_w.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online03 a:before {
+        background: url(../images/icon_online03_w.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online04 a:before {
+        background: url(../images/icon_online04_w.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online05 a:before {
+        background: url(../images/icon_online05_w.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online06 a:before {
+        background: url(../images/icon_online06_w.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online07 a:before {
+        background: url(../images/icon_online07_w.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+}
+.function_panel{
+ .function{
+    ul{
+        li{
+            a{
+                &:hover, &:focus {
+                    background: $aHover;
+                    color: #FFF;
+                    &:before { filter: invert(0); }
+                }
+            }
+            &.print{
+                a:before {
+                    background: url(../images/icon/icon_print_w.svg) no-repeat center center;
+                    background-size: 100%;
+                }
+            }
+            &.keep{
+                a:before {
+                    background: url(../images/icon/icon_heart_w.svg) no-repeat center center;
+                    background-size: 100%;
+                }
+            }
+            &.back{
+                a:before {
+                    background: url(../images/icon/icon_back_w.svg) no-repeat center center;
+                    background-size: 100%;
+                }
+            }
+        }
+    }
+}   
+}
+
+
+}
+   //黃字
+   &.tC_yellow * {
+    input, input[type="text"], button, input[type="submit"], input[type="reset"], input[type="button"], input[type="search"]{
+        color: $color-yellow!important;
+        border: solid 1px $color-yellow!important;
+    }
+    #manual_label, #manual_label2, .breadcrumb ul li:before{
+        color: $color-yellow!important;
+    }
+    input::placeholder, .labelEffect.password_toggle input[type="text"], .labelEffect.password_toggle input[type="password"], .labelEffect.hasBtn input[type="text"], .labelEffect.hasBtn input[type="password"], input[type="text"]{color: $color-yellow!important;}
+    .btn{
+        color: $color-yellow!important;
+        border: solid 1px $color-yellow!important;
+    }
+    select{
+        color: $color-yellow!important;
+        border: solid 1px $color-yellow!important;
+        background: url('../images/icon/icon_select_arrow_y.svg') no-repeat right 5px center!important;
+        background-size: 10px auto!important;
+    }
+    .i_show:before {
+        background: url(../images/icon/icon_show_y.svg) center center no-repeat;
+        background-size: contain;
+    }
+    .i_hide:before {
+        background: url(../images/icon/icon_hide_y.svg) center center no-repeat;
+        background-size: contain;
+    }
+    input[type="password"]{
+        color: $color-yellow!important;
+    }
+    .btn-search, .btn-submit, .btn-reset, h2#booksearch-label, .browselink li a:hover, .newbook a, .newsbox, .more a, .cp .pic, .accordionqa .accordionblock button.question, .accordionqa .accordionblock button.question .sort, .accordionqa .accordionblock button.question .openclose_btn, .sitemap .accesskeyDefine, kbd, .sub_menu li a, .labelEffect.password_toggle input[type="text"], .labelEffect.password_toggle input[type="password"], .labelEffect.hasBtn input[type="text"], .labelEffect.hasBtn input[type="password"]{
+        border: solid 1px $color-yellow!important;
+    }
+    .cp blockquote, .tooltip span, table, table th, table td, .img_list>ul>li, .img_list2>ul>li, .content-area, .bookbrowsing ul li a, .upload_grp .pic, div.function ul li button, div.function ul li a, .category a, .category a:hover, .category a:focus, .file_download li span.file_doc a, .file_download li span.file_docx a, .file_download li span.file_odt a, .file_download li span.file_xls a, .file_download li span.file_xlsx a, .file_download li span.file_csv a, .file_download li span.file_ods a, .file_download li span.file_ppt a, .file_download li span.file_pptx a, .file_download li span.file_odp a, .file_download li span.file_pdf a, .file_download li span.file_zip a, .file_download li span.file_txt a, .file_download li span.file_other a, .file_download li span.file_mov a, .file_download li span.file_mp3 a, .file_download li span.file_mp4 a, .file_download li span.file_jpg a, .file_download li span.file_wmv a, .audio_list table caption .int em{
+        border: solid 1px $color-yellow!important;
+    }
+    .lp .list>ul, .lp .list ol, .cascading{
+        border-top: 1px solid $color-yellow;
+    }
+    .mpfun>ul>li>a{
+        border: solid 1px $color-yellow;
+    }
+    .cascading li a, .file_download h3, .file_download li {
+        border-bottom: solid 1px $color-yellow;
+        &:hover{
+            color: $color-yellow!important;
+        }     
+    }
+    .font_size ul li a{
+        border: solid 1px $color-yellow;
+    }
+    .accordionqa .accordionblock button.question .openclose_btn:after {
+       border: solid 2px $color-yellow;
+       border-top: none;
+       border-left: none; 
+   }
+   a{
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;  
+  }
+}
+.menu>ul>li{
+    &.hasChild{
+        >a{
+            &:after {
+                border: 2px solid $color-yellow;
+                transform: rotate(135deg);
+                border-bottom: none;
+                border-left: none;
+            }
+        }
+    }
+}
+.menu ul li ul{
+    border: solid 1px $color-yellow;
+    li{
+        border-bottom: solid 1px $color-yellow;
+        &.hasChild {
+            >a{
+                &:after {
+                    top: 1.2em;
+                    border: 2px solid $color-yellow;
+                    transform: rotate(45deg);
+                    border-bottom: none;
+                    border-left: none;
+                }
+            }
+        }
+    }
+}
+.i_man:before {
+    background: url(../images/icon/icon_man_y.svg) center center no-repeat;
+    background-size: contain;
+}
+.i_lock:before {
+    background: url(../images/icon/icon_lock_y.svg) center center no-repeat;
+    background-size: contain;
+}
+.input-i i{
+    border-right: solid 1px $color-yellow;
+}
+.booksearch .flex-4-8 .col:nth-child(2){
+    border-left: solid 1px $color-yellow;
+}
+
+.onlinedownload ul li{
+    &.icon_online01 a:before {
+        background: url(../images/icon_online01_y.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online02 a:before {
+        background: url(../images/icon_online02_y.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online03 a:before {
+        background: url(../images/icon_online03_y.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online04 a:before {
+        background: url(../images/icon_online04_y.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online05 a:before {
+        background: url(../images/icon_online05_y.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online06 a:before {
+        background: url(../images/icon_online06_y.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online07 a:before {
+        background: url(../images/icon_online07_y.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+}
+.function_panel{
+ .function{
+    ul{
+        li{
+            a{
+                &:hover, &:focus {
+                    background: $aHover;
+                    color: #FFF;
+                    &:before { filter: invert(0); }
+                }
+            }
+            &.print{
+                a:before {
+                    background: url(../images/icon/icon_print_y.svg) no-repeat center center;
+                    background-size: 100%;
+                }
+            }
+            &.keep{
+                a:before {
+                    background: url(../images/icon/icon_heart_y.svg) no-repeat center center;
+                    background-size: 100%;
+                }
+            }
+            &.back{
+                a:before {
+                    background: url(../images/icon/icon_back_y.svg) no-repeat center center;
+                    background-size: 100%;
+                }
+            }
+        }
+    }
+}   
+}
+
+
+
+}
+    //檸檬字
+    &.tC_lime * {
+        input, input[type="text"], button, input[type="submit"], input[type="reset"], input[type="button"], input[type="search"]{
+            color: $color-lime!important;
+            border: solid 1px $color-lime!important;
+        }
+        #manual_label, #manual_label2, .breadcrumb ul li:before{
+            color: $color-lime!important;
+        }
+        input::placeholder, .labelEffect.password_toggle input[type="text"], .labelEffect.password_toggle input[type="password"], .labelEffect.hasBtn input[type="text"], .labelEffect.hasBtn input[type="password"], input[type="text"]{color: $color-lime!important;}
+        .btn{
+            color: $color-lime!important;
+            border: solid 1px $color-lime!important;
+        }
+        select{
+            color: $color-lime!important;
+            border: solid 1px $color-lime!important;
+            background: url('../images/icon/icon_select_arrow_g.svg') no-repeat right 5px center!important;
+            background-size: 10px auto!important;
+        }
+        .i_show:before {
+            background: url(../images/icon/icon_show_g.svg) center center no-repeat;
+            background-size: contain;
+        }
+        .i_hide:before {
+            background: url(../images/icon/icon_hide_g.svg) center center no-repeat;
+            background-size: contain;
+        }
+        input[type="password"]{
+            color: $color-lime!important;
+        }
+        .btn-search, .btn-submit, .btn-reset, h2#booksearch-label, .browselink li a:hover, .newbook a, .newsbox, .more a, .cp .pic, .accordionqa .accordionblock button.question, .accordionqa .accordionblock button.question .sort, .accordionqa .accordionblock button.question .openclose_btn, .sitemap .accesskeyDefine, kbd, .sub_menu li a, .labelEffect.password_toggle input[type="text"], .labelEffect.password_toggle input[type="password"], .labelEffect.hasBtn input[type="text"], .labelEffect.hasBtn input[type="password"]{
+            border: solid 1px $color-lime!important;
+        }
+        .cp blockquote, .tooltip span, table, table th, table td, .img_list>ul>li, .img_list2>ul>li, .content-area, .bookbrowsing ul li a, .upload_grp .pic, div.function ul li button, div.function ul li a, .category a, .category a:hover, .category a:focus, .file_download li span.file_doc a, .file_download li span.file_docx a, .file_download li span.file_odt a, .file_download li span.file_xls a, .file_download li span.file_xlsx a, .file_download li span.file_csv a, .file_download li span.file_ods a, .file_download li span.file_ppt a, .file_download li span.file_pptx a, .file_download li span.file_odp a, .file_download li span.file_pdf a, .file_download li span.file_zip a, .file_download li span.file_txt a, .file_download li span.file_other a, .file_download li span.file_mov a, .file_download li span.file_mp3 a, .file_download li span.file_mp4 a, .file_download li span.file_jpg a, .file_download li span.file_wmv a, .audio_list table caption .int em{
+            border: solid 1px $color-lime!important;
+        }
+        .lp .list>ul, .lp .list ol, .cascading{
+            border-top: 1px solid $color-lime;
+        }
+        .mpfun>ul>li>a{
+            border: solid 1px $color-lime;
+        }
+        .cascading li a, .file_download h3, .file_download li {
+            border-bottom: solid 1px $color-lime;
+            &:hover{
+                color: $color-lime!important;
+            }     
+        }
+        .font_size ul li a{
+            border: solid 1px $color-lime;
+        }
+        .accordionqa .accordionblock button.question .openclose_btn:after {
+           border: solid 2px $color-lime;
+           border-top: none;
+           border-left: none; 
+       }
+       a{
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;  
+      }
+  }
+  .menu>ul>li{
+    &.hasChild{
+        >a{
+            &:after {
+                border: 2px solid $color-lime;
+                transform: rotate(135deg);
+                border-bottom: none;
+                border-left: none;
+            }
+        }
+    }
+}
+
+.menu ul li ul{
+    border: solid 1px $color-lime;
+    li{
+        border-bottom: solid 1px $color-lime;
+        &.hasChild {
+            >a{
+                &:after {
+                    top: 1.2em;
+                    border: 2px solid $color-lime;
+                    transform: rotate(45deg);
+                    border-bottom: none;
+                    border-left: none;
+                }
+            }
+        }
+    }
+}
+.i_man:before {
+    background: url(../images/icon/icon_man_g.svg) center center no-repeat;
+    background-size: contain;
+}
+.i_lock:before {
+    background: url(../images/icon/icon_lock_g.svg) center center no-repeat;
+    background-size: contain;
+}
+.input-i i{
+    border-right: solid 1px $color-lime;
+}
+.booksearch .flex-4-8 .col:nth-child(2){
+    border-left: solid 1px $color-lime;
+}
+.onlinedownload ul li{
+    &.icon_online01 a:before {
+        background: url(../images/icon_online01_g.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online02 a:before {
+        background: url(../images/icon_online02_g.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online03 a:before {
+        background: url(../images/icon_online03_g.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online04 a:before {
+        background: url(../images/icon_online04_g.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online05 a:before {
+        background: url(../images/icon_online05_g.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online06 a:before {
+        background: url(../images/icon_online06_g.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online07 a:before {
+        background: url(../images/icon_online07_g.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+}
+.function_panel{
+ .function{
+    ul{
+        li{
+            a{
+                &:hover, &:focus {
+                    background: $aHover;
+                    color: #FFF;
+                    &:before { filter: invert(0); }
+                }
+            }
+            &.print{
+                a:before {
+                    background: url(../images/icon/icon_print_g.svg) no-repeat center center;
+                    background-size: 100%;
+                }
+            }
+            &.keep{
+                a:before {
+                    background: url(../images/icon/icon_heart_g.svg) no-repeat center center;
+                    background-size: 100%;
+                }
+            }
+            &.back{
+                a:before {
+                    background: url(../images/icon/icon_back_g.svg) no-repeat center center;
+                    background-size: 100%;
+                }
+            }
+        }
+    }
+}   
+}
+
+
+}
+
+    // 黑字
+    &.tC_black * {
+        input, input[type="text"], button, input[type="submit"], input[type="reset"], input[type="button"], input[type="search"]{
+            color: $color-black!important;
+            border: solid 1px $color-black!important;
+        }
+        #manual_label, #manual_label2, .breadcrumb ul li:before{
+            color: $color-black!important;
+        }
+        input::placeholder, .labelEffect.password_toggle input[type="text"], .labelEffect.password_toggle input[type="password"], .labelEffect.hasBtn input[type="text"], .labelEffect.hasBtn input[type="password"], input[type="text"]{color: $color-black!important;}
+        .btn{
+            color: $color-black!important;
+            border: solid 1px $color-black!important;
+        }
+        select{
+            color: $color-black!important;
+            border: solid 1px $color-black!important;
+            background: url('../images/icon/icon_select_arrow_b.svg') no-repeat right 5px center!important;
+            background-size: 10px auto!important;
+        }
+        .i_show:before {
+            background: url(../images/icon/icon_show_b.svg) center center no-repeat;
+            background-size: contain;
+        }
+        .i_hide:before {
+            background: url(../images/icon/icon_hide_b.svg) center center no-repeat;
+            background-size: contain;
+        }
+        input[type="password"]{
+            color: $color-black!important;
+        }
+        .btn-search, .btn-submit, .btn-reset, h2#booksearch-label, .browselink li a:hover, .newbook a, .newsbox, .more a, .cp .pic, .accordionqa .accordionblock button.question, .accordionqa .accordionblock button.question .sort, .accordionqa .accordionblock button.question .openclose_btn, .sitemap .accesskeyDefine, kbd, .sub_menu li a, .labelEffect.password_toggle input[type="text"], .labelEffect.password_toggle input[type="password"], .labelEffect.hasBtn input[type="text"], .labelEffect.hasBtn input[type="password"]{
+            border: solid 1px $color-black!important;
+        }
+        .cp blockquote, .tooltip span, table, table th, table td, .img_list>ul>li, .img_list2>ul>li, .content-area, .bookbrowsing ul li a, .upload_grp .pic, div.function ul li button, div.function ul li a, .category a, .category a:hover, .category a:focus, .file_download li span.file_doc a, .file_download li span.file_docx a, .file_download li span.file_odt a, .file_download li span.file_xls a, .file_download li span.file_xlsx a, .file_download li span.file_csv a, .file_download li span.file_ods a, .file_download li span.file_ppt a, .file_download li span.file_pptx a, .file_download li span.file_odp a, .file_download li span.file_pdf a, .file_download li span.file_zip a, .file_download li span.file_txt a, .file_download li span.file_other a, .file_download li span.file_mov a, .file_download li span.file_mp3 a, .file_download li span.file_mp4 a, .file_download li span.file_jpg a, .file_download li span.file_wmv a, .audio_list table caption .int em{
+            border: solid 1px $color-black!important;
+        }
+        .lp .list>ul, .lp .list ol, .cascading{
+            border-top: 1px solid $color-black;
+        }
+        .mpfun>ul>li>a{
+            border: solid 1px $color-black;
+        }
+        .cascading li a, .file_download h3, .file_download li {
+            border-bottom: solid 1px $color-black;
+            &:hover{
+                color: $color-black!important;
+            }     
+        }
+        .font_size ul li a{
+            border: solid 1px $color-black;
+        }
+        .accordionqa .accordionblock button.question .openclose_btn:after {
+         border: solid 2px $color-black;
+         border-top: none;
+         border-left: none; 
+     }
+     a{
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;  
+      }
+  }
+  .menu>ul>li{
+    &.hasChild{
+        >a{
+            &:after {
+                border: 2px solid $color-black;
+                transform: rotate(135deg);
+                border-bottom: none;
+                border-left: none;
+            }
+        }
+    }
+}
+.menu ul li ul{
+    border: solid 1px $color-black;
+    li{
+        border-bottom: solid 1px $color-black;
+        &.hasChild {
+            >a{
+                &:after {
+                    top: 1.2em;
+                    border: 2px solid $color-black;
+                    transform: rotate(45deg);
+                    border-bottom: none;
+                    border-left: none;
+                }
+            }
+        }
+    }
+}
+.i_man:before {
+    background: url(../images/icon/icon_man_b.svg) center center no-repeat;
+    background-size: contain;
+}
+.i_lock:before {
+    background: url(../images/icon/icon_lock_b.svg) center center no-repeat;
+    background-size: contain;
+}
+.input-i i{
+    border-right: solid 1px $color-black;
+}
+.booksearch .flex-4-8 .col:nth-child(2){
+    border-left: solid 1px $color-black;
+}
+.onlinedownload ul li{
+    &.icon_online01 a:before {
+        background: url(../images/icon_online01_b.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online02 a:before {
+        background: url(../images/icon_online02_b.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online03 a:before {
+        background: url(../images/icon_online03_b.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online04 a:before {
+        background: url(../images/icon_online04_b.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online05 a:before {
+        background: url(../images/icon_online05_b.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online06 a:before {
+        background: url(../images/icon_online06_b.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+    &.icon_online07 a:before {
+        background: url(../images/icon_online07_b.svg) no-repeat center center;
+        background-size: 100% auto;
+    }
+}
+.function_panel{
+ .function{
+    ul{
+        li{
+            a{
+                &:hover, &:focus {
+                    background: $color-white;
+                    color: #FFF;
+                    &:before { filter: invert(0); }
+                }
+            }
+            &.print{
+                a:before {
+                    background: url(../images/icon/icon_print_b.svg) no-repeat center center;
+                    background-size: 100%;
+                }
+            }
+            &.keep{
+                a:before {
+                    background: url(../images/icon/icon_heart_b.svg) no-repeat center center;
+                    background-size: 100%;
+                }
+            }
+            &.back{
+                a:before {
+                    background: url(../images/icon/icon_back_b.svg) no-repeat center center;
+                    background-size: 100%;
+                }
+            }
+        }
+    }
+}   
+}
+
+
+}
+}
+
+//background
+body{
+    //黑色背景
+    &.bC_black {
+        background: $color-black;
+        .main, .header, .container,  .menu, .booksearch, .publish_info, .mpfun>ul>li>a, .font_size ul li a, .btn, .btn-search, .btn-submit, .btn-reset, h2#booksearch-label, .browselink li a:hover, .newbook a, .newsbox, .more a, .cp .pic, .accordionqa .accordionblock button.question, .accordionqa .accordionblock button.question .sort, .accordionqa .accordionblock button.question .openclose_btn, .sitemap .accesskeyDefine, kbd, div.function ul li button, div.function ul li a, .category a.active, .file_download li span.file_doc a, .file_download li span.file_docx a, .file_download li span.file_odt a, .file_download li span.file_xls a, .file_download li span.file_xlsx a, .file_download li span.file_csv a, .file_download li span.file_ods a, .file_download li span.file_ppt a, .file_download li span.file_pptx a, .file_download li span.file_odp a, .file_download li span.file_pdf a, .file_download li span.file_zip a, .file_download li span.file_txt a, .file_download li span.file_other a, .file_download li span.file_mov a, .file_download li span.file_mp3 a, .file_download li span.file_mp4 a, .file_download li span.file_jpg a, .file_download li span.file_wmv a, .audio_list table caption .int em, input, footer div.Copyright, footer div.update{
+            background: $color-black!important; 
+        }
+
+        .newbook .booklist, .content-area{
+            box-shadow:none;
+        }
+
+        footer{
+            background:$color-black url(none);
+        }
+        
+     //    .labelEffect .btn, .flex-form .form_grp .tel input[type="tel"].area{
+     //     background:$color-white!important; 
+     // }
+
+     .cp blockquote, .tooltip span, table, table th, table td, .img_list>ul>li, .img_list2>ul>li, .content-area, .bookbrowsing ul li a, .upload_grp .pic{
+        background: rgba(0, 0, 0, 0);
+    }
+
+    .menu ul li ul{
+        background: $color-black;
+        li{
+            a{
+                &:hover, &:focus{
+                    background: #333;
+                }
+            }
+        }
+    }
+}
+
+
+//白色背景
+&.bC_white {
+    background: $color-white;
+    .main, .header, .container,  .menu, .booksearch, .publish_info, .mpfun>ul>li>a, .font_size ul li a, .btn, .btn-search, .btn-submit, .btn-reset, h2#booksearch-label, .browselink li a:hover, .newbook a, .newsbox, .more a, .cp .pic, .accordionqa .accordionblock button.question, .accordionqa .accordionblock button.question .sort, .accordionqa .accordionblock button.question .openclose_btn, .sitemap .accesskeyDefine, kbd, div.function ul li button, div.function ul li a, .category a.active, .file_download li span.file_doc a, .file_download li span.file_docx a, .file_download li span.file_odt a, .file_download li span.file_xls a, .file_download li span.file_xlsx a, .file_download li span.file_csv a, .file_download li span.file_ods a, .file_download li span.file_ppt a, .file_download li span.file_pptx a, .file_download li span.file_odp a, .file_download li span.file_pdf a, .file_download li span.file_zip a, .file_download li span.file_txt a, .file_download li span.file_other a, .file_download li span.file_mov a, .file_download li span.file_mp3 a, .file_download li span.file_mp4 a, .file_download li span.file_jpg a, .file_download li span.file_wmv a, .audio_list table caption .int em, footer div.Copyright, footer div.update{
+        background: $color-white!important; 
+    }
+
+    .newbook .booklist, .content-area{
+        box-shadow:none;
+    }
+
+    footer{
+        background:$color-white url(none);
+    }
+
+    .labelEffect .btn, .flex-form .form_grp .tel input[type="tel"].area{
+     background:$color-white!important; 
+ }
+
+ .cp blockquote, .tooltip span, table, table th, table td, .img_list>ul>li, .img_list2>ul>li, .content-area, .bookbrowsing ul li a, .upload_grp .pic{
+    background: rgba(0, 0, 0, 0);
+}
+
+.category a:hover, .category a:focus{
+    background-color: $color-white!important;
+}
+.news .newsbox{
+    box-shadow: none;
+}
+
+.menu ul li ul{
+    background: $color-white;
+    li{
+        a{
+            &:hover, &:focus{
+                background: #eee;
+            }
+        }
+    }
+}
+
+}
+
+}
+
+
+//readset不變
+.readset{
+    .form_inline label{
+        color: $color-black!important; 
+    }
+    .btn-submit, .btn-reset, .labelEffect .btn-icon{
+        background:$color-white!important;
+        border: solid 1px $color-black!important;
+        color:$color-black!important;
+    }
+    .close_btn:before{
+      background:$color-white url("../images/icon/icon_close.svg") no-repeat center center!important;
+      background-size: .8rem auto!important;  
+  }
+}
+

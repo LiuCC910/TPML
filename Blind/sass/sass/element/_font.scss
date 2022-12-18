@@ -1,0 +1,148 @@
+@mixin fontSetting($FONT-SIZE:$font-size, $WEIGHT:normal) {
+    font-size: $FONT-SIZE;
+    font-weight: $WEIGHT;
+    color: $color-word;
+}
+
+@mixin aSetting($COLOR:$aColor, $NOLINE:none) {
+    color: $COLOR;
+    text-decoration: $NOLINE;
+    &:hover,
+    &:focus {
+        color: $aHover;
+        cursor: pointer;
+    }
+}
+@mixin aSetting_nocolor($COLOR:$color-word, $NOLINE:none) {
+    color: $COLOR;
+    text-decoration: $NOLINE;
+    &:hover,
+    &:focus {
+        color: $aHover;
+        cursor: pointer;
+    }
+}
+body {
+    @include fontSetting(1em);
+    line-height: 1.5em;
+    font-family:$font-family;
+    -webkit-text-size-adjust: none;
+}
+a {
+    @include aSetting();
+}
+// kbd
+kbd{
+    background: #FFF;
+    border-radius:.2em;
+    color:#555;
+    font-weight: bold;
+    display:inline-block;
+    padding:.1em .6em;
+    font-size: .938em;
+    font-family: sans-serif;
+    margin-right: .4em;
+    margin-bottom: .1em;
+    vertical-align:middle;
+    border-top: 1px solid #BBB;
+    border-bottom: 3px solid #BBB;
+    border-left: 2px solid #BBB;
+    border-right: 2px solid #BBB;
+    ~kbd{
+        margin-left: .4em;
+    }
+    kbd{
+        border:none;
+    }
+}
+
+// 字級
+.font_size {
+    display: flex;
+    flex:0 1 12.5em;
+    padding: .3em;
+    position: absolute;
+    right: 3.8%;
+    top:3.4em;
+    @include screen('tablet') {
+        right:1%;
+    }
+
+    span {
+        font-size: .875em;
+        color: #222;
+        padding-top: .3em;
+    }
+    ul {
+       @include li-reset;
+       display: flex;
+       flex: 0 0 6em;
+       li {
+        font-size: 1em;
+        font-weight: bold;
+        flex:0 0 auto;
+        margin: 0 .2em;
+        align-items: center;
+
+        a {
+            display: block;
+            text-align: center;
+            line-height: 32px;
+            border-radius: 50%;
+            background: rgb(226,226,226);
+            background: -moz-linear-gradient(180deg, rgba(226,226,226,1) 0%, rgba(199,199,199,1) 100%);
+            background: -webkit-linear-gradient(180deg, rgba(226,226,226,1) 0%, rgba(199,199,199,1) 100%);
+            background: linear-gradient(180deg, rgba(226,226,226,1) 0%, rgba(199,199,199,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2e2e2",endColorstr="#c7c7c7",GradientType=1);
+            width: 32px;
+            height: 32px;
+            color: #333;
+            &:hover, &:focus {
+                background: $aHover;
+                color: #FFF;
+            }
+            &.active {
+                background: $aHover;
+                color: #FFF;
+                &:hover, &:focus {
+                    background: $aHover;
+                    color: #FFF;
+                }
+            }
+            &.small { font-size: 1em; }
+            &.large { font-size: 1em; }
+        }
+    }
+}
+@include screen('mobile') {
+    // display: none;
+    position: relative;
+    right: 0;
+    left:0;
+    top:1em;
+    flex:1 1 100%;
+    justify-content:center; 
+    ul{
+        font-size: 1.25em;
+        li{
+            a{
+                line-height: 44px;
+                width: 44px;
+                height: 44px;
+                &:hover, &:focus {
+                    background: $linkColor;
+                    color: #FFF;
+                }
+                &.active {
+                    background: $linkColor;
+                    color: #FFF;
+                    &:hover, &:focus {
+                        background: $linkColor;
+                        color: #FFF;
+                    }
+                } 
+            }
+        }
+    }
+}
+}
