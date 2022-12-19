@@ -205,38 +205,54 @@
                         <!-- category end-->
                         <!-- funbox star -->
                         <div class="funbox">
-                         <!-- Pagination -->
-                         <div class="pagination">
-                            <form action="" aria-label="pagination">
+                            <!-- Pagination -->
+                            <div class="pagination">
+                                <form action="" aria-label="pagination">
                                 <div class="form_inline">
-                                    <div class="total">目前顯示第<span>16</span>至第<span>30</span>筆資料，共<span>186</span>筆資料，目前在第 <select name="" id="" aria-label="目前頁面">
-                                        <option value="">1</option>
-                                        <option value="">2</option>
-                                        <option value="">3</option>
-                                        <option value="">4</option>
-                                    </select> 頁 <input type="button" value="確定換頁" title="確定換頁" class="btn btn-submit">
-                                    ，
-                                    每頁顯示 <select name="" id="" aria-label="每頁顯示">
-                                        <option value="">15</option>
-                                        <option value="">30</option>
-                                        <option value="">45</option>
-                                        <option value="">60</option>
-                                    </select> 筆， <input type="button" value="條件切換" title="條件切換" class="btn btn-submit">
-                                    </div>
+                                <div class="total">目前顯示第<span>1</span>至第
+                                                                    <span>15</span>筆資料，共
+                                                                    <span>20</span>筆資料，目前在第 
+                                                                    <span>1/2</span>頁，
+                                                                    
+                                                                    
+                                                                    每頁顯示 <select name="" id="PageSize" aria-label="每頁顯示"><option value="15">15</option><option value="20">20</option><option value="30">30</option></select> 筆， <input type="button" value="條件切換" class="btn btn-submit" onclick="changePerPage()">
                                 </div>
+                                </div>
+                                </form>
+                            </div>
+                            <!-- Pagination end-->
+                            <!-- function功能區塊 -->
+                            <div class="function">
+                                <ul>
+                                    <li class="back"><a href="javascript:history.back()">上一頁</a></li>
+                                    <li class="next"><a href="javascript:;">下一頁</a></li>
+                                </ul>
+                            </div>
+                            <!-- function功能區塊end -->
+                        </div>
+                        <!-- funbox end -->
+                        <div class="pagination">
+                            <form action="">
+                            <ul class="page">
+                            <li class="active">
+                            <a href="#aC">1</a>
+                            </li>
+                            <li>
+                            <a target="_self" href="lp?ctNode=335&amp;nowPage=2&amp;pagesize=15&amp;mp=2">2</a>
+                            </li>
+                            <li class="next">
+                            <a target="_self" title="next pgae" href="lp?ctNode=335&amp;nowPage=2&amp;pagesize=15&amp;mp=2">
+                                                    next pgae
+                                                </a>
+                            </li>
+                            <li class="last">
+                            <a target="_self" title="last page" href="lp?ctNode=335&amp;nowPage=2&amp;pagesize=15&amp;mp=2">
+                                                    last page
+                                                </a>
+                            </li>
+                            </ul>
                             </form>
                         </div>
-                    <!-- Pagination end-->
-                    <!-- function功能區塊 -->
-                    <div class="function">
-                        <ul>
-                            <li class="back"><a href="javascript:history.back()">上一頁</a></li>
-                            <li class="next"><a href="javascript:;">下一頁</a></li>
-                        </ul>
-                    </div>
-                    <!-- function功能區塊end -->
-                </div>
-                <!-- funbox end -->
 
 
                 <!-- 文字列表 -->
