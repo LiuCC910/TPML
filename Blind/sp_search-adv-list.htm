@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta name="robots" content="noindex">
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>視障網－更新進階搜尋</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+<![endif]-->
+    <!-- slick css-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- 燈箱facybox -->
+    <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css">
+    <!-- carousel -->
+    <link rel="stylesheet" type="text/css" href="vendor/carousel/carousel-prev-next.css">
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/hyui.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+</head>
+
+<body>
+    <!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
+    <!-- wrapper Start -->
+    <div class="wrapper">
+        <!-- header Start -->
+        <header class="header">
+            <div class="container">
+                <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+                <h1>
+                    <a href="index.htm"><img src="images/logo.svg" alt="臺北市立圖書館 視障電子圖書館"></a>
+                </h1>
+                <!-- navigation Start -->
+                <nav class="navigation" role="navigation" aria-label="Site">
+                    <!-- 新增div navlist -->
+                    <div class="navlist">
+                        <ul aria-label="navlist">
+                            <li><a href="#">回首頁</a></li>
+                            <li><a href="#">北市圖首頁</a></li>
+                            <li><a href="#">網站導覽</a></li>
+                            <li><a href="#">使用說明與常見問題</a></li>
+                        </ul>
+                    </div>
+                    <!-- mpfun -->
+                    <div class="mpfun">
+                        <ul aria-label="login">
+                            <li class="myname">歡迎，劉佳淇</li>
+                            <li><a href="#">進入個人書房</a></li>
+                            <li class="logout_btn"><a href="#">登出</a></li>
+                            <li><a href="#">自訂顏色</a>
+                                <!-- readset star -->
+                                <div class="readset">
+                                    <button type="button" class="btn close_btn" aria-label="Close" onclick="">關閉</button>
+                                    <div class="flex-form">
+                                        <!-- changeTextColor -->
+                                        <div class="form_grp form_inline" aria-label="changeTextColor">
+                                            <label for="changeTextColor">文字顏色</label>
+                                            <select id="changeTextColor">
+                                                <option data-val="tC_default" selected="selected">預設文字顏色</option>
+                                                <option data-val="tC_white">白色(White)</option>
+                                                <option data-val="tC_black">黑色(Black)</option>
+                                                <option data-val="tC_yellow">黃色(Yellow)</option>
+                                                <option data-val="tC_lime">綠色(Lime)</option>
+                                            </select>
+                                        </div>
+                                        <!-- changeBackgroundColor -->
+                                        <div class="form_grp form_inline" aria-label="changeBackgroundColor">
+                                            <label for="changeBackgroundColor">背景顏色</label>
+                                            <select id="changeBackgroundColor">
+                                                <option data-val="bC_default" selected="selected">預設背景顏色</option>
+                                                <option data-val="bC_white">白色(White)</option>
+                                                <option data-val="bC_black">黑色(Black)</option>
+                                            </select>
+                                        </div>
+                                        <hr>   
+                                        <div class="btn_grp form_inline">
+                                            <button class="btn btn-submit">套用設定</button>
+                                            <button class="btn btn-reset">預設樣式</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- readset end -->
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- font_size -->
+                    <div class="font_size">
+                        <!-- 英文用<span>font-size：</span> -->
+                        <ul aria-label="font size">
+                            <li><a href="#" class="small">A-</a></li>
+                            <li><a href="#" class="medium active">A</a></li>
+                            <li><a href="#" class="large">A+</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- navigation End -->
+
+                <!-- Search Start -->
+                <div class="search" role="search">
+                    <button type="button" class="btn sclose_btn" aria-label="Close" onclick="">關閉</button>
+                    <div class="form_grp">
+                        <label for="mustSameAsId">站內全文檢索</label>
+                        <input name="username" id="mustSameAsId" type="text" title="請輸入查詢關鍵字" placeholder="請輸入查詢關鍵字" accesskey="S" aria-label="搜尋網站內容">
+                        <input name="" type="submit" value="搜尋" title="搜尋" class="btn btn-search" />
+                    </div>
+                </div>
+                <!-- Search End -->
+                <!-- noscript -->
+                <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="#">網站導覽</a>
+                </noscript>
+                <!-- menu Start -->
+                <nav class="menu" role="navigation" aria-label="Header的導航列">
+                    <ul>
+                        <li><a href="#">訊息公告</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">關於啟明</a></li>
+                        <li><a href="#">博士通信箱</a></li>
+                        <li><a href="#">讀者服務</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="http://www.google.com">第二層有連結</a>
+                                    <ul>
+                                        <li><a href="http://www.google.com">第三層選單有下層</a>
+                                            <ul>
+                                                <li><a href="#">第四層選單</a></li>
+                                                <li><a href="#">第四層選單</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="http://www.google.com">第三層選單有連結</a></li>
+                                        <li><a href="#">第三層選單</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">網站連結</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">線上閱讀下載</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">圖書查詢瀏覽</a></li>
+                    </ul>
+                </nav>
+                <!-- menu End -->
+            </div>
+        </header>
+        <!-- header End -->
+        <!-- main Start -->
+        <main id="center" class="main innerpage">
+            <div class="container">
+                <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+                <!-- 主要內容區 -->
+                <div class="center_block">
+                    <!-- breadcrumb路徑 -->
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <ul>
+                            <li><a href="#">首頁</a></li>
+                            <li aria-current="page">圖書進階查詢</li>
+                        </ul>
+                    </nav>
+                    <!-- breadcrumb路徑 end-->
+                    <h2 class="title" id="h2-label">圖書進階查詢</h2>
+
+                    <!-- function功能區塊 -->
+                    <div class="function_panel">
+                        <div class="function">
+                            <ul>
+                                <li class="print"><a href="#">友善列印</a></li>
+                                <li class="keep"><a href="#">收藏</a></li>
+                                <li class="back"><a href="javascript:history.back()">上一頁</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- function功能區塊end -->
+
+                    <!-- SP star -->
+                    <section class="sp" aria-describedby="h2-label">
+                        <!-- booksearch2 star -->
+                        <div class="booksearch">
+                            <form aria-labelledby="booksearch-label" class="booksearchform">
+                              <!-- Search Start -->
+                              <div class="flex-form skeyword">
+                                <div class="form_grp">
+                                    <label for="username">關鍵字:</label>
+                                    <input name="username" type="text" title="請輸入關鍵字" placeholder="請輸入關鍵字">
+                                </div>
+                                <div class="radio_grp form_inline">
+                                    <label><input name="radioSample" type="radio" value="" checked="" title="國字輸入">國字輸入</label>
+                                    <label><input name="radioSample" type="radio" value="" title="點字輸入">點字輸入</label>
+                                </div>
+                            </div>
+                            <!-- 展開／收合搜尋欄位 star -->
+                            <div class="fold">
+                                <button type="button" class="fold_btn" aria-expanded="false" aria-controls="search_input">展開／收合搜尋欄位</button>
+                                <div class="fold_box">
+                                    <div class="flex-form inputbox" id="search_input">
+                                        <div class="form_grp">
+                                            <label for="username">書名</label>
+                                            <input name="username" type="text" title="請輸入書名關鍵字" placeholder="請輸入書名關鍵字">
+                                        </div>
+                                        <div class="form_grp">
+                                            <label for="username">作者</label>
+                                            <input name="username" type="text" title="請輸入作者關鍵字" placeholder="請輸入作者關鍵字">
+                                        </div>
+                                        <div class="form_grp">
+                                            <label for="username">主題</label>
+                                            <input name="username" type="text" title="請輸入主題關鍵字" placeholder="請輸入主題關鍵字">
+                                        </div>
+
+                                        <div class="form_grp">
+                                            <label for="username">叢書名</label>
+                                            <input name="username" type="text" title="請輸入叢書名關鍵字" placeholder="請輸入叢書名關鍵字">
+                                        </div>
+                                        <div class="form_grp">
+                                            <label for="username">ISBN</label>
+                                            <input name="username" type="text" title="請輸入ISBN" placeholder="請輸入ISBN">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 展開／收合搜尋欄位 end -->
+                            <div class="flex-form selbox">
+                                <div class="form_grp">
+                                    <label for="datatype">資料類型</label>
+                                    <select name="" name="datatype" id="datatype" aria-label="請選擇資料類型">
+                                        <option value="all">所有類型</option>
+                                        <option value="DA" selected="">有聲書</option>
+                                        <option value="DBR">點字書</option>
+                                        <option value="BRJ">兒童點字書</option>
+                                        <option value="DV">雙視圖書</option>
+                                        <option value="BOOK">一般書</option>
+                                        <option value="BOOKJ">兒童書</option>
+                                        <option value="VIDEO">視聽資料</option>
+                                    </select>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="type">類別</label>
+                                    <select name="class_display" id="type" aria-label="請選擇類別">
+                                        <option value="all" selected="">所有類別</option>
+                                        <option value="總類">總類</option>
+                                        <option value="哲學類">哲學類</option>
+                                        <option value="宗教類">宗教類</option>
+                                        <option value="自然科學類">科學類</option>
+                                        <option value="應用科學類">應用科學類</option>
+                                        <option value="社會科學類">社會科學類</option>
+                                        <option value="本國史地類">史地：中國</option>
+                                        <option value="外國史地類">史地：世界</option>
+                                        <option value="語文類">語言文學類</option>
+                                        <option value="美術類">藝術類</option>
+                                    </select>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="where">館藏地</label>
+                                    <select name="where" id="where" aria-label="請選擇館藏地">
+                                        <option value="all">所有館藏地</option>
+                                        <option value="A15" selected="">A15啟明</option>
+                                        <option value="A11">A11松山</option>
+                                        <option value="A12">A12民生</option>
+                                        <option value="A13">A13三民</option>
+                                        <option value="A14">A14中崙</option>
+                                        <option value="A15">A15啟明</option>
+                                        <option value="B11">B11永春</option>
+                                        <option value="B12">B12三興</option>
+                                        <option value="B13">B13六合</option>
+                                        <option value="B21">B21新興</option>
+                                        <option value="C01">C01總館</option>
+                                        <option value="C11">C11道藩</option>
+                                        <option value="C12">C12大安</option>
+                                        <option value="C21">C21延吉</option>
+                                        <option value="C22">C22成功</option>
+                                        <option value="C23">C23龍安</option>
+                                        <option value="C41">C41大安書閣</option>
+                                        <option value="D11">D11中山</option>
+                                        <option value="D12">D12長安</option>
+                                        <option value="D13">D13大直</option>
+                                        <option value="D21">D21恆安</option>
+                                        <option value="E11">E11王貫英</option>
+                                        <option value="E12">E12城中</option>
+                                        <option value="EOB">EOB西門智慧</option>
+                                        <option value="F11">F11延平</option>
+                                        <option value="F12">F12大同</option>
+                                        <option value="F13">F13建成</option>
+                                        <option value="F21">F21蘭州</option>
+                                        <option value="G11">G11龍山</option>
+                                        <option value="G12">G12東園</option>
+                                        <option value="G13">G13西園</option>
+                                        <option value="G14">G14萬華</option>
+                                        <option value="G21">G21柳鄉</option>
+                                        <option value="GOB">GOB太陽</option>
+                                        <option value="H11">H11景美</option>
+                                        <option value="H12">H12木柵</option>
+                                        <option value="H13">H13永建</option>
+                                        <option value="H14">H14萬興</option>
+                                        <option value="H15">H15文山</option>
+                                        <option value="H16">H16力行</option>
+                                        <option value="H17">H17景新</option>
+                                        <option value="H22">H22安康</option>
+                                        <option value="H23">H23萬芳</option>
+                                        <option value="I11">I11南港</option>
+                                        <option value="I12">I12舊庄</option>
+                                        <option value="I21">I21龍華</option>
+                                        <option value="J11">J11內湖</option>
+                                        <option value="J12">J12東湖</option>
+                                        <option value="J13">J13西湖</option>
+                                        <option value="JOB">JOB內湖智慧</option>
+                                        <option value="K11">K11葫蘆堵</option>
+                                        <option value="K12">K12天母</option>
+                                        <option value="K13">K13士林</option>
+                                        <option value="K14">K14李科永</option>
+                                        <option value="L11">L11北投</option>
+                                        <option value="L12">L12稻香</option>
+                                        <option value="L13">L13石牌</option>
+                                        <option value="L14">L14清江</option>
+                                        <option value="L15">L15吉利</option>
+                                        <option value="L21">L21永明</option>
+                                        <option value="L23">L23秀山</option>
+                                        <option value="L41">L41秀山書閣</option>
+                                        <option value="MIC">MIC多元文化</option>
+                                    </select>
+                                </div>
+
+                                <div class="btn_grp2">
+                                    <input name="" type="submit" value="搜尋" title="搜尋" class="btn btn-submit">
+                                    <input name="" type="reset" value="重設" title="重設" class="btn">
+                                </div>
+
+                            </div>
+
+                            <!-- Search End -->
+                        </form>
+
+                    </div>
+                    <!-- booksearch2 end -->
+                    <br>
+                    <!-- funbox star -->
+                    <div class="funbox">
+                        <!-- Pagination -->
+                        <div class="pagination">
+                            <form action="" aria-label="pagination">
+                                <div class="form_inline">
+                                    <div class="total">目前顯示第<span>16</span>至第<span>30</span>筆資料，共<span>186</span>筆資料，目前在第 <select name="" id="" aria-label="目前頁面">
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                        <option value="">4</option>
+                                    </select> 頁 <input type="button" value="確定換頁" title="確定換頁" class="btn btn-submit">
+                                    <br>
+                                    每頁顯示 <select name="" id="" aria-label="每頁顯示">
+                                        <option value="">15</option>
+                                        <option value="">30</option>
+                                        <option value="">45</option>
+                                        <option value="">60</option>
+                                    </select> 筆， <input type="button" value="條件切換" title="條件切換" class="btn btn-submit">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- Pagination end-->
+                        <!-- function功能區塊 -->
+                        <div class="function">
+                            <ul>
+                                <li class="back"><a href="javascript:history.back()">上一頁</a></li>
+                                <li class="next"><a href="javascript:;">下一頁</a></li>
+                            </ul>
+                        </div>
+                        <!-- function功能區塊end -->
+                    </div>
+                    <!-- funbox end -->
+
+            <!-- table_list star -->
+            <div class="table_list search_list">
+                <table>
+                    <caption>查詢列表</caption>
+                    <thead>
+                        <tr>
+                            <th width="1%">序號</th>
+                            <th>書名</th>
+                            <th width="20%">作者</th>
+                            <th width="15%">出版社</th>
+                            <th width="10%">資料類型</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-title="序號" class="num">01</td>
+                            <td data-title="書名"><a href="#">搞怪奇聞故事 = Unique of story</a></td>
+                            <td data-title="作者">張愛</td>
+                            <td data-title="出版社">臺北市立圖書館</td>
+                            <td data-title="資料類型">點字書</td>
+                        </tr>
+                        <tr>
+                            <td data-title="序號" class="num">02</td>
+                            <td data-title="書名"><a href="#">孤星淚, 又名, 悲慘世界</a></td>
+                            <td data-title="作者">雨果 (Hugo, Victor-Marie),1802-1885, 文字作者</td>
+                            <td data-title="出版社">臺北市立圖書館</td>
+                            <td data-title="資料類型">有聲書</td>
+                        </tr>
+                        <tr>
+                            <td data-title="序號" class="num">03</td>
+                            <td data-title="書名"><a href="#">胖咪咪變瘦 = Catundra</a></td>
+                            <td data-title="作者">卡格羅夫 (Cosgrove, Stephen),文字作者</td>
+                            <td data-title="出版社"></td>
+                            <td data-title="資料類型">兒童點字書</td>
+                        </tr>
+                        <tr>
+                            <td data-title="序號" class="num">04</td>
+                            <td data-title="書名"><a href="#">半小時媽媽. 益智故事篇</a></td>
+                            <td data-title="作者">三暉圖書公司 製作</td>
+                            <td data-title="出版社">翰輝出版</td>
+                            <td data-title="資料類型">XXDA</td>
+                        </tr>
+                        <tr>
+                            <td data-title="序號" class="num">05</td>
+                            <td data-title="書名"><a href="#">布卡公主的故事. 印地安傳奇, 2</a></td>
+                            <td data-title="作者">九童文化</td>
+                            <td data-title="出版社">九童文化</td>
+                            <td data-title="資料類型">雙視圖書</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- table_list end -->
+
+            <!-- function功能區塊 -->
+            <div class="function">
+                <ul>
+                    <li class="back"><a href="javascript:history.back()">上一頁</a></li>
+                    <li class="next"><a href="javascript:;">下一頁</a></li>
+                </ul>
+            </div>
+            <!-- function功能區塊 end-->
+
+        </section>
+        <!-- SP end -->
+
+
+
+    </div>
+</div>
+</main>
+<!-- footer Start-->
+<footer>
+    <div class="container">
+        <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+        <div class="footer_logo">
+            <img src="images/f_logo.svg" alt="臺北市立圖書館logo" class="img-responsive flogo">
+        </div>
+        <div class="footer_info">
+            <ul class="footer_link">
+                <li><a href="javascript:;">隱私權及資訊安全政策</a></li>
+                <li><a href="javascript:;">政府網站資料開放宣告</a></li>
+                <li><a href="javascript:;">意見信箱</a></li>
+                <li><a href="javascript:;">滿意度調查</a></li>
+            </ul>
+            <p>本網站為建立專屬視障者使用之網站，提供線上有聲書、點字書等資源，供視障者使用</p>
+            <p>啟明分館地址：臺北市松山區敦化北路155巷76號<br>
+                電話：(02)2514-8443（詳細業務聯繫電話）｜傳真：(02)2514-8428<br>
+                電子郵件：<a href="mailto:a15@email.tpml.edu.tw">a15@email.tpml.edu.tw</a><br>
+                開放時間：週一至週日09:00-17:00｜休館日：每月第一個星期四及國定假日
+            </p>
+        </div>
+        <div class="footer_icon">
+            <ul>
+                <li>
+                    <a target="_blank" href="javascript:;">
+                        <img src="images/taipeilogo.png" alt="臺北市政府,另開新視窗">
+                    </a> 
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;">
+                        <img src="images/accessibility_aaa.jpg" alt="通過AAA優先等級無障礙網頁檢測,另開新視窗">
+                    </a>                        
+                </li>
+            </ul>
+        </div>
+        <div class="Copyright">台北市立圖書館版權所有 © 2022 All Rights Reserved.</div>
+        <div class="update">網站最後更新日期：<em>111年09月08日</em></div>
+    </div>
+</footer>
+<!-- footer End -->
+</div>
+<a href="javascript:;" class="scrollToTop">回頁首</a>
+<!-- JQ -->
+<script src="js/jquery-3.6.0.min.js"></script>
+<!-- 外掛 plugin js -->
+<script src="vendor/jquery.easing.min.js"></script>
+<!-- ease -->
+<script src="vendor/slick/slick.min.js "></script>
+<!-- slick -->
+<script src="vendor/slick/slick-lightbox.js "></script>
+<!-- slick lightbox -->
+<script src="vendor/lazyload/lazyload.js"></script>
+<!-- lazyload -->
+<script src="vendor/picturefill/picturefill.min.js" async></script>
+<!-- picturefill -->
+<script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
+<!-- scrolltable -->
+<!-- sticky-sidebar -->
+<script src='vendor/sticky-sidebar/sticky-sidebar.js'></script>
+<script src='vendor/sticky-sidebar/ResizeSensor.js'></script>
+<!-- fancy -->
+<script src='vendor/fancybox/jquery.fancybox.min.js'></script>
+<!-- carousel -->
+<script src="vendor/carousel/carousel-prev-next.js"></script>
+<!-- hyUI -->
+<script src="js/hyui.js"></script>
+<!-- 客製js -->
+<script src="js/customize.js"></script>
+</body>
+
+</html>
