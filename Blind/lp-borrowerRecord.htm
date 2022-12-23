@@ -178,19 +178,20 @@
                     <nav class="breadcrumb" aria-label="Breadcrumb">
                         <ul>
                             <li><a href="#">首頁</a></li>
-                            <li aria-current="page">留言版</li>
+                            <li><a href="#">讀者服務</a></li>
+                            <li aria-current="page">借閱紀錄(個人書房)</li>
                         </ul>
                     </nav>
                     <!-- breadcrumb路徑 end-->
-                    <h2 class="title" id="h2-label">留言版</h2>
+                    <h2 class="title" id="h2-label">借閱紀錄(個人書房)</h2>
                     <!-- pagesearch Start -->
-                    <div class="pagesearch" role="search">
+                    <!--div class="pagesearch" role="search">
                         <div class="form_grp">
                             <label for="mustSameAsId">單元內搜尋</label>
                             <input name="username" id="mustSameAsId" type="text" title="單元內搜尋" placeholder="單元內搜尋" accesskey="S" aria-label="單元內搜尋">
                             <input name="" type="submit" value="搜尋" title="搜尋" class="btn btn-search" />
                         </div>
-                    </div>
+                    </div-->
                     <!-- pagesearch End -->
                     <!-- LP Start -->
                     <section class="lp">
@@ -198,8 +199,9 @@
                         <div class="category">
                             <span class="title" id="category_label">類別篩選：</span>
                             <ul aria-labelledby="category_label">
-                                <li><a href="#" class="active">借書留言</a></li>
-                                <li><a href="#">其他問題</a></li>
+                                <li><a href="#" class="active">全部</a></li>
+                                <li><a href="#">借閱中</a></li>
+                                <li><a href="#">已歸還</a></li>
                             </ul>
                         </div>
                         <!-- category end-->
@@ -257,43 +259,35 @@
 
                 <!-- 文字列表 -->
                 <div class="table_list search_list" aria-describedby="h2-label">
-                    <input type="button" value="張貼新留言" title="張貼新留言" class="btn btn-submit">
+                    <div class="notice">若需進行個人資料或借閱管理，請至 <span><a href="#">館藏系統</a></span> 進行管理。</div>
                     <table>
                         <caption>查詢列表</caption>
                         <thead>
                             <tr>
                                 <th width="1%">序號</th>
-                                <th width="10%">類別</th>
-                                <th>留言標題</th>
-                                <th width="15%">留言者</th>
-                                <th width="20%">留言時間</th>
-                                <th width="10%">回覆狀態</th>
+                                <th>書名</th>
+                                <th width="15%">作者</th>
+                                <th width="15%">館別</th>
+                                <th width="15%">借閱日期</th>
+                                <th width="10%">狀態</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td data-title="序號" class="num">01</td>
-                                <td data-title="類別">借書留言</td>
-                                <td data-title="留言標題"><a href="#">我想借書</a></td>
-                                <td data-title="留言者">楊敦凱</td>
-                                <td data-title="留言時間">2022/11/12</td>
-                                <td data-title="回覆狀態">待回覆</td>
-                            </tr>
-                            <tr>
-                                <td data-title="序號" class="num">03</td>
-                                <td data-title="類別">借書留言</td>
-                                <td data-title="留言標題"><a href="#">我想借書(續借有聲書，家裡尚有九片，謝謝)</a></td>
-                                <td data-title="留言者">楊敦凱</td>
-                                <td data-title="留言時間">2022/11/10</td>
-                                <td data-title="回覆狀態">已回覆</td>
+                                <td data-title="書名"><a href="https://book.tpml.edu.tw/bookDetail/703913" target="_blank">股神巴菲特 & 比爾蓋茲 富豪面對面 = Buffett & Gates go back to school</a></td>
+                                <td data-title="作者">巴菲特(Buffett, Warren) ; 蓋茲(Gates, Bill)</td>
+                                <td data-title="館別">A15啟明</td>
+                                <td data-title="借閱日期"><time>2022/11/12</time></td>
+                                <td data-title="狀態">借閱中</td>
                             </tr>
                             <tr>
                                 <td data-title="序號" class="num">02</td>
-                                <td data-title="類別">其他問題</td>
-                                <td data-title="留言標題"><a href="#">忘記密碼需要求救</a></td>
-                                <td data-title="留言者">楊敦凱</td>
-                                <td data-title="留言時間">2022/11/10</td>
-                                <td data-title="回覆狀態">已回覆</td>
+                                <td data-title="書名"><a href="https://book.tpml.edu.tw/bookDetail/707069" target="_blank">Prince of Persia the sands of time = 波斯王子 : 時之刃 / directed by Mike Newell.</a></td>
+                                <td data-title="作者">Newell, Mike ; Gyllenhaal, Jake.</td>
+                                <td data-title="館別">A15啟明</td>
+                                <td data-title="借閱日期"><time>2022/11/11</time></td>
+                                <td data-title="狀態">已歸還</td>
                             </tr>
                         </tbody>
                     </table>
