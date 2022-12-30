@@ -200,47 +200,43 @@
                               <!-- Search Start -->
                               <div class="flex-form skeyword">
                                 <div class="form_grp">
-                                    <label for="username">關鍵字:</label>
-                                    <input name="username" type="text" title="請輸入關鍵字" placeholder="請輸入關鍵字">
+                                    <label for="FullText">關鍵字:</label>
+                                    <input name="FullText" type="text" title="請輸入關鍵字" placeholder="請輸入關鍵字">
                                 </div>
                                 <div class="radio_grp form_inline">
-                                    <label><input name="radioSample" type="radio" value="" checked="" title="國字輸入">國字輸入</label>
-                                    <label><input name="radioSample" type="radio" value="" title="點字輸入">點字輸入</label>
+                                    <!--"phonetic": 1, (中文拼音 無:0／同音:1／羅馬:2／漢語:3／通用:4)-->
+                                    <label><input name="radioSample" type="radio" value="0" checked="" title="國字輸入">國字輸入</label>
+                                    <label><input name="radioSample" type="radio" value="1" title="點字輸入">點字輸入</label>
                                 </div>
                             </div>
                             <div class="flex-form selbox">
                                 <div class="form_grp">
-                                    <label for="datatype">資料類型</label>
-                                    <select name="" name="datatype" id="datatype" aria-label="請選擇資料類型">
+                                    <label for="feature">特藏</label>
+                                    <select name="" name="feature" id="feature" aria-label="請選擇資料類型">
                                         <option value="all">所有類型</option>
                                         <option value="DA" selected="">有聲書</option>
                                         <option value="DBR">點字書</option>
-                                        <option value="BRJ">兒童點字書</option>
+                                        <option value="DBRJ">兒童點字書</option>
                                         <option value="DV">雙視圖書</option>
                                         <option value="BOOK">一般書</option>
-                                        <option value="BOOKJ">兒童書</option>
-                                        <option value="VIDEO">視聽資料</option>
+                                        <option value="J">兒童書</option>
+                                        <option value="DVD">視聽資料</option>
                                     </select>
                                 </div>
                                 <div class="form_grp">
-                                    <label for="type">類別</label>
-                                    <select name="class_display" id="type" aria-label="請選擇類別">
-                                        <option value="all" selected="">所有類別</option>
-                                        <option value="總類">總類</option>
-                                        <option value="哲學類">哲學類</option>
-                                        <option value="宗教類">宗教類</option>
-                                        <option value="自然科學類">科學類</option>
-                                        <option value="應用科學類">應用科學類</option>
-                                        <option value="社會科學類">社會科學類</option>
-                                        <option value="本國史地類">史地：中國</option>
-                                        <option value="外國史地類">史地：世界</option>
-                                        <option value="語文類">語言文學類</option>
-                                        <option value="美術類">藝術類</option>
+                                    <label for="feature2">適用對象</label>
+                                    <select name="feature2" id="feature2" aria-label="請選擇類別">
+                                        <option value="all" selected="">所有對象</option>
+                                        <option value="A">成人</option>
+                                        <option value="Y">兒童</option>
+                                        <option value="J">青少年</option>
+                                        <option value="C">特色館藏</option>
+                                        <option value="++">學齡前</option>
                                     </select>
                                 </div>
                                 <div class="form_grp">
-                                    <label for="where">館藏地</label>
-                                    <select name="where" id="where" aria-label="請選擇館藏地">
+                                    <label for="keepsite">館藏地</label>
+                                    <select name="keepsite" id="keepsite" aria-label="請選擇館藏地">
                                         <option value="all">所有館藏地</option>
                                         <option value="A15" selected="">A15啟明</option>
                                         <option value="A11">A11松山</option>
