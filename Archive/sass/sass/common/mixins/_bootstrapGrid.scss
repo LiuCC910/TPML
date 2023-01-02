@@ -1,0 +1,144 @@
+/* Grid system*/
+/*== Media queries breakpoints*/
+/* Extra small screen / phone*/
+/* $screenXs:                  480px !default;*/
+$screenXsMin: $screenXs !default;
+$screenPhone: $screenXsMin !default;
+/* Small screen / tablet*/
+/* $screenSm:                  768px !default;*/
+$screenSmMin: $screenSm !default;
+$screenTablet: $screenSmMin !default;
+/* Medium screen / desktop*/
+/* $screenMd:                  992px !default;*/
+$screenMdMin: $screenMd !default;
+$screenDesktop: $screenMdMin !default;
+/* Large screen / wide desktop*/
+/* $screenLg:                  1400px !default;*/
+$screenLgMin: $screenLg !default;
+$screenLgDesktop: $screenLgMin !default;
+$screenXsMobileMax: ($screenXs - 1) !default;
+$screenXsMax: ($screenSmMin - 1) !default;
+$screenSmMax: ($screenMdMin - 1) !default;
+$screenMdMax: ($screenLgMin - 1) !default;
+/*== Grid system*/
+/* $gridColumns:              12 !default;*/
+/* $gridGutterWidth:         30px !default;*/
+$gridFloatBreakpoint: $screenSmMin !default;
+$gridFloatBreakpointMax: ($gridFloatBreakpoint - 1) !default;
+/*== Container sizes*/
+/* Small screen / tablet*/
+$containerTablet: (720px + $gridGutterWidth) !default;
+$containerSm: $containerTablet !default;
+/* Medium screen / desktop*/
+$containerDesktop: (940px + $gridGutterWidth) !default;
+$containerMd: $containerDesktop !default;
+/* Large screen / wide desktop*/
+$containerLgDesktop: (1140px + $gridGutterWidth) !default;
+$containerLg: $containerLgDesktop !default;
+@mixin containerFixed($gutter: $gridGutterWidth) {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: floor(calc($gutter / 2));
+  padding-right: ceil(calc($gutter / 2));
+}
+/* Creates a wrapper for a series of columns*/
+@mixin makeRow($gutter: $gridGutterWidth) {
+  margin-left: ceil(calc($gutter / -2));
+  margin-right: floor(calc($gutter / -2));
+}
+@mixin gutter($gutter: $gridGutterWidth) {
+  position: relative;
+  min-height: 1px;
+  padding-left: calc($gutter / 2);
+  padding-right: calc($gutter / 2);
+  box-sizing: border-box;
+}
+/* Generate the extra small columns*/
+@mixin makeXsColumn($columns, $gutter: $gridGutterWidth) {
+  float: left;
+  width: percentage(calc($columns / $gridColumns));
+}
+@mixin makeXsColumnOffset($columns) {
+  margin-left: percentage(calc($columns / $gridColumns));
+}
+@mixin makeXsColumnPush($columns) {
+  left: percentage(calc($columns / $gridColumns));
+}
+@mixin makeXsColumnPull($columns) {
+  right: percentage(calc($columns / $gridColumns));
+}
+/* Generate the small columns*/
+@mixin makeSmColumn($columns) {
+  @media (min-width: $screenSmMin) {
+    float: left;
+    width: percentage(calc($columns / $gridColumns));
+  }
+}
+@mixin makeSmColumnOffset($columns) {
+  @media (min-width: $screenSmMin) {
+    margin-left: percentage(calc($columns / $gridColumns));
+  }
+}
+@mixin makeSmColumnPush($columns) {
+  @media (min-width: $screenSmMin) {
+    left: percentage(calc($columns / $gridColumns));
+  }
+}
+@mixin makeSmColumnPull($columns) {
+  @media (min-width: $screenSmMin) {
+    right: percentage(calc($columns / $gridColumns));
+  }
+}
+/* Generate the medium columns*/
+@mixin makeMdColumn($columns) {
+  @media (min-width: $screenMdMin) {
+    float: left;
+    width: percentage(calc($columns / $gridColumns));
+  }
+}
+@mixin makeMdColumnOffset($columns) {
+  @media (min-width: $screenMdMin) {
+    margin-left: percentage(calc($columns / $gridColumns));
+  }
+}
+@mixin makeMdColumnPush($columns) {
+  @media (min-width: $screenMdMin) {
+    left: percentage(calc($columns / $gridColumns));
+  }
+}
+@mixin makeMdColumnPull($columns) {
+  @media (min-width: $screenMdMin) {
+    right: percentage(calc($columns / $gridColumns));
+  }
+}
+/* Generate the large columns*/
+@mixin makeLgColumn($columns) {
+  @media (min-width: $screenLgMin) {
+    float: left;
+    width: percentage(calc($columns / $gridColumns));
+  }
+}
+@mixin makeLgColumnOffset($columns) {
+  @media (min-width: $screenLgMin) {
+    margin-left: percentage(calc($columns / $gridColumns));
+  }
+}
+@mixin makeLgColumnPush($columns) {
+  @media (min-width: $screenLgMin) {
+    left: percentage(calc($columns / $gridColumns));
+  }
+}
+@mixin makeLgColumnPull($columns) {
+  @media (min-width: $screenLgMin) {
+    right: percentage(calc($columns / $gridColumns));
+  }
+}
+
+// 範例
+// .col{
+//     @include makeXsColumn(12);              // xsMobile
+//     @include makeSmColumn(6);               // mobile
+//     @include makeMdColumn(3);               // tablet
+//     @include makeLgColumn(3);               // desktop
+//     @include gutter();                        // 容器內距 padding
+// }

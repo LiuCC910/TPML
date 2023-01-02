@@ -1,0 +1,73 @@
+.header {
+    .container {
+        padding-left: 140px;
+        @include screen('mobile') {
+            padding-left: 0;
+        }
+    }
+}
+
+.mainMenu {
+    position: fixed;
+    top: 0;
+    left: auto;
+    width: 140px;
+    height: 100%;
+    overflow-y: auto;
+    margin-left: -140px;
+    align-items: flex-start;
+    box-shadow: rgba(50, 50, 93, 0.15) 2px 0px 5px -1px;
+    @include screen('mobile') {
+        margin-left: 0;
+    }
+    &.sticky {
+        left: auto;
+        width: 140px;
+        height: 100%;
+        box-shadow: none;
+    }
+    >ul {
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 1em 0;
+        >li {
+            position: relative;
+            padding: .5em 0;
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 10%;
+                width: 80%;
+                height: 1px;
+                background-color: rgba(255, 255, 255, .5);
+            }
+            a {
+                padding: 1.2em 1em;
+                text-align: center;
+                white-space: normal;
+                word-break: break-word;
+                line-height: 1.65em;
+            }
+        }
+    }
+}
+
+.main {
+    .container {
+        padding-left: 190px;
+        @include screen('mobile') {
+            padding-left: 15px;
+        }
+    }
+}
+
+footer {
+    padding-left: 140px;
+    //background-image: linear-gradient(180deg, $colorLight 0%, rgba(243, 239, 231, 0) 100%), url(../images/footer_bg.png);
+    background-size: cover;
+    @include screen('mobile') {
+        padding-left: 0;
+    }
+}

@@ -1,0 +1,13 @@
+//  MIXIN
+@import 'mixins/_extend'; // 繼承
+@import 'mixins/_mediaquery'; // mediaquery
+@import 'mixins/_gradient'; // 漸層
+@import 'mixins/_lireset'; // 清除li格式
+@import 'mixins/_bootstrapgrid'; // 格線系統
+@import 'mixins/_flexgrid'; // flex 格線系統（for迴圈、mixin化）
+@import 'mixins/_clearfix';
+@import 'mixins/_text'; // ellipsis 文字刪節號 標籤預設
+@import 'mixins/_sronly'; //針對視覺隱藏，螢幕閱讀器會讀到
+
+// 客製化
+@import 'mixins/_image'; //img設定

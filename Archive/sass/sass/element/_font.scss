@@ -1,0 +1,104 @@
+// @mixin aSetting_nocolor($color: $colorWord, $noLine: none) {
+//   color: $color;
+//   text-decoration: $noLine;
+//   &:hover,
+//   &:focus-visible{
+//     color: $aHover;
+//     cursor: pointer;
+//   }
+// }
+body {
+    font-size: 1em;
+    font-weight: normal;
+    color: $colorWord;
+    line-height: 1.5em;
+    font-family: $fontFamily;
+    -webkit-text-size-adjust: none;
+    letter-spacing: 0.03em;
+    // --變更為全站
+    &.smallSize {
+        font-size: 0.938em;
+    }
+    &.largeSize {
+        font-size: 1.125em;
+    }
+}
+
+a {
+    @include aSetting();
+}
+
+// kbd
+kbd {
+    background: #fff;
+    border-radius: 0.2em;
+    color: #555;
+    font-weight: bold;
+    display: inline-block;
+    padding: 0.1em 0.6em;
+    font-size: 0.938em;
+    font-family: sans-serif;
+    margin-right: 0.4em;
+    margin-bottom: 0.1em;
+    vertical-align: middle;
+    border-top: 1px solid #bbb;
+    border-bottom: 3px solid #bbb;
+    border-left: 2px solid #bbb;
+    border-right: 2px solid #bbb;
+    ~kbd {
+        margin-left: 0.4em;
+    }
+    kbd {
+        border: none;
+    }
+}
+
+// 無障礙文字大小切換
+.fontSize {
+    display: flex;
+    align-items: center;
+    flex: 0 1 12.5em;
+    margin-right: 0.5em;
+    span {
+        font-size: 0.875em;
+        color: #222;
+        padding-top: 0.3em;
+    }
+    ul {
+        @include liReset;
+        display: flex;
+        flex: 0 0 6em;
+        li {
+            font-size: 1em;
+            flex: 0 0 auto;
+            margin: 2px;
+            align-items: center;
+            a {
+                display: block;
+                text-align: center;
+                line-height: 32px;
+                border-radius: 50%;
+                background: #f0f0f0;
+                width: 32px;
+                height: 32px;
+                color: #333;
+                &:hover,
+                &:focus,
+                &.active {
+                    background: $aHover;
+                    color: #fff;
+                    box-shadow: none;
+                }
+                &.small {
+                    font-size: 0.938em;
+                }
+                &.large {
+                    font-size: 1.125em;
+                }
+            }
+        }
+    }
+    @include screen('mobile') {
+        display: none;
+    }
+}

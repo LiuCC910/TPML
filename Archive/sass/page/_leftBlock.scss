@@ -1,0 +1,26 @@
+.leftBlock {
+    .listBlock {
+        //padding: 1em;
+        margin-bottom: 1.5em;
+        background: lighten($colorLight, 2);
+        .title {
+            padding: 0.8em 0.5em;
+            text-align: center;
+            font-size: 1.25em;
+            font-weight: bolder;
+            background-color: $colorLight;
+        }
+        li {
+            a {
+                &:hover {
+                    font-weight: bold;
+                }
+                .amount {
+                    display: inline-block;
+                    color: $colorPrimary;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}

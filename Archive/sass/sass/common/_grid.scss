@@ -1,0 +1,155 @@
+/////////////////////////////////////////////////////////以下為demo範例///
+// 首頁區塊設定
+.demoSection {
+  padding: 0em 0 3em;
+  text-align: center;
+  [class^='col'] {
+    border: 1px solid $colorBlue;
+    background: lighten($colorBlue, 30);
+    min-height: 200px;
+    color: darken($colorWord, 5);
+    text-align: center;
+    line-height: 200px;
+    font-size: 1.5em;
+    font-weight: bold;
+    box-sizing: border-box;
+  }
+  & + .demoSection {
+    padding-top: 2em;
+  }
+  & + .bg {
+    background: lighten($colorPrimary, 50);
+  }
+  &.full {
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+      max-width: 100% !important;
+    }
+  }
+  .container {
+    @extend %clearfix;
+  }
+}
+
+// 可用class個別命名
+// 單欄滿版
+.full {
+  .container {
+    max-width: 100% !important;
+  }
+}
+// 單欄
+// .col-12 {
+// }
+// 兩欄 6-6
+.col_6_6 {
+  .col {
+    @include makeXsColumn(12);
+    @include makeSmColumn(6);
+    @include makeMdColumn(6);
+    @include makeLgColumn(6);
+  }
+}
+// 三欄 4-4-4
+.col_4_4_4 {
+  .col {
+    @include makeXsColumn(12);
+    @include makeSmColumn(4);
+    @include makeMdColumn(4);
+    @include makeLgColumn(4);
+  }
+}
+// 四欄 3_3_3
+.col_3_3_3_3 {
+  .col {
+    @include makeXsColumn(12);
+    @include makeSmColumn(6);
+    @include makeMdColumn(3);
+    @include makeLgColumn(3);
+  }
+}
+// 雙欄 8-4
+.col_8_4 {
+  .col {
+    @include makeXsColumn(12);
+    @include makeSmColumn(8);
+    @include makeMdColumn(8);
+    @include makeLgColumn(8);
+  }
+  .col:nth-of-type(2n) {
+    @include makeXsColumn(12);
+    @include makeSmColumn(4);
+    @include makeMdColumn(4);
+    @include makeLgColumn(4);
+  }
+}
+// 雙欄 4-8
+.col_4_8 {
+  .col {
+    @include makeXsColumn(12);
+    @include makeSmColumn(4);
+    @include makeMdColumn(4);
+    @include makeLgColumn(4);
+  }
+  .col:nth-of-type(2n) {
+    @include makeXsColumn(12);
+    @include makeSmColumn(8);
+    @include makeMdColumn(8);
+    @include makeLgColumn(8);
+  }
+}
+// 六欄 2_2_2_2_2-2
+.col_2_2_2_2_2_2 {
+  .col {
+    @include makeXsColumn(6);
+    @include makeSmColumn(2);
+    @include makeMdColumn(2);
+    @include makeLgColumn(2);
+  }
+}
+// 進階設定：自行命名
+.cssName {
+  .news {
+    @include makeXsColumn(12);
+    @include makeSmColumn(8);
+    @include makeMdColumn(8);
+    @include makeLgColumn(8);
+  }
+  .video {
+    @include makeXsColumn(12);
+    @include makeSmColumn(4);
+    @include makeMdColumn(4);
+    @include makeLgColumn(4);
+  }
+}
+// 進階設定：非均等欄位
+.col_3_6_3 {
+  .col {
+    @include makeXsColumn(12);
+    @include makeSmColumn(3);
+    @include makeMdColumn(3);
+    @include makeLgColumn(3);
+    &:nth-child(2) {
+      @include makeXsColumn(12);
+      @include makeSmColumn(6);
+      @include makeMdColumn(6);
+      @include makeLgColumn(6);
+    }
+  }
+}
+// 進階設定：五欄
+.col_5 {
+  .col {
+    @include makeXsColumn(12);
+    @include makeSmColumn(2);
+    @include makeMdColumn(2);
+    @include makeLgColumn(2);
+    &:first-child {
+      @include makeXsColumnOffset(0);
+      @include makeSmColumnOffset(1);
+      @include makeMdColumnOffset(1);
+      @include makeLgColumnOffset(1);
+    }
+  }
+}

@@ -1,0 +1,85 @@
+// 同版面，多色快速調整 sass map實作
+// 參數可再自行新增
+// $colorStyleConfig: (
+//   colorA: (
+//     class: 'colorStyleA',
+//     // class 名稱
+//     color: blue,
+//     // 顏色
+//   ),
+//   colorB: (
+//     class: 'colorStyleA',
+//     color: red,
+//   ),
+//   colorC: (
+//     class: 'colorStyleC',
+//     color: green,
+//   ),
+// );
+
+// 有以下方法可以產生css
+// ----------------------------------------------------------------------
+// -----   scss   -------------------------------------------------------
+// ----------------------------------------------------------------------
+// 迴圈跑出所有css
+// @each $item, $value in $colorStyleConfig {
+//   $class: map-get($value, class);
+//   $color: map-get($value, color);
+
+//   .#{$class} {
+//     .txt {
+//       color: #{$color};
+//     }
+//   }
+// }
+
+//以上語法會產生出
+// .colorStyleA .txt {
+//   color: blue;
+// }
+// .colorStyleB .txt {
+//   color: red;
+// }
+// .colorStyleC .txt {
+//   color: green;
+// }
+
+// ----------------------------------------------------------------------
+// -----   scss + css var   ---------------------------------------------
+// ----------------------------------------------------------------------
+// 可直接在瀏覽器的開發者工具變更root的顏色，也可以使用JS操作(操作:root)
+// // 指定對應顏色
+// :root {
+//   @each $item, $value in $colorStyleConfig {
+//     $class: map-get($value, class);
+//     $color: map-get($value, color);
+//     --#{$class}: #{$color};
+//   }
+// }
+
+// 迴圈跑出所有css
+// @each $item, $value in $colorStyleConfig {
+//   $class: map-get($value, class);
+//   .#{$class} {
+//     .txt {
+//       color: var(--#{$class});
+//     }
+//   }
+// }
+
+//以上語法會產生出
+// :root {
+//   --colorStyleA: blue;
+//   --colorStyleA: red;
+//   --colorStyleC: green;
+// }
+
+// .colorStyleA .txt {
+//   color: var(--colorStyleA); //color: blue;
+// }
+// .colorStyleB .txt {
+//   color: var(--colorStyleB); //color: red;
+// }
+// .colorStyleC .txt {
+//   color: var(--colorStyleC); //color: green;
+// }

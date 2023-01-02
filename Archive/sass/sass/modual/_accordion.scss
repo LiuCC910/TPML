@@ -1,0 +1,184 @@
+.accordion {
+  &.active,
+  .active {
+    .accordionArrow {
+      &::after {
+        transform: rotate(-135deg);
+        top: 10px;
+      }
+    }
+  }
+  & > ul {
+    list-style: none;
+    padding: 0;
+    transition: all 0.3s linear;
+    overflow: hidden;
+    & > li {
+      margin-bottom: 0.5em;
+      .accordionList {
+        display: block;
+        text-decoration: none;
+        //padding: 5px;
+        position: relative;
+      }
+    }
+  }
+  .accordionContent {
+    line-height: 1.45em;
+    // transition: height 0.3s linear;
+    overflow: hidden;
+    .content {
+      padding: 10px;
+    }
+  }
+  .accordionBtn {
+    margin-left: 10px;
+  }
+  .accordionArrow {
+    position: absolute;
+    right: 0;
+    &:after {
+      content: '';
+      border: 2px solid $aColor;
+      border-top: none;
+      border-left: none;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      width: 8px;
+      height: 8px;
+      transform: rotate(45deg);
+      transition: transform 0.5s;
+    }
+  }
+}
+
+//檢索後分類
+.accordion1 {
+  padding: 1em;
+  .accordionList {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    font-size: 1.125rem;
+    .accordionBtn {
+      font-size: 0;
+    }
+  }
+  .accordionContent {
+    padding-left: 0.5em;
+    ul {
+      padding: 0.5em 0;
+      overflow: hidden;
+      transition: all 0.3s linear;
+    }
+    li {
+      margin-bottom: 0.5em;
+      // display: none;
+      // &:first-of-type,
+      // &:nth-of-type(2),
+      // &:nth-of-type(3),
+      // &:nth-of-type(4),
+      // &:nth-of-type(5) {
+      //   display: block;
+      // }
+      a {
+        display: inline-block;
+        color: $colorWord;
+        padding: 0.25em 0.5em;
+        &:hover {
+          color: $aHover;
+        }
+      }
+    }
+    .moreLessBtn {
+      margin: 0 0 1em 0;
+    }
+  }
+}
+
+//進階查詢
+.accordion2 {
+  .accordionList {
+    display: block;
+    float: right;
+    margin-bottom: 5px;
+    position: relative;
+  }
+  .accordionBtn {
+    padding-right: 25px;
+  }
+  .accordionArrow {
+    &:after {
+      right: 5px;
+      //top: 5px;
+    }
+  }
+  .accordionContent {
+    clear: both;
+  }
+}
+
+//常見問題
+.accordion3 {
+  margin: 2em 0;
+  & > ul {
+    & > li {
+      margin-bottom: 1em;
+      padding-bottom: 1em;
+      border-bottom: 1px solid $colorLight;
+      .accordionList {
+        display: flex;
+        align-items: flex-start;
+      }
+      .accordionContent {
+        margin-left: 20px;
+      }
+    }
+  }
+  .accordionList {
+    .qBlock {
+      flex: 1 1 auto;
+      position: relative;
+      padding-left: 30px;
+      @include screen('mobile') {
+        padding-left: 0;
+      }
+      time {
+        color: $colorWordLight;
+        font-size: 0.938em;
+        display: block;
+      }
+      .num {
+        display: inline-block;
+        width: 25px;
+        text-align: right;
+        position: absolute;
+        left: 0;
+        top: auto;
+        &::after {
+          content: '.';
+        }
+        @include screen('mobile') {
+          position: static;
+          text-align: left;
+          display: block;
+        }
+      }
+    }
+  }
+  .accordionBtn {
+    margin-right: 25px;
+    background: $colorPrimary;
+    padding: 0.1em 0.8em;
+    font-size: 0.875em;
+    color: #fff;
+    border-radius: 4px;
+    flex: 0 0 auto;
+  }
+}
+
+.accordionContent {
+  display: none;
+}

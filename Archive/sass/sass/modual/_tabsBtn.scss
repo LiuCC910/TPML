@@ -1,0 +1,48 @@
+.navTab {
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 1em;
+    list-style: none;
+  }
+  .navList {
+    .navLink.active {
+      color: #fff;
+      background-color: $colorBlue;
+    }
+  }
+  .tabContent > .tab-pane {
+    display: none;
+  }
+  .tabContent > .active {
+    display: block;
+  }
+  .tabContent {
+    padding: 0 1em;
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    li {
+      margin: 0 0 1.3em 0;
+      padding: 0;
+      line-height: 1.6;
+      border-bottom: 1px #ccc dashed;
+      text-align: start;
+      a {
+        color: #222;
+        text-decoration: none;
+      }
+      time {
+        display: inline-block;
+        margin: 0 0 0 1em;
+        font-size: 0.813em;
+        color: #666;
+      }
+    }
+    .more {
+      text-align: start;
+    }
+  }
+}

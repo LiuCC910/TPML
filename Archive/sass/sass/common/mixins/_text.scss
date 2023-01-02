@@ -1,0 +1,56 @@
+//https://codepen.io/iMarkup/pen/LEjMZN
+
+// @mixin text-overflow($overflow: ellipsis) {
+//     overflow: hidden;
+//     white-space: nowrap;
+//     text-overflow: $overflow; // values are: clip, ellipsis, or a string
+// }
+
+@mixin textOverflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin textLine($value, $lineHight) {
+  overflow: hidden;
+  text-overflow: -o-ellipsis-lastline;
+  text-overflow: ellipsis; // ellipsis＝省略
+  display: -webkit-box;
+  -webkit-line-clamp: $value;
+  -webkit-box-orient: vertical;
+  line-height: $lineHight; // X 填入行高 px 值
+  height: calc(#{$lineHight} * #{$value}); // 限定高度為 X * N 的 px 值
+}
+
+//範例：
+// p {
+//   background-color: $gray;
+//   color: white;
+//   padding: 10px 20px;
+//   width: 300px;
+//   margin: 0 auto;
+//   @include textOverflow;
+// }
+// p{
+// 	@include textLine(2,23px);                    // 多行（行數、行高）
+// }
+
+// a預設
+@mixin aSetting($color: $aColor, $line: none) {
+  text-decoration: $line;
+  color: $color;
+  &:hover,
+  &:focus-visible {
+    color: $aHover;
+    cursor: pointer;
+  }
+  &:focus-visible {
+    outline: #1aadfa 2px solid;
+  }
+}
+
+//px轉rem 使用方式 rem(px) px直接輸入數字即可
+@function rem($n: $remFontSize) {
+  @return calc($n / $remFontSize * 1rem);
+}

@@ -1,0 +1,239 @@
+//使用bootstrap3 原生之grid設定。
+// Grid system
+// --------------------------------------------------
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+.container {
+  // @include containerFixed;
+  // @media (min-width: $screenSmMin) {
+  //   width: $containerSm;
+  // }
+  // @media (min-width: $screenMdMin) {
+  //   width: $containerMd;
+  // }
+  // @media (min-width: $screenLgMin) {
+  //   width: $containerLg;
+  // }
+  max-width: $containerMax;
+}
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+.containerFluid {
+  @include containerFixed;
+}
+// Framework grid generation
+//
+// Used only by Bootstrap to generate the correct number of grid classes given
+// any value of `$gridColumns`.
+// [converter] This is defined recursively in LESS, but Sass supports real loops
+@mixin makeGridColumns($i: 1, $list: '.colXs-#{$i}, .colSm-#{$i}, .colMd-#{$i}, .colLg-#{$i}') {
+  @for $i from (1 + 1) through $gridColumns {
+    $list: '#{$list}, .colXs-#{$i}, .colSm-#{$i}, .colMd-#{$i}, .colLg-#{$i}';
+  }
+  #{$list} {
+    position: relative;
+    // Prevent columns from collapsing when empty
+    min-height: 1px;
+    // Inner gutter via padding
+    padding-left: ceil(($gridGutterWidth / 2));
+    padding-right: floor(($gridGutterWidth / 2));
+  }
+}
+// [converter] This is defined recursively in LESS, but Sass supports real loops
+@mixin floatGridColumns($class, $i: 1, $list: '.col-#{$class}-#{$i}') {
+  @for $i from (1 + 1) through $gridColumns {
+    $list: '#{$list}, .col-#{$class}-#{$i}';
+  }
+  #{$list} {
+    float: left;
+  }
+}
+@mixin calcGridColumn($index, $class, $type) {
+  @if ($type==width) and ($index > 0) {
+    .col-#{$class}-#{$index} {
+      width: percentage(($index / $gridColumns));
+    }
+  }
+  @if ($type==push) and ($index > 0) {
+    .col-#{$class}-push-#{$index} {
+      left: percentage(($index / $gridColumns));
+    }
+  }
+  @if ($type==push) and ($index==0) {
+    .col-#{$class}-push-0 {
+      left: auto;
+    }
+  }
+  @if ($type==pull) and ($index > 0) {
+    .col-#{$class}-pull-#{$index} {
+      right: percentage(($index / $gridColumns));
+    }
+  }
+  @if ($type==pull) and ($index==0) {
+    .col-#{$class}-pull-0 {
+      right: auto;
+    }
+  }
+  @if ($type==offset) {
+    .col-#{$class}-offset-#{$index} {
+      margin-left: percentage(($index / $gridColumns));
+    }
+  }
+}
+// [converter] This is defined recursively in LESS, but Sass supports real loops
+@mixin loopGridColumns($columns, $class, $type) {
+  @for $i from 0 through $columns {
+    @include calcGridColumn($i, $class, $type);
+  }
+}
+// Create grid for specific class
+@mixin makeGrid($class) {
+  @include floatGridColumns($class);
+  @include loopGridColumns($gridColumns, $class, width);
+  @include loopGridColumns($gridColumns, $class, pull);
+  @include loopGridColumns($gridColumns, $class, push);
+  @include loopGridColumns($gridColumns, $class, offset);
+}
+// Grid system
+//
+// Generate semantic grid columns with these mixins.
+// Centered container element
+@mixin containerFixed($gutter: $gridGutterWidth) {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: floor(($gutter / 2));
+  padding-right: ceil(($gutter / 2));
+  @include clearfix;
+}
+// Creates a wrapper for a series of columns
+@mixin makeRow($gutter: $gridGutterWidth) {
+  margin-left: ceil(($gutter / -2));
+  margin-right: floor(($gutter / -2));
+  @include clearfix;
+}
+%gridSetting {
+  position: relative;
+  min-height: 1px;
+  padding-left: ($gridGutterWidth / 2);
+  padding-right: ($gridGutterWidth / 2);
+}
+// Generate the extra small columns
+@mixin makeXsColumn($columns) {
+  float: left;
+  width: percentage(($columns / $gridColumns));
+}
+@mixin makeXsColumnOffset($columns) {
+  margin-left: percentage(($columns / $gridColumns));
+}
+@mixin makeXsColumnPush($columns) {
+  left: percentage(($columns / $gridColumns));
+}
+@mixin makeXsColumnPull($columns) {
+  right: percentage(($columns / $gridColumns));
+}
+// Generate the small columns
+@mixin makeSmColumn($columns) {
+  @extend %gridSetting;
+  @media (min-width: $screenSmMin) {
+    float: left;
+    width: percentage(($columns / $gridColumns));
+  }
+}
+@mixin makeSmColumnOffset($columns) {
+  @media (min-width: $screenSmMin) {
+    margin-left: percentage(($columns / $gridColumns));
+  }
+}
+@mixin makeSmColumnPush($columns) {
+  @media (min-width: $screenSmMin) {
+    left: percentage(($columns / $gridColumns));
+  }
+}
+@mixin makeSmColumnPull($columns) {
+  @media (min-width: $screenSmMin) {
+    right: percentage(($columns / $gridColumns));
+  }
+}
+// Generate the medium columns
+@mixin makeMdColumn($columns) {
+  @extend %gridSetting;
+  @media (min-width: $screenMdMin) {
+    float: left;
+    width: percentage(($columns / $gridColumns));
+  }
+}
+@mixin makeMdColumnOffset($columns) {
+  @media (min-width: $screenMdMin) {
+    margin-left: percentage(($columns / $gridColumns));
+  }
+}
+@mixin makeMdColumnPush($columns) {
+  @media (min-width: $screenMdMin) {
+    left: percentage(($columns / $gridColumns));
+  }
+}
+@mixin makeMdColumnPull($columns) {
+  @media (min-width: $screenMdMin) {
+    right: percentage(($columns / $gridColumns));
+  }
+}
+// Generate the large columns
+@mixin makeLgColumn($columns) {
+  @extend %gridSetting;
+  @media (min-width: $screenLgMin) {
+    float: left;
+    width: percentage(($columns / $gridColumns));
+  }
+}
+@mixin makeLgColumnOffset($columns) {
+  @media (min-width: $screenLgMin) {
+    margin-left: percentage(($columns / $gridColumns));
+  }
+}
+@mixin makeLgColumnPush($columns) {
+  @media (min-width: $screenLgMin) {
+    left: percentage(($columns / $gridColumns));
+  }
+}
+@mixin makeLgColumnPull($columns) {
+  @media (min-width: $screenLgMin) {
+    right: percentage(($columns / $gridColumns));
+  }
+}
+// Row
+//
+// Rows contain and clear the floats of your columns.
+.row {
+  @include makeRow;
+}
+// Columns
+//
+// Common styles for small and large grid columns
+@include makeGridColumns;
+// Extra small grid
+//
+// Columns, offsets, pushes, and pulls for extra small devices like
+// smartphones.
+@include makeGrid(xs);
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+@media (min-width: $screenSmMin) {
+  @include makeGrid(sm);
+}
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+@media (min-width: $screenMdMin) {
+  @include makeGrid(md);
+}
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+@media (min-width: $screenLgMin) {
+  @include makeGrid(lg);
+}

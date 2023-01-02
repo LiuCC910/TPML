@@ -1,0 +1,157 @@
+.pagination {
+    margin: 1em auto;
+    padding: 0;
+    display: block;
+    text-align: center;
+    font-size: 0.938em;
+    clear: both;
+    .formInline {
+        justify-content: center;
+    }
+    span {
+        color: $colorPrimary;
+        margin: 0 0.5em;
+    }
+    .page {
+        margin: 0 0 0 5px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        li {
+            min-width: 40px;
+            height: 40px;
+            margin: 2px;
+            list-style: none;
+            flex: 0 0 40px;
+            box-sizing: border-box;
+            a {
+                border-radius: 5px;
+                padding: 6px 10px;
+                font-weight: 700;
+                display: block;
+                white-space: nowrap;
+                font-size: 1em;
+                color: $colorWord;
+                background: #eee;
+                border: #ccc solid 1px;
+                margin: 0 0.1em 0.25em;
+                &:hover,
+                &:focus-visible {
+                    background: $colorPrimary;
+                    color: #fff !important;
+                    border: $colorPrimary solid 1px;
+                }
+            }
+            &.active {
+                a {
+                    color: #fff !important;
+                    background: $formFocus;
+                    border: darken($formFocus, 5) solid 1px;
+                }
+            }
+            %arrow {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 6px;
+                height: 6px;
+                margin-top: -4px;
+                border: 2px solid #666;
+                border-left: none;
+                border-bottom: none;
+            }
+            &.first,
+            &.prev,
+            &.next,
+            &.last {
+                a {
+                    text-indent: -9999px;
+                    position: relative;
+                    &:hover,
+                    &:focus-visible {
+                        &:before,
+                        &:after {
+                            border: 2px solid #fff;
+                            border-left: none;
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+            &.first {
+                a:before {
+                    @extend %arrow;
+                    margin-left: -6px;
+                    transform: rotate(-135deg);
+                }
+                a:after {
+                    @extend %arrow;
+                    margin-left: 0px;
+                    transform: rotate(-135deg);
+                }
+            }
+            &.prev {
+                a:before {
+                    @extend %arrow;
+                    margin-left: -2px;
+                    transform: rotate(-135deg);
+                }
+            }
+            &.next {
+                a:before {
+                    @extend %arrow;
+                    margin-left: -6px;
+                    transform: rotate(45deg);
+                }
+            }
+            &.last {
+                a:before {
+                    @extend %arrow;
+                    margin-left: -3px;
+                    transform: rotate(45deg);
+                }
+                a:after {
+                    @extend %arrow;
+                    margin-left: -9px;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+    .total {
+        padding: 0em;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        select,
+        input {
+            margin: 0.2em 0.5em;
+            // @include screen('mobile') {
+            //     margin: 0px;
+            // }
+        }
+        .btn {
+            min-width: auto;
+            padding: 0.4em 1em !important;
+        }
+    }
+    .items {
+        display: inline-block;
+        vertical-align: middle;
+        a {
+            padding: 0 5px;
+            color: $colorPrimary;
+            text-decoration: none;
+        }
+    }
+}
+
+@include screen('mobile') {
+    .pagination .total select.formControl {
+        margin: 0px 0px;
+        text-align: center;
+    }
+}

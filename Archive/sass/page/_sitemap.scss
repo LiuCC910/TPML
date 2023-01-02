@@ -1,0 +1,81 @@
+/* sitemap */
+.sitemap {
+  margin: 0px auto 1em;
+  p {
+    font-size: 0.813em;
+    kbd {
+      border: 1px solid #aaa;
+      background: transparent;
+      color: $colorWord;
+      padding: 0 0.3em;
+      margin: 0 0.2em 0.1em;
+      kbd {
+        border: none;
+      }
+    }
+  }
+  .accessKeyDefine {
+    padding: 1em 2em;
+    background: #eee;
+    border-radius: 6px;
+    li {
+      margin-bottom: 0.2em;
+    }
+  }
+}
+
+.cascading {
+  border-top: 1px solid #ccc;
+  @include gutter;
+  box-sizing: border-box;
+  ul {
+    @include liReset;
+  }
+  li {
+    line-height: 1.5;
+    width: $sitemapWidth;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 -5px 1em 0; // margin-right:改為負5;
+    box-sizing: border-box;
+    padding: 0px 0.5em;
+    a {
+      margin: 0.2em 0;
+      color: #222;
+      padding: 0.5em;
+      display: block;
+      font-size: 1.25em;
+      font-weight: bold;
+      border-bottom: 2px solid $colorPrimary;
+      &:hover,
+      &:focus-visible {
+        color: $colorPrimary;
+        text-decoration: none;
+      }
+    }
+    ul {
+      padding-left: 1em;
+      li {
+        width: 100%;
+        display: block;
+        margin-bottom: 0;
+        padding: 0;
+        a {
+          display: block;
+          font-size: 1em;
+          padding: 0.2em 0;
+          border-bottom: 1px dotted #ccc;
+          background-color: transparent;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+  @include screen('mobile') {
+    width: 95%;
+    margin: 0px auto;
+    li {
+      width: 100%;
+    }
+  }
+}

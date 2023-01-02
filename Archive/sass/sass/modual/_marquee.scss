@@ -1,0 +1,69 @@
+.marquee {
+  .swiperBox {
+    margin: 0;
+    list-style: none;
+    display: block;
+    overflow: hidden;
+    background: #fff;
+    text-align: left;
+    position: relative;
+    min-height: 1px;
+    padding-left: 30px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 1px solid #dadada;
+    @media (max-width: 991px) {
+      margin: 1.5em 0em;
+    }
+    .swiper {
+      height: 40px;
+    }
+    .marquee-arrow {
+      padding: 0;
+      position: absolute;
+      cursor: pointer;
+      left: 5px;
+      z-index: 9;
+      transform: rotate(90deg);
+      &::before {
+        content: '';
+        width: 10px;
+        height: 20px;
+        display: block;
+        background: url('../vendor/swiper/ar.svg') center no-repeat;
+      }
+      &.marquee-prev {
+        top: 0;
+      }
+      &.marquee-next {
+        bottom: 0;
+        left: 4px;
+        &::before {
+          transform: rotate(180deg);
+        }
+      }
+      &.marquee-arrow-disabled {
+        opacity: 0.3;
+      }
+    }
+  }
+  a {
+    display: block;
+    line-height: 40px;
+    margin-right: 3em;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #000;
+    text-decoration: none;
+    span {
+      color: #7cb52f;
+      margin-right: 15px;
+    }
+    &:hover {
+      color: #7cb52f;
+    }
+  }
+}

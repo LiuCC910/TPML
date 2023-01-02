@@ -1,0 +1,267 @@
+/////////////////////////////////////////////////////////以下為demo範例///
+
+// flex 欄位均分
+// 父層啟動 flex : @extend %flexSet;
+// 子層欄寬（均分）: @include flex-瀏覽器寬度Equal(欄數, margin );
+// 子層欄寬（自由）: @include flex-瀏覽器寬度(欄數, margin);
+
+// step 0、設定 flex 的 margin gutter
+$mGutter: 4px;
+
+////////////////////////////////////////////////////
+////////////////// 均分 equal ///////////////////////
+////////////////////////////////////////////////////
+
+/////////////////////// step 1、父層啟動 flex
+.flexSet {
+  // 啟動flex
+  // 位置：sass/sass/common/mixins/_extend.scss
+  @extend %flexSet;
+
+  // sampl樣式設定
+  .col {
+    background: #485b8a;
+    color: #fff;
+    margin: 4px 0;
+    p {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+
+/////////////////////// step 2、子層設定欄寬
+.flexEqual_3,
+.flexEqual-5,
+.flexEqual_7,
+.flexEqual_9,
+.flexEqual_11 {
+  .flexSet {
+    .col {
+      background: #00b0c6;
+    }
+  }
+}
+
+.flexEqual_2 {
+  .flexSet {
+    .col {
+      @include flexXsEqual(1, 0px);
+      @include flexSmEqual(2, $mGutter);
+      @include flexMdEqual(2, $mGutter);
+      @include flexLgEqual(2, $mGutter);
+      @include gutter();
+    }
+  }
+}
+.flexEqual_3 {
+  .flexSet {
+    .col {
+      @include flexXsEqual(1, 0px);
+      @include flexSmEqual(2, $mGutter);
+      @include flexMdEqual(3, $mGutter);
+      @include flexLgEqual(3, $mGutter);
+      @include gutter();
+    }
+    .thumbnail {
+      margin-bottom: 30px;
+      @include flexXsEqual(1, 0px);
+      @include flexSmEqual(2, $mGutter);
+      @include flexMdEqual(3, $mGutter);
+      @include flexLgEqual(3, $mGutter);
+      @include screen('mobile') {
+        justify-content: center;
+      }
+    }
+  }
+}
+.flexEqual_4 {
+  .flexSet {
+    .col {
+      @include flexXsEqual(1, 0px);
+      @include flexSmEqual(2, $mGutter);
+      @include flexMdEqual(4, $mGutter);
+      @include flexLgEqual(4, $mGutter);
+      @include gutter();
+    }
+  }
+}
+// .flexEqual-5 {
+//     .flexSet {
+//         .col {
+//             @include flexXsEqual(1, 0px);
+//             @include flexSmEqual(2, $mGutter);
+//             @include flexMdEqual(5, $mGutter);
+//             @include flexLgEqual(5, $mGutter);
+//             @include gutter();
+//         }
+//     }
+// }
+// .flexEqual-6 {
+//     .flexSet {
+//         .col {
+//             @include flexXsEqual(1, 0px);
+//             @include flexSmEqual(2, $mGutter);
+//             @include flexMdEqual(6, $mGutter);
+//             @include flexLgEqual(6, $mGutter);
+//             @include gutter();
+//         }
+//     }
+// }
+// .flexEqual_7 {
+//     .flexSet {
+//         .col {
+//             @include flexXsEqual(1, 0px);
+//             @include flexSmEqual(3, $mGutter);
+//             @include flexMdEqual(4, $mGutter);
+//             @include flexLgEqual(7, $mGutter);
+//             @include gutter();
+//         }
+//     }
+// }
+// .flexEqual-8 {
+//     .flexSet {
+//         .col {
+//             @include flexXsEqual(2, 2px);
+//             @include flexSmEqual(4, $mGutter);
+//             @include flexMdEqual(6, $mGutter);
+//             @include flexLgEqual(8, $mGutter);
+//             @include gutter();
+//         }
+//     }
+// }
+// .flexEqual_9 {
+//     .flexSet {
+//         .col {
+//             @include flexXsEqual(2, 2px);
+//             @include flexSmEqual(3, $mGutter);
+//             @include flexMdEqual(6, $mGutter);
+//             @include flexLgEqual(9, $mGutter);
+//             @include gutter();
+//         }
+//     }
+// }
+// .flexEqual-10 {
+//     .flexSet {
+//         .col {
+//             @include flexXsEqual(4, 2px);
+//             @include flexSmEqual(6, $mGutter);
+//             @include flexMdEqual(8, $mGutter);
+//             @include flexLgEqual(10, $mGutter);
+//             @include gutter();
+//         }
+//     }
+// }
+// .flexEqual_11 {
+//     .flexSet {
+//         .col {
+//             @include flexXsEqual(3, 2px);
+//             @include flexSmEqual(5, $mGutter);
+//             @include flexMdEqual(7, $mGutter);
+//             @include flexLgEqual(11, $mGutter);
+//             @include gutter();
+//         }
+//     }
+// }
+// .flexEqual-12 {
+//     .flexSet {
+//         .col {
+//             @include flexXsEqual(3, 2px);
+//             @include flexSmEqual(6, $mGutter);
+//             @include flexMdEqual(9, $mGutter);
+//             @include flexLgEqual(12, $mGutter);
+//             @include gutter();
+//         }
+//     }
+// }
+
+//////////////////////////////////////////////////
+////////////////// 自訂欄寬         ///////////////
+////////////////// 處理不均分的欄位  ///////////////
+//////////////////////////////////////////////////
+
+// 多欄 = 12
+.flex_3_6_3 {
+  .col {
+    @include flexXs(12, 0px);
+    @include flexSm(12, $mGutter);
+    @include flexMd(3, $mGutter);
+    @include flexLg(3, $mGutter);
+    @include gutter();
+
+    &:nth-child(2) {
+      @include flexXs(12, 0px);
+      @include flexSm(12, $mGutter);
+      @include flexMd(6, $mGutter);
+      @include flexLg(6, $mGutter);
+    }
+  }
+}
+
+.flex_8_4 {
+  .col {
+    @include flexXs(12, 0px);
+    @include flexSm(6, $mGutter);
+    @include flexMd(8, $mGutter);
+    @include flexLg(8, $mGutter);
+    @include gutter();
+
+    &:nth-child(2) {
+      @include flexXs(12, 0px);
+      @include flexSm(6, $mGutter);
+      @include flexMd(4, $mGutter);
+      @include flexLg(4, $mGutter);
+    }
+  }
+}
+.flex_4_8 {
+  .col {
+    @include flexXs(12, 0px);
+    @include flexSm(6, $mGutter);
+    @include flexMd(4, $mGutter);
+    @include flexLg(4, $mGutter);
+    @include gutter();
+
+    &:nth-child(2) {
+      @include flexXs(12, 0px);
+      @include flexSm(6, $mGutter);
+      @include flexMd(8, $mGutter);
+      @include flexLg(8, $mGutter);
+    }
+  }
+}
+
+// 綜合
+.mixEqual_2 {
+  .flexSet {
+    @extend %flexSet;
+    .col {
+      @include flexXsEqual(1, 0px);
+      @include flexSmEqual(2, $mGutter);
+      @include flexMdEqual(2, $mGutter);
+      @include flexLgEqual(2, $mGutter);
+      // @include gutter();
+      padding: 1em;
+
+      h3 {
+        margin: 10px 0;
+      }
+    }
+  }
+
+  .inner_4_8 {
+    @extend %flexSet;
+    div {
+      @include flexXs(12, 0px);
+      @include flexSm(4, $mGutter);
+      @include flexMd(4, $mGutter);
+      @include flexLg(4, $mGutter);
+
+      &:last-child {
+        @include flexXs(12, 0px);
+        @include flexSm(8, $mGutter);
+        @include flexMd(8, $mGutter);
+        @include flexLg(8, $mGutter);
+      }
+    }
+  }
+}

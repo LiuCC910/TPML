@@ -1,0 +1,122 @@
+.helpDemo {
+  // -----------------------------------------------------------------------
+  // -----   extend   ------------------------------------------------------
+  // -----------------------------------------------------------------------
+  // 繼承（ ../sass/mixins/_extend.scss）
+  @extend %slash; // 斜線
+  @extend %arrowSetting; // 箭頭
+  @extend %arrowDown; // 箭頭：下
+  @extend %arrowRight; // 箭頭：右
+  @extend %arrowUp; // 箭頭：上
+  @extend %arrowLeft; // 箭頭：左
+  @extend %clearfix; // 清除浮動
+  @extend %flexSet; // 啟動 display:flex
+
+  // ----------------------------------------------------------------------
+  // -----   mixin   ------------------------------------------------------
+  // ----------------------------------------------------------------------
+
+  // 1、瀏覽器斷點（ ../sass/mixins/_mediaquery.scss）
+  @include screen('desktop') {
+  } // min-width: 1400px
+  @include screen('notebook') {
+  } // max-width: 1399px
+  @include screen('tablet') {
+  } // max-width: 991px
+  @include screen('mobile') {
+  } // max-width: 767px
+  @include screen('xsMobile') {
+  } // max-width: 575px
+
+  @include screen('tabletMin') {
+  } // min-width: 991px
+  @include screen('mobileMin') {
+  } // min-width: 767px
+  @include screen('xsMobileMin') {
+  } // min-width: 575px
+
+  @include screenWidth('1234') {
+  } // max-width: 1234px
+
+  // 2、漸層（ ../sass/mixins/_gradient.scss）
+  @include gradient(#07c, #06f, vertical); // 水平
+  @include gradient(#07c, #06f, horizontal); // 垂直
+  @include gradient(#07c, #06f, diagonal); // 對角線
+  @include gradient(#07c, #06f, circle); // 圓形
+
+  // 3、文字刪節號（ ../sass/mixins/_text-overflow.scss）
+  @include textOverflow; // 單行
+  @include textLine(2, 23px); // 多行（行數、行高）
+
+  // 4、清除li格式（ ../sass/mixins/_liReset.scss）
+  @include liReset; // 清除li預設
+  @include imgResponsive; // 圖片
+
+  // 5、格線系統（ ../sass/mixins/_bootstrapGrid.scss）
+  // 5-1 bootstrap 格線系統
+  .col {
+    @include makeXsColumn(12); // xsMobile
+    @include makeSmColumn(6); // mobile
+    @include makeMdColumn(3); // tablet
+    @include makeLgColumn(3); // desktop
+    @include gutter(); // 容器內距 padding
+  }
+
+  // 5-2 flex 格線系統（ ../sass/mixins/_flexSet_for2.scss）
+  // flex 父層預設
+  // %flexSet {
+  //   box-sizing: border-box;
+  //   display: flex;
+  //   flex-flow: row wrap;
+  //   justify-content: space-between;
+  // }
+
+  .papa {
+    // 父層預設：
+    // 1. display: flex;
+    // 2. flex-flow: row wrap;
+    // 3. justify-content: space-between;
+    @extend %flexSet;
+
+    // 子層設定：欄數、margin、padding
+    // margin、padding，務必加上『單位』才能計算！
+    // 搞不懂『均分』、『自由搭配』的算式嗎？
+    // 複習請由此去：https://hackmd.io/@lizewu/r1eU6MPBw
+    .col {
+      @include flexColEqual(6, 10px, 30px); // 均分 2 - 12 欄
+      @include flexCol(6, 10px, 30px); // 自由搭配
+    }
+    @include screen('tablet') {
+      .col {
+        @include flexColEqual(3, 10px, 30px); // 均分 2 - 12 欄
+        @include flexCol(3, 10px, 30px); // 自由搭配
+      }
+    }
+    @include screen('mobile') {
+      .col {
+        @include flexColEqual(1, 10px, 30px); // 均分 2 - 12 欄
+        @include flexCol(1, 10px, 30px); // 自由搭配
+      }
+    }
+  }
+
+  // 6、圖片比例
+  @include aspectRatio(4, 3); // 圖片比例，4:3
+
+  // 7、版面變色功能
+  // ../sass/page/_color.scss
+
+  // ----------------------------------------------------------------------
+  // -----   css   --------------------------------------------------------
+  // ----------------------------------------------------------------------
+
+  // 1、px轉rem，基本文字大小為16px
+  font-size: rem(24); // = 1.5rem
+
+  // 2、顏色變亮或變深，可以利用
+  color: darken(blue, 10%);
+  color: lighten(blue, 10%);
+  // 之外還可以利用mix
+  color: mix(blue, #000, 90%);
+  color: mix(blue, #fff, 90%);
+}

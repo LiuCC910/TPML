@@ -1,0 +1,129 @@
+.fatFooter {
+  overflow: hidden;
+  padding-bottom: 1em;
+  margin: 0 auto;
+  background: $fatFooterBgColor;
+  .container {
+    overflow: hidden;
+    box-sizing: border-box;
+    @include gutter;
+  }
+  // 按鈕
+  .btnFatFooter {
+    font-size: 0.813em;
+    display: block;
+    width: 6em;
+    color: #fff;
+    border: none;
+    background: $colorPrimary;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin: 0 0 0 -3em;
+    z-index: 90;
+    text-indent: -9999px;
+    border-radius: 0;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border: 2px solid #fff;
+      border-left: none;
+      border-bottom: none;
+      transform: rotate(-45deg);
+      left: 50%;
+      top: 12px;
+      margin-left: -6px;
+    }
+    &:hover,
+    &:focus {
+      background: darken($colorPrimary, 10);
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      box-shadow: none !important;
+      outline: none;
+    }
+    &.close {
+      &:before {
+        transform: rotate(135deg) !important;
+        top: 5px;
+      }
+    }
+  }
+  nav {
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding: 3em 0 0 2em;
+    box-sizing: border-box;
+    @include screen('mobile') {
+      padding: 3em 0.5em 1em;
+    }
+    ul {
+      display: flex;
+      @include liReset;
+      @include screen('mobile') {
+        flex-flow: wrap row;
+      }
+      li {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 16%;
+        box-sizing: border-box;
+        @include screen('mobile') {
+          flex: 1 1 90%;
+        }
+        a {
+          line-height: 1.5;
+          display: block;
+          font-weight: bold;
+          padding: 0.5em 0px;
+          box-sizing: border-box;
+          &:hover {
+            box-shadow: none;
+          }
+        }
+        ul {
+          display: block;
+          margin: 0;
+          padding: 0 1em 0 0;
+          transition: height 0.5s;
+          overflow: hidden;
+          @include screen('mobile') {
+            width: auto;
+          }
+          li {
+            // flex: 0 0 100%;
+            width: auto;
+            margin-right: 0.5em;
+            display: block;
+            @include screen('mobile') {
+              display: inline-block;
+            }
+            a {
+              display: block;
+              @include aSetting($colorWord);
+              font-weight: normal;
+              text-align: left;
+              font-size: 0.938em;
+              line-height: 1.5em;
+              padding: 0.5em 0;
+              background: none;
+              @include screen('xsMobile') {
+                font-size: 0.813rem;
+                padding: 0.25em 0;
+              }
+            }
+          }
+          //第三層關閉
+          ul {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

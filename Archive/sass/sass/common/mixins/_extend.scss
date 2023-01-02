@@ -1,0 +1,69 @@
+// 斜線
+%slash {
+    content: ' / ';
+    display: inline-block;
+    padding: 0px 4px;
+    margin: 0px 5px 0px 5px;
+    color: #ccc;
+}
+
+// 箭頭
+%arrowSetting {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.5em;
+    content: ' ';
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+%arrowDown {
+    @extend %arrowSetting;
+    border-width: 6px 3px 0 3px;
+    border-color: #555 transparent transparent transparent;
+}
+
+%arrowRight {
+    @extend %arrowSetting;
+    border-width: 3px 0 3px 6px;
+    border-color: transparent transparent transparent #555;
+}
+
+%arrowUp {
+    @extend %arrowSetting;
+    border-width: 0 3px 6px 3px;
+    border-color: transparent transparent #555 transparent;
+}
+
+%arrowLeft {
+    @extend %arrowSetting;
+    border-width: 3px 6px 3px 0;
+    border-color: transparent #555 transparent transparent;
+}
+
+// 啟動display:flex
+%flexSet {
+    display: flex;
+    flex-flow: row wrap;
+    // 預設均分
+    justify-content: space-between;
+}
+
+%sort {
+    display: inline-block;
+    background: #FCA24F;
+    color: #000;
+    font-size: 0.875rem;
+    padding: 0.1em 0.5em;
+    border-radius: 4px;
+}
+
+// 繼承
+// @extend %slash;              // 斜線
+// @extend %arrowSetting;      // 箭頭
+// @extend %arrowDown;         // 箭頭：下
+// @extend %arrowRight;        // 箭頭：右
+// @extend %arrowUp;           // 箭頭：上
+// @extend %arrowLeft;         // 箭頭：左
+// @extend %flexSet;           // 啟動 display:flex
