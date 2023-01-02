@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta name="robots" content="noindex" />
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>單位名稱切版檔案</title>
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- mainJs -->
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        .demo_wrap {
+            max-width: 1000px;
+            margin: 0em auto 1em;
+            padding: 15px 15px 3em;
+            clear: both;
+            background: #fff;
+        }
+        
+        .demo_wrap h1 {
+            display: block;
+            margin: 0px auto;
+            max-width: 300px;
+            float: left;
+            margin-right: 1em;
+        }
+        
+        @media screen and (max-width: 545px) {
+            .demo_wrap h1 {
+                max-width: 100%;
+                float: none;
+                text-align: center;
+            }
+        }
+        
+        .demo_wrap h1 img {
+            width: 300px;
+        }
+        
+        .num {
+            width: 12%;
+        }
+        
+        body {
+            counter-reset: num;
+        }
+        
+        table th {
+            color: #555;
+            font-size: 0.813rem;
+            text-align: left;
+            color: #666;
+        }
+        
+        table td,
+        table th {
+            border-left: none;
+            border-right: none;
+            padding: 0.4em;
+        }
+        
+        table td .gray {
+            color: #808080;
+            font-size: 0.938rem;
+        }
+        
+        table td a {
+            display: block;
+        }
+        
+        table tr th:first-child {
+            width: 30px;
+        }
+        
+        table caption {
+            text-align: left;
+            font-weight: bold;
+            font-size: 1.25em;
+            padding: 0.5em 0;
+            color: #ff5050;
+        }
+        
+        tbody tr td:first-child:before {
+            counter-increment: num;
+            display: block;
+            text-align: center;
+            color: #888;
+            font-size: 0.875rem;
+            content: counters(num, '.') ' ';
+        }
+        
+        tbody tr td:nth-child(2) {
+            width: 200px;
+        }
+        
+        tbody tr td:nth-child(3) {
+            width: 300px;
+        }
+        
+        tbody tr td:nth-child(5) {
+            width: 60px;
+            text-align: center;
+        }
+        
+        .btnGrp {
+            text-align: right;
+            justify-content: flex-end;
+        }
+        
+        .btnGrp a {
+            max-width: 200px;
+        }
+        
+        @media screen and (max-width: 545px) {
+            .btnGrp {
+                text-align: center;
+            }
+        }
+        
+        .tableWrapper {
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        @media screen and (max-width: 545px) {
+            .tableWrapper {
+                flex-flow: row wrap;
+            }
+            .tableWrapper h2 {
+                flex: 1 0 100%;
+                margin-bottom: 1em;
+            }
+        }
+        
+        h2 {
+            margin: 0.5em 0 0.25em;
+            font-size: 1rem;
+            line-height: 1.25em;
+            white-space: nowrap;
+        }
+        
+        .tableWrapper h2 {
+            flex: 0 0 150px;
+            padding-right: 1em;
+        }
+        
+        hr {
+            border-top: 1px dashed #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="demo_wrap">
+        <h1><img src="images/logo.png" alt="" /></h1>
+        <div class="btnGrp">
+            <a href="https://github.com/HywebU00/2022_tpml_archive" class="btn" target="_blank">切版檔案下載</a>
+        </div>
+        <hr />
+        <div class="tableWrapper">
+            <h2>首頁</h2>
+            <!-- hyUI 標準頁面 -->
+            <table>
+                <thead>
+                    <tr>
+                        <th class="num">編號</th>
+                        <th>頁面名稱</th>
+                        <th>檔案名稱</th>
+                        <th>備註</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>首頁</td>
+                        <!-- 連結放到a裡面就好 -->
+                        <td>
+                            <a href="mp.html">首頁</a>
+                        </td>
+                        <td><span class="gray"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr />
+        <div class="tableWrapper">
+            <h2>查詢服務</h2>
+            <!-- hyUI 標準頁面 -->
+            <table>
+                <thead>
+                    <tr>
+                        <th class="num">編號</th>
+                        <th>頁面名稱</th>
+                        <th>檔案名稱</th>
+                        <th>備註</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>分類瀏覽</td>
+                        <td>
+                            <a href="lp1.html">分類瀏覽</a>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>藏品全覽、查詢結果</td>
+                        <td>
+                            <a href="sp.html">藏品查詢結果</a>
+                        </td>
+                        <td><span class="gray">藏品全覽請移除後分類區塊</span></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>查無資料</td>
+                        <td>
+                            <a href="sp_nodate.html">查無資料</a>
+                        </td>
+                        <td><span class="gray"></span></td>
+                    </tr>
+                    <tr>
+
+                        <td></td>
+                        <td>藏品詳目</td>
+                        <td>
+                            <a href="cp.html">藏品詳目</a>
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr />
+        <div class="tableWrapper">
+            <h2>典藏精選</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="num">編號</th>
+                        <th>頁面名稱</th>
+                        <th>檔案名稱</th>
+                        <th>備註</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>典藏精選</td>
+                        <td>
+                            <a href="lp2.html">典藏精選</a>
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr />
+        <div class="tableWrapper">
+            <h2>主題展覽</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="num">編號</th>
+                        <th>頁面名稱</th>
+                        <th>檔案名稱</th>
+                        <th>備註</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>主題展覽</td>
+                        <td>
+                            <a href="lp3.html">主題展覽</a>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>策展A</td>
+                        <td>
+                            <a href="themeA.html">策展A</a>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>策展B</td>
+                        <td>
+                            <a href="themeB.html">策展B</a>
+                        </td>
+                        <td><span class="gray">一頁式</span></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>策展C</td>
+                        <td>
+                            <a href="themeC.html">策展C</a>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>多筆呈現</td>
+                        <td>
+                            <a href="themeA_lp.html">多筆呈現A</a>
+                        </td>
+                        <td><span class="gray">A專用</span></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>自建藏品</td>
+                        <td>
+                            <a href="themeA_cp.html">自建藏品A</a>
+                        </td>
+                        <td><span class="gray">A專用</span></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>多筆呈現</td>
+                        <td>
+                            <a href="themeC_lp.html">多筆呈現C</a>
+                        </td>
+                        <td><span class="gray">C專用</span></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>自建藏品</td>
+                        <td>
+                            <a href="themeC_cp.html">自建藏品C</a>
+                        </td>
+                        <td><span class="gray">C專用</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr />
+        <div class="tableWrapper">
+            <h2>其他頁面</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="num">編號</th>
+                        <th>頁面名稱</th>
+                        <th>檔案名稱</th>
+                        <th>備註</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>相關網站</td>
+                        <td>
+                            <a href="related.html">相關網站</a>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>網站導覽</td>
+                        <td>
+                            <a href="sitemap.html">網站導覽</a>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>常見問題</td>
+                        <td>
+                            <a href="faq.html">常見問題</a>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>關於本站</td>
+                        <td>
+                            <a href="about.html">關於本站</a>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>節點頁</td>
+                        <td>
+                            <a href="np.html">節點頁</a>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>404</td>
+                        <td>
+                            <a href="404.html">404</a>
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <script>
+        let aName = document.querySelectorAll('tbody a');
+        aName.forEach((i) => {
+            let Link = i.getAttribute('href');
+            i.textContent = Link;
+        });
+    </script>
+</body>
+
+</html>
