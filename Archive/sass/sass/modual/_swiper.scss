@@ -1,248 +1,247 @@
 :swiper {
-    --dotSize: 15px;
+  --dotSize: 15px;
 }
 
 .swiperBox {
-    position: relative;
-    .swiper-dots {
-        display: flex;
-        position: absolute;
-        bottom: -60px;
-        justify-content: center;
-        align-items: center;
-        @include screen('mobile') {
-            bottom: -30px;
-        }
-        .swiper-pagination-bullet {
-            /* 點的顏色 */
-            background: $colorImportant;
-            opacity: 1;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            &:hover,
-            &:focus-visible {
-                opacity: 1;
-                /* 點hover的顏色 */
-                background: $colorSecondary;
-            }
-            &:focus-visible {
-                opacity: 1;
-                /* 點focus的顏色 */
-                background: $colorSecondary;
-                // box-shadow: 0px 0px 0px 1px #ff3e4d; /* 讓focus過去的點大一些 */
-            }
-            &.swiper-pagination-bullet-active {
-                opacity: 1;
-                /* 點 active 的顏色 */
-                background: $colorSecondary;
-                &:hover {
-                    /* 點 active  hover的顏色 */
-                    background: $colorSecondary;
-                }
-                &:focus-visible {
-                    /* 點 active  focus的顏色 */
-                    background: $colorSecondary;
-                }
-            }
-        }
+  position: relative;
+  .swiper-dots {
+    display: flex;
+    position: absolute;
+    bottom: -60px;
+    justify-content: center;
+    align-items: center;
+    @include screen('mobile') {
+      bottom: -30px;
     }
+    .swiper-pagination-bullet {
+      /* 點的顏色 */
+      background: $colorImportant;
+      opacity: 1;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      &:hover,
+      &:focus-visible {
+        opacity: 1;
+        /* 點hover的顏色 */
+        background: $colorSecondary;
+      }
+      &:focus-visible {
+        opacity: 1;
+        /* 點focus的顏色 */
+        background: $colorSecondary;
+        // box-shadow: 0px 0px 0px 1px #ff3e4d; /* 讓focus過去的點大一些 */
+      }
+      &.swiper-pagination-bullet-active {
+        opacity: 1;
+        /* 點 active 的顏色 */
+        background: $colorSecondary;
+        &:hover {
+          /* 點 active  hover的顏色 */
+          background: $colorSecondary;
+        }
+        &:focus-visible {
+          /* 點 active  focus的顏色 */
+          background: $colorSecondary;
+        }
+      }
+    }
+  }
 }
 
 .swiperArrow {
-    position: absolute;
-    cursor: pointer;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 15px 10px;
-    background: rgba(255, 255, 255, 0.4);
-    z-index: 9;
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 15px 10px;
+  background: rgba(255, 255, 255, 0.4);
+  z-index: 9;
+  &::before {
+    content: '';
+    width: 30px;
+    height: 40px;
+    display: block;
+    background: url('../images/basic/icon_arrow.svg') center no-repeat;
+  }
+  &.prev,
+  &.prevSlider {
+    left: 0px;
+  }
+  &.next,
+  &.nextSlider {
+    right: 0px;
     &::before {
-        content: '';
-        width: 30px;
-        height: 40px;
-        display: block;
-        background: url('../images/basic/icon_arrow.svg') center no-repeat;
+      transform: rotate(180deg);
     }
-    &.prev,
-    &.prevSlider {
-        left: 0px;
-    }
-    &.next,
-    &.nextSlider {
-        right: 0px;
-        &::before {
-            transform: rotate(180deg);
-        }
-    }
-    &.swiperArrow-disabled {
-        opacity: 0.3;
-    }
+  }
+  &.swiperArrow-disabled {
+    opacity: 0.3;
+  }
 }
 
-.cpSlider {
-    padding-bottom: 60px;
-    h3 {
-        font-size: 1.5em;
-        padding: 12px 0px 15px 0px;
-        margin: 0.5em 0px 1.2em;
-        text-align: center;
+.cpSlider,
+.cpSlider_2 {
+  padding-bottom: 60px;
+  h3 {
+    font-size: 1.5em;
+    padding: 12px 0px 15px 0px;
+    margin: 0.5em 0px 1.2em;
+    text-align: center;
+  }
+  .swiper {
+    margin: 0 40px;
+    background: #fff;
+    overflow: hidden;
+    .imgContainer {
+      @include aspectRatio(1.1, 1);
+      overflow: hidden;
+      background: #333;
+      img {
+        object-fit: contain;
+      }
     }
-    .swiper {
-        margin: 0 40px;
-        background: #fff;
-        overflow: hidden;
-        .imgContainer {
-            @include aspectRatio(1.1,
-            1);
-            overflow: hidden;
-            background: #333;
-            img {
-                object-fit: contain;
-            }
-        }
-        .sort {
-            @extend %sort;
-            position: absolute;
-            left: 10px;
-            top: 10px
-        }
+    .sort {
+      @extend %sort;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+    }
+    .caption {
+      padding: 0.5em !important;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.75) !important;
+      color: #fff;
+      bottom: -2em !important;
+      left: 0;
+      font-size: 1rem !important;
+      height: 2em !important;
+      line-height: 1 !important;
+      width: 100%;
+      @include textOverflow;
+      transition: 0.3s ease-out;
+      backdrop-filter: blur(4.5px);
+    }
+    a {
+      color: #555;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      &:hover,
+      &:focus-visible {
         .caption {
-            padding: 0.5em !important;
-            position: absolute;
-            background: rgba(0, 0, 0, 0.75) !important;
-            color: #fff;
-            bottom: -2em !important;
-            left: 0;
-            font-size: 1rem !important;
-            height: 2em !important;
-            line-height: 1 !important;
-            width: 100%;
-            @include textOverflow;
-            transition: 0.3s ease-out;
-            backdrop-filter: blur(4.5px);
+          bottom: 0 !important;
         }
-        a {
-            color: #555;
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            &:hover,
-            &:focus-visible {
-                .caption {
-                    bottom: 0 !important;
-                }
-            }
-        }
-        .swiperArrow {
-            padding: 0;
-        }
+      }
     }
-    .swiperBox {
-        .swiper-dots {
-            bottom: -30px;
-        }
+    .swiperArrow {
+      padding: 0;
     }
+  }
+  .swiperBox {
+    .swiper-dots {
+      bottom: -30px;
+    }
+  }
 }
 
 .navSlider {
-    position: relative;
-    .swiper-slide {
-        max-height: 180px;
-        a {
-            position: relative;
-            display: block;
-            img {
-                height: 100%;
-                object-fit: cover;
-            }
-        }
+  position: relative;
+  .swiper-slide {
+    max-height: 180px;
+    a {
+      position: relative;
+      display: block;
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
     }
+  }
 }
 
 [class*='lpSlider'] {
-    margin-bottom: 2em;
-    padding: 2em;
-    border-radius: 6px;
+  margin-bottom: 2em;
+  padding: 2em;
+  border-radius: 6px;
+  @include screen('mobile') {
+    padding: 1em;
+  }
+  &:nth-of-type(odd) {
+    background: lighten($colorLight, 5);
+  }
+  h3 {
+    font-size: 1.5em;
+    margin: 0 0 1em 0;
+  }
+  .swiper {
+    margin: 0 50px;
     @include screen('mobile') {
-        padding: 1em;
+      margin: 0 15px;
     }
-    &:nth-of-type(odd) {
-        background: lighten($colorLight, 5);
-    }
-    h3 {
-        font-size: 1.5em;
-        margin: 0 0 1em 0;
-    }
-    .swiper {
-        margin: 0 50px;
-        @include screen('mobile') {
-            margin: 0 15px;
-        }
-    }
-    .imgContainer {
-        @include aspectRatio(1.2,
-        1);
-        a {
-            display: block;
-            overflow: hidden;
-            // &:before {
-            //     content:""
-            //     display:block;
-            //     width: 100%;
-            //     height: 100%;
-            // }
-            &:hover {
-                .title {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 100%;
-                    max-height: 100%;
-                    white-space: normal;
-                    background: rgba(0, 0, 0, 0.6);
-                }
-            }
-        }
-        img {
-            object-fit: cover;
-        }
+  }
+  .imgContainer {
+    @include aspectRatio(1.2, 1);
+    a {
+      display: block;
+      overflow: hidden;
+      // &:before {
+      //     content:""
+      //     display:block;
+      //     width: 100%;
+      //     height: 100%;
+      // }
+      &:hover {
         .title {
-            margin: 0;
-            padding: .5em 1em;
-            display: block;
-            text-align: center;
-            width: 100%;
-            max-height: 46px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            font-size: 1.125rem;
-            line-height: 1.65em;
-            color: #fff;
-            background: rgba(0, 0, 0, 0.4);
-            font-weight: normal;
-            transition: .3s;
-            backdrop-filter: blur(4.5px);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          max-height: 100%;
+          white-space: normal;
+          background: rgba(0, 0, 0, 0.6);
         }
+      }
     }
-    .swiperArrow.next {
-        right: -15px;
+    img {
+      object-fit: cover;
     }
-    .swiperArrow.prev {
-        left: -15px;
+    .title {
+      margin: 0;
+      padding: 0.5em 1em;
+      display: block;
+      text-align: center;
+      width: 100%;
+      max-height: 46px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      font-size: 1.125rem;
+      line-height: 1.65em;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.4);
+      font-weight: normal;
+      transition: 0.3s;
+      backdrop-filter: blur(4.5px);
     }
+  }
+  .swiperArrow.next {
+    right: -15px;
+  }
+  .swiperArrow.prev {
+    left: -15px;
+  }
 }
 
 .sliderFor {
-    .pagination {
-        display: flex;
-        justify-content: center;
-    }
+  .pagination {
+    display: flex;
+    justify-content: center;
+  }
 }

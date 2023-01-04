@@ -105,9 +105,11 @@
     float: right;
     margin-bottom: 5px;
     position: relative;
+    font-size: 0rem;
   }
   .accordionBtn {
     padding-right: 25px;
+    font-size: 1rem;
   }
   .accordionArrow {
     &:after {
